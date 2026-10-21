@@ -1,0 +1,15 @@
+{
+  "name": "model-atlas",
+  "private": true,
+  "type": "module",
+  "description": "模型纪元 · 大模型发布与有据可查的未来",
+  "scripts": {
+    "dev": "npx --yes serve public -l 8080",
+    "validate": "node scripts/validate.mjs",
+    "archive": "node scripts/archive.mjs",
+    "check-links": "node scripts/check-links.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

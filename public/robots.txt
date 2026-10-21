@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://beteey.github.io/model-atlas/sitemap.xml

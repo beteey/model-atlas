@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>页面不存在 · 模型纪元</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#e8edf1;--ink:#0f1c2e;--mute:#5c6b7d;--acc:#2447f5}
+@media(prefers-color-scheme:dark){:root{--bg:#0c1522;--ink:#e6edf5;--mute:#93a3b8;--acc:#8ea3ff}}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 'PingFang SC','Microsoft YaHei',sans-serif;text-align:center;padding:96px 20px}
+h1{font:800 clamp(28px,5vw,44px)/1.2 'Songti SC','STSong',serif;margin:0 0 12px}p{color:var(--mute)}a{color:var(--acc)}
+</style>
+</head>
+<body>
+<h1>这一页没有出处。</h1>
+<p>你访问的地址不存在，或者已经被移动。</p>
+<p><a id="home" href="/">回到首页</a></p>
+<script>
+// GitHub Pages 项目站点部署在 /<仓库名>/ 子路径下
+if (location.hostname.endsWith('github.io')) {
+  const seg = location.pathname.split('/')[1];
+  if (seg) document.getElementById('home').href = '/' + seg + '/';
+}
+</script>
+</body>
+</html>

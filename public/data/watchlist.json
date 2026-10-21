@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-21",
+  "rules": {
+    "hitWindowDays": 7,
+    "minResolvedForRate": 5,
+    "outcomes": {
+      "hit": "官方事件在说法给出的时间窗内（或日期 ±7 天内）发生，且模型名称一致。",
+      "partial": "模型名称一致但日期偏差超过 7 天，或日期一致但名称 / 事件类型与官方不符。",
+      "miss": "时间窗过期后 30 天内没有对应官方事件，或官方明确否认。",
+      "pending": "时间窗尚未结束，或尚未与官方记录比对。"
+    }
+  },
+  "accounts": [
+    {
+      "id": "jimmy-apples",
+      "name": "Jimmy Apples",
+      "platform": "X",
+      "handle": "@apples_jimmy",
+      "url": "https://x.com/apples_jimmy",
+      "type": "leaker",
+      "focus": ["openai"],
+      "profileCheckedAt": null,
+      "note": "长期发布 OpenAI 相关的发布时间暗示，多为隐晦提示而非明确日期；需要按本页规则逐条记录后才能计算命中率。",
+      "trackRecord": []
+    },
+    {
+      "id": "tibor-blaho",
+      "name": "Tibor Blaho",
+      "platform": "X",
+      "handle": "@btibor91",
+      "url": "https://x.com/btibor91",
+      "type": "reverse-engineer",
+      "focus": ["openai", "anthropic", "google"],
+      "profileCheckedAt": null,
+      "note": "通过客户端代码、配置字符串与模型目录变动推断未发布功能与模型；线索通常附带截图，可独立复核。",
+      "trackRecord": []
+    },
+    {
+      "id": "testingcatalog",
+      "name": "TestingCatalog",
+      "platform": "X",
+      "handle": "@testingcatalog",
+      "url": "https://x.com/testingcatalog",
+      "type": "reverse-engineer",
+      "focus": ["openai", "anthropic", "google", "xai"],
+      "profileCheckedAt": null,
+      "note": "跟踪产品灰度与界面改动，偏产品功能而非模型本体；对模型发布日期的直接判断较少。",
+      "trackRecord": []
+    },
+    {
+      "id": "dylan-patel",
+      "name": "Dylan Patel · SemiAnalysis",
+      "platform": "X",
+      "handle": "@dylan522p",
+      "url": "https://x.com/dylan522p",
+      "type": "analyst",
+      "focus": ["openai", "anthropic", "google", "meta", "xai"],
+      "profileCheckedAt": null,
+      "note": "供应链与算力侧分析，偶尔给出训练进度与发布节奏判断；更适合作为周期推测的佐证而非具体日期来源。",
+      "trackRecord": []
+    },
+    {
+      "id": "chubby",
+      "name": "Chubby",
+      "platform": "X",
+      "handle": "@kimmonismus",
+      "url": "https://x.com/kimmonismus",
+      "type": "aggregator",
+      "focus": ["openai", "anthropic", "google", "xai"],
+      "profileCheckedAt": null,
+      "note": "转发量大的 AI 资讯聚合账号，多数线索来自他处；记录时应回溯到最初来源，而不是记在该账号名下。",
+      "trackRecord": []
+    },
+    {
+      "id": "guizang",
+      "name": "歸藏",
+      "platform": "X",
+      "handle": "@op7418",
+      "url": "https://x.com/op7418",
+      "type": "commentator",
+      "focus": ["openai", "anthropic", "google", "qwen", "deepseek", "kimi"],
+      "profileCheckedAt": null,
+      "note": "中文 AI 社区高频评论账号，常整理国内外发布动态；对国产模型的发布消息转达较快，原始来源多为厂商群或社区。",
+      "trackRecord": []
+    },
+    {
+      "id": "dotey",
+      "name": "宝玉",
+      "platform": "X",
+      "handle": "@dotey",
+      "url": "https://x.com/dotey",
+      "type": "commentator",
+      "focus": ["openai", "anthropic"],
+      "profileCheckedAt": null,
+      "note": "以翻译与解读英文一手信息为主，本身较少首发传闻；可作为中文语境下核对原文的中转。",
+      "trackRecord": []
+    }
+  ]
+}

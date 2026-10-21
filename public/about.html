@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>关于与方法 · 模型纪元</title>
+<meta name="description" content="模型纪元的信源分级、核验流程、社区观察名单命中率规则、勘误方式与数据许可。">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;800&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap"><b><a href="./">模型纪元</a></b><nav><a href="./#radar">下一次发布</a><a href="./#watch">观察名单</a><a href="./#map">时间地图</a><a href="./#ledger">信源账本</a><a href="about.html" aria-current="page">关于与方法</a></nav></div></header>
+<main class="wrap prose">
+<h1>关于与方法</h1>
+<p>模型纪元是一个人维护的大模型发布记录站。它只做一件事：把每一次模型发布的时间、事件类型和出处对齐，并诚实地标出哪些已经核实、哪些还没有。</p>
+<p>这里不做榜单，不评价模型好坏，不预测谁会赢。对于还没发生的发布，本站只整理有来源的线索，并把来源的可信程度写在明面上。</p>
+
+<h2 id="levels">证据分级</h2>
+<p>每条来源都有一个「来源类型」，决定它最高能被赋予多少可信度。类型由数据字段 <code>sourceType</code> 决定，不靠猜。</p>
+<table class="levels">
+<thead><tr><th>来源类型</th><th>含义</th><th>可用于</th></tr></thead>
+<tbody>
+<tr><td>官方一手</td><td>厂商官网公告、模型页、更新日志、开发者文档</td><td>确认发布事实、日期、开放范围</td></tr>
+<tr><td>论文</td><td>arXiv 或会议论文，以首次提交日期为准</td><td>确认研究公开事件</td></tr>
+<tr><td>厂商新闻稿</td><td>厂商通过通稿平台发布的内容，署名为厂商</td><td>确认发布事实；日期以通稿时间为准</td></tr>
+<tr><td>厂商社区文章</td><td>厂商官方账号在 Hugging Face、GitHub 等平台发布的文章</td><td>确认权重发布等事件</td></tr>
+<tr><td>媒体报道</td><td>有编辑流程的媒体正文</td><td>记录计划、推迟、内部说法；不能单独确认发布</td></tr>
+<tr><td>第三方整理</td><td>聚合站、博客、追踪日志</td><td>只作线索指引，必须回溯到更原始的来源</td></tr>
+<tr><td>社区账号</td><td>个人账号的爆料、逆向发现或评论</td><td>只进入「社区线索」，可信度由账号历史命中记录决定</td></tr>
+</tbody>
+</table>
+
+<h2 id="verify">核验流程</h2>
+<ol>
+<li><b>打开原页。</b>必须实际读取来源正文。只看到搜索引擎摘录、社交媒体转述或 AI 摘要的，一律标为「未核验」。</li>
+<li><b>三项检查。</b>分别确认来源是否支持记录中的模型名称、事件日期、事件类型。任何一项不支持，整条记录不算「已核验」。</li>
+<li><b>事件类型要分开。</b>「首次宣布」「有限预览」「API 上线」「权重开放」是不同事件，日期往往不同，分开收录，不合并。</li>
+<li><b>读不到就说读不到。</b>来源返回错误、被反爬拦截或正文为空，标为「待复核」或「无法读取」，不计入已核验，也不因此删除记录。</li>
+<li><b>存档。</b>核验过的来源会提交到 Internet Archive 存档，并在记录旁附上存档链接；原页日后改动或下线时仍可对照。</li>
+<li><b>记录检查时间。</b>每条记录都带 <code>checkedAt</code>（最近检查）和 <code>verifiedAt</code>（核验通过）两个日期。两者不同是正常的。</li>
+</ol>
+
+<h2 id="forecast">未来线索怎么分级</h2>
+<ul>
+<li><b>官方</b>：厂商自己说的计划、路线图或时间窗。官方窗口过期后只标「待核实」，不自动视为已发布或已跳票。</li>
+<li><b>媒体报道</b>：有编辑流程的媒体给出的日期或计划。与官方窗口并列展示，不互相替代。</li>
+<li><b>周期推测</b>：基于厂商历史发布节奏的估计。只在没有更好来源时使用，并明确写出推算依据。</li>
+<li><b>社区线索</b>：来自个人账号的说法。必须回溯到最初发出说法的账号，并挂上该账号在观察名单中的历史命中记录。转发、聚合账号与「据说」不记在转发者名下。</li>
+</ul>
+<p>每条未来线索都保留变更记录：每次重新核验时发生了什么变化、为什么维持或调整分级。</p>
+
+<h2 id="watchlist">社区观察名单与命中率</h2>
+<p>社区线索的可信度不来自账号粉丝数或名气，而来自它过去说对了多少次。观察名单为每个账号维护一份「历史说法」列表，每条说法在时间窗结束后与官方记录比对，得到以下结果之一：</p>
+<table class="levels">
+<thead><tr><th>结果</th><th>判定规则</th></tr></thead>
+<tbody>
+<tr><td>命中</td><td>官方事件在说法给出的时间窗内（或指定日期 ±7 天内）发生，且模型名称一致。</td></tr>
+<tr><td>部分命中</td><td>模型名称一致但日期偏差超过 7 天；或日期一致但名称 / 事件类型与官方不符。</td></tr>
+<tr><td>未命中</td><td>时间窗过期后 30 天内没有对应官方事件，或官方明确否认。</td></tr>
+<tr><td>待比对</td><td>时间窗尚未结束，或尚未与官方记录比对。</td></tr>
+</tbody>
+</table>
+<p>命中率 = (命中 + 0.5 × 部分命中) ÷ 已比对数。已比对不足 5 条时只显示样本数，不显示百分比，避免用两三条记录给账号盖章。</p>
+<h3>建档要求</h3>
+<ul>
+<li>每条说法必须附原帖链接（<code>claimUrl</code>），并尽量存档；删帖不影响已存档记录。</li>
+<li>说法内容按原文意思记录，不替账号补充它没说过的具体日期。「本周可能有动作」记为模糊时间窗，而不是换算成某一天。</li>
+<li>比对结果必须附官方依据链接（<code>evidenceUrl</code>），通常就是本站历史记录中的那条来源。</li>
+<li>账号信息（名称、平台、主页）核对后填写 <code>profileCheckedAt</code>；未核对的账号在页面上会标「账号待核对」。</li>
+</ul>
+<p>观察名单目前以英文圈层的爆料与逆向账号为主，中文账号偏评论解读。名单会随着记录积累调整，命中率长期偏低的账号会保留在名单里，因为「这个账号经常不准」本身也是有用的信息。</p>
+
+<h2 id="corrections">勘误与更正</h2>
+<p>任何记录都可能出错。如果你发现来源失效、日期不符、事件类型写错、分级不当，或者观察名单里的某条比对结果有问题，请通过以下方式告诉我：</p>
+<ul>
+<li>在代码仓库提交 Issue，写明记录 ID（点开任一记录弹窗，ID 即 URL 中的标识）、你认为正确的内容和依据链接。仓库地址见页脚「源码与数据」。</li>
+<li>直接提交 Pull Request 修改 <code>public/data/</code> 下的 JSON 文件。提交会自动跑数据校验。</li>
+</ul>
+<p>更正会写进对应记录的变更记录或 <code>audit.note</code> 字段，不会静默覆盖。</p>
+
+<h2 id="data">数据与许可</h2>
+<ul>
+<li>全部数据以 JSON 形式公开：<a href="data/atlas.json">atlas.json</a>（历史记录与未来线索）、<a href="data/watchlist.json">watchlist.json</a>（观察名单）。</li>
+<li>数据按 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" rel="noopener noreferrer" target="_blank">CC BY 4.0</a> 许可，引用时注明「模型纪元」并附链接即可。页面代码按 MIT 许可。</li>
+<li>本站不使用任何统计或追踪脚本，不设 Cookie。唯一的第三方请求是网页字体。</li>
+</ul>
+
+<h2 id="disclaimer">免责声明</h2>
+<p>本站的「未来线索」只是对公开来源的整理，不构成对任何厂商行为的预测或承诺。所有商标归各自所有者所有。</p>
+</main>
+<footer><div class="wrap"><span>模型纪元</span><span><a href="./">返回首页</a> · <a id="repo-link" href="#" rel="noopener">源码与数据</a></span></div></footer>
+<script src="assets/about.js" type="module"></script>
+</body>
+</html>

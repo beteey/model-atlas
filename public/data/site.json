@@ -1,0 +1,12 @@
+{
+  "name": "模型纪元",
+  "tagline": "大模型发布与有据可查的未来",
+  "description": "每一次大模型发布都附带出处。历史发布记录逐条核验来源，未来发布线索按官方、媒体、社区观察名单分级标注。",
+  "url": "https://beteey.github.io/model-atlas",
+  "repo": "https://github.com/beteey/model-atlas",
+  "issues": "https://github.com/beteey/model-atlas/issues/new/choose",
+  "author": "xixi",
+  "contact": "",
+  "timezone": "Asia/Taipei",
+  "timezoneLabel": "台北时间"
+}

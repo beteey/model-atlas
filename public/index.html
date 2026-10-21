@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>模型纪元 · 大模型发布与有据可查的未来</title>
+<meta name="description" content="每一次大模型发布都附带出处。历史发布记录逐条核验来源，未来发布线索按官方、媒体、社区观察名单分级标注。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#e8edf1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c1522" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="模型纪元 · 大模型发布与有据可查的未来">
+<meta property="og:description" content="每一次大模型发布都附带出处。历史发布记录逐条核验来源，未来发布线索按官方、媒体、社区观察名单分级标注。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;800&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap"><b><a href="./">模型纪元</a></b><nav><a href="#radar">下一次发布</a><a href="#watch">观察名单</a><a href="#map">时间地图</a><a href="#ledger">信源账本</a><a href="about.html">关于与方法</a></nav></div></header>
+<main class="wrap">
+<div class="hero"><h1>每一次模型发布，都附带出处。</h1><p id="lead">正在加载数据…</p><div class="bar" id="bar" role="img"></div><div class="bar-legend" id="bl"></div></div>
+
+<section id="radar"><h2>下一次发布</h2><p class="sub">只收录有来源的线索。官方计划、媒体报道、周期推测与社区线索分开标注；社区线索会附上说法来源账号的历史命中记录。预计日期不等于发布承诺。</p><div class="chips" id="rf"></div><div class="radar" id="rg"></div></section>
+
+<section id="watch"><h2>社区观察名单</h2><p class="sub">长期跟踪的爆料者、逆向分析者与评论账号。每条社区线索都会回溯到最初说出它的账号，并以该账号过往说法与官方记录的比对结果作为可信度依据。命中率只在样本足够时显示。</p><div class="chips" id="wf"></div><div class="watch" id="wg"></div></section>
+
+<section id="map"><h2>发布时间地图</h2><p class="sub">实线圆是已发生的发布，点线圆是发布预期，红色虚线圆表示该条目的来源待复核。蓝线表示今天（<span data-tz>台北时间</span>）。点击任一节点查看证据。</p>
+<div class="panel"><div class="tools"><div class="chips" style="margin:0" id="rng"></div><div class="chips" style="margin:0" id="vw"></div><input id="q" type="search" placeholder="搜索模型、厂商或标签" aria-label="搜索"></div><div class="scroll" id="sc"></div><div class="list" id="ls" hidden></div></div>
+<div class="chips" id="vf" style="margin-top:16px"></div></section>
+
+<section id="ledger"><h2>信源账本</h2><p class="sub">每条发布记录对应的来源、来源类型、核验方法与三项检查：模型名称、发布日期、事件类型。有存档的来源会附上存档链接，便于原页改动后仍可对照。</p><div class="chips" id="lf"></div><div class="panel led"><table><thead><tr><th>日期</th><th>厂商</th><th>模型 / 事件</th><th>来源类型</th><th>核验方法</th><th>名称·日期·类型</th><th>存档</th><th>状态</th></tr></thead><tbody id="lb"></tbody></table></div></section>
+
+<section id="method"><h2>我们怎么判断可信</h2><div class="how">
+<div><b>一手优先</b>官方公告、论文、更新日志优先；新闻稿与媒体单独标注，不冒充官方。</div>
+<div><b>三项检查</b>名称、日期、事件类型分别核对。能证明“预览”的来源，不会被写成“全面开放”。</div>
+<div><b>读不到就说读不到</b>只读到检索摘录的来源标为未核验；无法打开的来源标为待复核或无法读取，均不计入已核验。</div>
+<div><b>社区线索看账号记录</b>社区说法必须回溯到最初账号，并用该账号历史说法与官方记录的比对结果打分；转发与聚合不计入。</div>
+<div><b>变更可追溯</b>未来线索保留每次核验的变化记录，官方窗口与媒体日期并列呈现。窗口过期只提示待核实，不自动视为已发布。</div>
+<div><b>欢迎指错</b>任何记录都可以提交勘误。发现来源失效、日期不符或分级不当，请到 <a id="issues-link" href="about.html#corrections">勘误页</a> 提交。</div>
+</div><p class="sub" style="margin-top:18px">完整规则、证据分级表与命中率算法见 <a href="about.html">关于与方法</a>。</p></section>
+</main>
+<footer><div class="wrap"><span>模型纪元 · 数据最近检查 <span id="snap">—</span> · 模型资料不自动更新；今天与窗口过期提醒按当前日期计算。</span><span><a href="about.html">关于</a> · <a href="about.html#corrections">勘误</a> · <a id="repo-link" href="#" rel="noopener">源码与数据</a> · <a href="data/atlas.json">atlas.json</a></span></div></footer>
+<dialog id="dlg"></dialog>
+<script src="assets/app.js" type="module"></script>
+</body>
+</html>

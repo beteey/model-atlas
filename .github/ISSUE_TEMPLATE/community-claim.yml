@@ -1,0 +1,32 @@
+name: 提交社区说法
+description: 记录一条社区账号关于未来发布的说法，用于观察名单命中率
+title: "社区说法："
+labels: [watchlist]
+body:
+  - type: input
+    id: account
+    attributes:
+      label: 账号（最初发出说法的账号，不是转发者）
+      placeholder: "@btibor91"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 原帖链接
+      placeholder: https://x.com/...
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: 发帖日期
+      placeholder: 2026-10-21
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: 说法内容（按原意转述，不要补充原帖没有的日期）
+    validations:
+      required: true

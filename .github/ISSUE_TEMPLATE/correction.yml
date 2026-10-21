@@ -1,0 +1,39 @@
+name: 勘误
+description: 报告来源失效、日期不符、事件类型或分级错误
+title: "勘误："
+labels: [correction]
+body:
+  - type: input
+    id: record
+    attributes:
+      label: 记录 ID 或模型名称
+      placeholder: 例如 gemini4 / Mistral Large 4
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 来源链接失效
+        - 日期不符
+        - 模型名称不符
+        - 事件类型不符（如预览写成了全面开放）
+        - 分级不当
+        - 观察名单比对结果有误
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 你认为正确的内容
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: 依据链接（优先官方一手来源）
+      placeholder: https://
+    validations:
+      required: true
