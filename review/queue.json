@@ -6,7 +6,7 @@
       "canonicalUrl": "https://openai.com/index/att-legal",
       "title": "How AT&T is rethinking in-house legal work with OpenAI",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": "openai",
       "status": "pending",
@@ -20,14 +20,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "failed",
+        "code": "source_unavailable",
+        "reason": "HTTP 403",
+        "retryAfter": "2026-10-22T13:12:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "69ff12265ece0021b2ee76e84189273920783b19216f90f61d7bbc4e8500caa8"
+      }
     },
     {
       "id": "candidate-95dedf578de78f3ec264",
       "canonicalUrl": "https://openai.com/index/openai-models-google-cloud",
       "title": "OpenAI models are coming to Google Cloud",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": "openai",
       "status": "pending",
@@ -41,14 +51,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "76a789142a1c1ccf394e7d0d6f0bb61e788e5bbc27b5b448aa4dd40de9a8cde0"
+      }
     },
     {
       "id": "candidate-b1215e1aefc04c61e203",
       "canonicalUrl": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
       "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": "openai",
       "status": "pending",
@@ -62,14 +82,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "not_model_release",
+        "reason": "本文主题不是新模型发布",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c64f9d4482cf5043577d0510bbfbd7681fd83f059bffaf19d85a3ad7dbe7d228"
+      }
     },
     {
       "id": "candidate-3fe372fb2e8166f0e814",
       "canonicalUrl": "https://openai.com/index/cloudflare-cyber",
       "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": "openai",
       "status": "pending",
@@ -90,7 +120,7 @@
       "canonicalUrl": "https://openai.com/index/building-chatgpt-ad-stack",
       "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": "openai",
       "status": "pending",
@@ -111,7 +141,7 @@
       "canonicalUrl": "https://openai.com/index/ted-taylor-restaurant",
       "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": "openai",
       "status": "pending",
@@ -132,7 +162,7 @@
       "canonicalUrl": "https://openai.com/index/terminal-x",
       "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": "openai",
       "status": "pending",
@@ -153,7 +183,7 @@
       "canonicalUrl": "https://openai.com/index/openai-to-acquire-orchestra-bio",
       "title": "OpenAI acquires Orchestra Bio",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": "openai",
       "status": "pending",
@@ -174,7 +204,7 @@
       "canonicalUrl": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-16",
       "vendor": "openai",
       "status": "pending",
@@ -195,7 +225,7 @@
       "canonicalUrl": "https://openai.com/index/introducing-the-rosalind-academic-plan",
       "title": "Bringing GPT-Rosalind to academic research labs",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-15",
       "vendor": "openai",
       "status": "pending",
@@ -216,7 +246,7 @@
       "canonicalUrl": "https://openai.com/index/amp-beyond-coding",
       "title": "Amp puts AI agents to work beyond code with OpenAI models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-14",
       "vendor": "openai",
       "status": "pending",
@@ -237,7 +267,7 @@
       "canonicalUrl": "https://openai.com/index/block-ai-powered-security",
       "title": "How Block is building AI-powered security with OpenAI technology",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-14",
       "vendor": "openai",
       "status": "pending",
@@ -258,7 +288,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/announcements",
       "title": "Announcements",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -272,14 +302,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "eba90491e19caee47e681b830246a119dd130fea8f72b15f72e9e722e811d5ab"
+      }
     },
     {
       "id": "candidate-2bd8707fdab8226a9f67",
       "canonicalUrl": "https://www.anthropic.com/news/cyber-verification-program",
       "title": "Expanding the Cyber Verification ProgramWe’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -293,14 +333,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "not_model_release",
+        "reason": "本文主题不是新模型发布",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "acc7b727cd76d9b6d80f2e061168161d38f5464bd4d6a06c513a37785c6762bf"
+      }
     },
     {
       "id": "candidate-252684366be4bd9dc11d",
       "canonicalUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
       "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -314,14 +364,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "0a94041ec0a9e83ca33915ac3c6cb306ba71117370d216787f4ac75c5c1b4d3f"
+      }
     },
     {
       "id": "candidate-241a0eb7150b75c2c4dd",
       "canonicalUrl": "https://www.anthropic.com/news/singapore-office-opening",
       "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -342,7 +402,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/anthropic-cyber-mission",
       "title": "Introducing the Anthropic Cyber Mission",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -363,7 +423,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/claude-frontier-academy",
       "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -384,7 +444,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/barclays-scales-claude",
       "title": "Barclays scales Claude to upgrade operations and improve client experience",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -405,7 +465,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/life-sciences-verification-program",
       "title": "Introducing the Life Sciences Verification Program",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -426,7 +486,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
       "title": "Previewing the Model Hardware Standard",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "anthropic",
       "status": "pending",
@@ -447,7 +507,7 @@
       "canonicalUrl": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform",
       "title": "Introducing Playground: Create and play custom games",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-07",
       "vendor": "google",
       "status": "pending",
@@ -461,14 +521,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c56b298d840e3f159cc5617c523d3aad9da52cdb362f620e350c5b6a15f5b531"
+      }
     },
     {
       "id": "candidate-aacb8ca8a4a96bc0cfec",
       "canonicalUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026",
       "title": "The latest AI news we announced in September 2026",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-02",
       "vendor": "google",
       "status": "pending",
@@ -482,14 +552,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "bb1482119b36e8b262602f0e40300226aefb0d733a61c0afbad63e7ef430c32e"
+      }
     },
     {
       "id": "candidate-e6646933ca959a5fc8d1",
       "canonicalUrl": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
       "title": "The latest AI news we announced in August 2026",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-01",
       "vendor": "google",
       "status": "pending",
@@ -503,14 +583,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "41a90d760495c76e7c2c286bea59f1c96d7ab1050beeeae584d97cf1158aeb7e"
+      }
     },
     {
       "id": "candidate-b76b11a1199f73b7027f",
       "canonicalUrl": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi",
       "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-14",
       "vendor": "google",
       "status": "pending",
@@ -531,7 +621,7 @@
       "canonicalUrl": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely",
       "title": "Developing Gemini 4 Argon responsibly and safely",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-13",
       "vendor": "google",
       "status": "pending",
@@ -552,7 +642,7 @@
       "canonicalUrl": "https://deepmind.google/blog/gemini-4-argon-for-robotics",
       "title": "Gemini 4 Argon for Robotics",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-13",
       "vendor": "google",
       "status": "pending",
@@ -573,7 +663,7 @@
       "canonicalUrl": "https://deepmind.google/blog/introducing-gemini-4-argon",
       "title": "Gemini 4 Argon: Built to solve your hardest problems",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-13",
       "vendor": "google",
       "status": "pending",
@@ -594,7 +684,7 @@
       "canonicalUrl": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model",
       "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-06",
       "vendor": "google",
       "status": "pending",
@@ -615,7 +705,7 @@
       "canonicalUrl": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence",
       "title": "Gemini 4 Argon: our next era of frontier intelligence",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-30",
       "vendor": "google",
       "status": "pending",
@@ -636,7 +726,7 @@
       "canonicalUrl": "https://deepmind.google/blog/introducing-synthid-bio",
       "title": "Introducing SynthID Bio",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-30",
       "vendor": "google",
       "status": "pending",
@@ -657,7 +747,7 @@
       "canonicalUrl": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar",
       "title": "Introducing Gemini 3.8 Live with Live Avatar",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-24",
       "vendor": "google",
       "status": "pending",
@@ -678,7 +768,7 @@
       "canonicalUrl": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech",
       "title": "Gemini 3.8 text-to-speech says hello",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-23",
       "vendor": "google",
       "status": "pending",
@@ -699,7 +789,7 @@
       "canonicalUrl": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking",
       "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-15",
       "vendor": "google",
       "status": "pending",
@@ -720,7 +810,7 @@
       "canonicalUrl": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model",
       "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-03",
       "vendor": "google",
       "status": "pending",
@@ -741,7 +831,7 @@
       "canonicalUrl": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
       "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-02",
       "vendor": "google",
       "status": "pending",
@@ -762,7 +852,7 @@
       "canonicalUrl": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering",
       "title": "Mistral Advances AI for Engineering with NVIDIA",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": "mistral",
       "status": "pending",
@@ -776,14 +866,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "96505dc4e8e30baae1b5b520c4731d85720932cfb4128d43b73fb7cc97155e9c"
+      }
     },
     {
       "id": "candidate-370d8453b070a7bffccc",
       "canonicalUrl": "https://mistral.ai/news/timestral",
       "title": "Introducing Timestral",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-15",
       "vendor": "mistral",
       "status": "pending",
@@ -797,14 +897,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "a2d1703a55043019acfde160c96049699996e75edffe8f5b696c174518160299"
+      }
     },
     {
       "id": "candidate-70a5d3bd151a623147cf",
       "canonicalUrl": "https://mistral.ai/news/mistral-x-mozilla",
       "title": "Mistral and Mozilla are bringing open, private and multilingual AI to your web browser",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-16",
       "vendor": "mistral",
       "status": "pending",
@@ -818,14 +928,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "4f00d1a6fa0edef813a4140801bcf895f7c0281661f01a897af04c046986d890"
+      }
     },
     {
       "id": "candidate-2947b34346514aae0973",
       "canonicalUrl": "https://mistral.ai/news/mistral-x-cloudera",
       "title": "Cloudera and Mistral Partner to Bring Specialized, Sovereign Intelligence to Enterprise Data",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-10",
       "vendor": "mistral",
       "status": "pending",
@@ -846,7 +966,7 @@
       "canonicalUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
       "title": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-08",
       "vendor": "mistral",
       "status": "pending",
@@ -867,7 +987,7 @@
       "canonicalUrl": "https://mistral.ai/news/mistral-x-humain",
       "title": "Mistral x HUMAIN",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-24",
       "vendor": "mistral",
       "status": "pending",
@@ -888,7 +1008,7 @@
       "canonicalUrl": "https://mistral.ai/news/regional-inference-open-models-new-compute",
       "title": "In-region inference, open models, and new European infrastructure for sovereign AI.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-11",
       "vendor": "mistral",
       "status": "pending",
@@ -909,7 +1029,7 @@
       "canonicalUrl": "https://mistral.ai/news/shieldstral",
       "title": "Introducing Shieldstral.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-04",
       "vendor": "mistral",
       "status": "pending",
@@ -930,7 +1050,7 @@
       "canonicalUrl": "https://mistral.ai/news/robostral-navigate",
       "title": "Introducing Robostral Navigate",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-07-08",
       "vendor": "mistral",
       "status": "pending",
@@ -951,7 +1071,7 @@
       "canonicalUrl": "https://mistral.ai/news/ocr-4",
       "title": "Introducing Mistral OCR 4",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-06-23",
       "vendor": "mistral",
       "status": "pending",
@@ -972,7 +1092,7 @@
       "canonicalUrl": "https://mistral.ai/news/search-toolkit",
       "title": "Introducing Search Toolkit",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-05-28",
       "vendor": "mistral",
       "status": "pending",
@@ -993,7 +1113,7 @@
       "canonicalUrl": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
       "title": "FEATURED",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "meta",
       "status": "pending",
@@ -1007,14 +1127,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unreadable_article",
+        "reason": "未找到唯一文章标题与独立正文段落",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "9cf391606ae2490cb0762cfc2e4d9bd7773b22a43c410c4f822d60e75f31a955"
+      }
     },
     {
       "id": "candidate-57a59d53b52109678879",
       "canonicalUrl": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
       "title": "FEATURED",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "meta",
       "status": "pending",
@@ -1028,14 +1158,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unreadable_article",
+        "reason": "未找到唯一文章标题与独立正文段落",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "df5da24f9aa729100536e18cdf3308d4e99d4a7fb31a76de20ea74b9be82483c"
+      }
     },
     {
       "id": "candidate-c386882163e19d1fa728",
       "canonicalUrl": "https://ai.meta.com/blog/tribe-v2-brain-predictive-foundation-model",
       "title": "Learn More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "meta",
       "status": "pending",
@@ -1049,14 +1189,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unreadable_article",
+        "reason": "未找到唯一文章标题与独立正文段落",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "649fc11640f762c36f8127b11f5de77f5f04c377600eb65ed8f563d85cc39666"
+      }
     },
     {
       "id": "candidate-7888bfc6f367313b45c5",
       "canonicalUrl": "https://www.deepseek.com/en/news/v4-preview",
       "title": "NewsApril 24, 2026DeepSeek-V4 Preview: Entering the Era of Affordable Million-Token ContextDeepSeek-V4 Preview is officially live & open-sourced. Welcome to the era of cost-effective 1M context length.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1070,14 +1220,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unconfirmed_release",
+        "reason": "正文没有直接确认该模型已开放的明确语句",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "ab577ee26d53621094e41a981566efa5c6a794e40cda832abbf68c50d4f2aae3"
+      }
     },
     {
       "id": "candidate-bbee9ec228339bc687f5",
       "canonicalUrl": "https://www.deepseek.com/en/news/deepseek-v3-2",
       "title": "NewsDecember 1, 2025DeepSeek-V3.2: Pushing the Frontier of Open Large Language ModelsDeepSeek-V3.2 and V3.2-Speciale launch with world-leading reasoning, thinking in tool-use, and gold-medal performance in IMO, CMO, ICPC & IOI 2025.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1091,14 +1251,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unconfirmed_release",
+        "reason": "正文没有直接确认该模型已开放的明确语句",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "5e729e40cd5058e51b25a712af7a1aeb13402b22427f4bf9c202166985712e29"
+      }
     },
     {
       "id": "candidate-39f493c564b32fa20225",
       "canonicalUrl": "https://www.deepseek.com/en/news/v3-2-exp",
       "title": "NewsSeptember 29, 2025Introducing DeepSeek-V3.2-ExpDeepSeek-V3.2-Exp debuts DeepSeek Sparse Attention (DSA) for faster, more efficient training & inference on long context, with API prices cut by 50%+.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1112,14 +1282,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unconfirmed_release",
+        "reason": "正文没有直接确认该模型已开放的明确语句",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "dd602780f03907f4adfddf35a4aaab7d776626b183bf4eacfe3878debfbed5c1"
+      }
     },
     {
       "id": "candidate-a1467fd725285f60e9fd",
       "canonicalUrl": "https://www.deepseek.com/en/news/v3-1-terminus",
       "title": "NewsSeptember 22, 2025DeepSeek-V3.1 is now DeepSeek-V3.1-TerminusDeepSeek-V3.1-Terminus improves language consistency, reduces CN/EN mix-ups, and upgrades Code Agent & Search Agent performance.",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1140,7 +1320,7 @@
       "canonicalUrl": "https://www.deepseek.com/en/news/deepseek-v3-1",
       "title": "DeepSeek V3.1",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1161,7 +1341,7 @@
       "canonicalUrl": "https://www.deepseek.com/en/news/r1-0528",
       "title": "DeepSeek R1",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1182,7 +1362,7 @@
       "canonicalUrl": "https://www.deepseek.com/en/news/deepseek-v3",
       "title": "DeepSeek V3",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "deepseek",
       "status": "pending",
@@ -1203,7 +1383,7 @@
       "canonicalUrl": "https://qwenlm.github.io/blog/qwen3guard",
       "title": "qwen3guard",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "qwen",
       "status": "pending",
@@ -1217,14 +1397,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "4238df8816fdb428ed3dc19aa8d985613774e617b1abb985d2b8cd3d7aa2ff36"
+      }
     },
     {
       "id": "candidate-16ba0e86712a4f13ba8c",
       "canonicalUrl": "https://qwenlm.github.io/blog/qwen-image-edit",
       "title": "qwen-image-edit",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "qwen",
       "status": "pending",
@@ -1238,14 +1428,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "9bef101514968aaa8c6120951e30be1c9b29b60f5f069dad177c28c525c64b57"
+      }
     },
     {
       "id": "candidate-2c308d1299a47f0fd6c1",
       "canonicalUrl": "https://qwenlm.github.io/blog/qwen-image",
       "title": "qwen-image",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "qwen",
       "status": "pending",
@@ -1266,7 +1466,7 @@
       "canonicalUrl": "https://qwenlm.github.io/blog/qwen-mt",
       "title": "qwen-mt",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "qwen",
       "status": "pending",
@@ -1287,7 +1487,7 @@
       "canonicalUrl": "https://www.kimi.com/en/blog/kimi-k3",
       "title": "Kimi K3",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1301,14 +1501,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unconfirmed_date",
+        "reason": "缺少与该模型发布语句绑定的唯一有效日期，或官方日期冲突",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "6c9a88c8f6b78b4f1b5de114e9e82c2c53865b5f46d442e2e693edc454e204a4"
+      }
     },
     {
       "id": "candidate-e70390e22983a42d95bd",
       "canonicalUrl": "https://www.kimi.com/en/blog/kimi-k2-6",
       "title": "Kimi K2.6",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1322,14 +1532,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "unconfirmed_date",
+        "reason": "缺少与该模型发布语句绑定的唯一有效日期，或官方日期冲突",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "8774fdab381f7cf1a5954e27c86bf1c3031b16a25bf57c3de29c47dc57310e05"
+      }
     },
     {
       "id": "candidate-15a49a2fc36da252cd62",
       "canonicalUrl": "https://www.kimi.com/en/blog/kimi-k2-5",
       "title": "Kimi K2.5",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1350,7 +1570,7 @@
       "canonicalUrl": "https://www.kimi.com/en/blog/kimi-vendor-verifier",
       "title": "Kimi Vendor Verifier",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1371,7 +1591,7 @@
       "canonicalUrl": "https://www.kimi.com/en/blog/kimi-k2-thinking",
       "title": "Kimi K2 Thinking",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1392,7 +1612,7 @@
       "canonicalUrl": "https://www.kimi.com/en/blog/kimi-k2",
       "title": "Kimi K2",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1413,7 +1633,7 @@
       "canonicalUrl": "https://www.kimi.com/blog/kimi-k3",
       "title": "Kimi K3 技术博客",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1434,7 +1654,7 @@
       "canonicalUrl": "https://www.kimi.com/blog/kimi-k2-6",
       "title": "Kimi K2.6 技术博客",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1455,7 +1675,7 @@
       "canonicalUrl": "https://www.kimi.com/blog/kimi-k2-5",
       "title": "Kimi K2.5 技术博客",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "kimi",
       "status": "pending",
@@ -1476,10 +1696,10 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-m31f",
       "title": "MiniMax M3.1 Flash",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
-      "status": "pending",
+      "status": "published",
       "sources": [
         {
           "registryId": "minimax-blog",
@@ -1490,14 +1710,51 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": {
+        "mode": "automatic",
+        "by": "model-atlas-auto",
+        "at": "2026-10-22T12:42:01.005Z",
+        "candidateId": "candidate-b984a5c544e6313764dd",
+        "candidateRevision": "b6b35db60504cd773bb89a73dd4f3fffedabc0667c4f44119079cb203b1a6c44",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "ruleVersion": "official-release-v1",
+        "sourceId": "minimax-blog",
+        "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+        "contentHash": "d56dc7f236e9dd589dde5a33325d2de319ae2f868d3aea25de8bbe686527488d",
+        "documentHash": "8669a569630ba9a8e63c735342b6dba03870401c71e68135a375b075025b3f22",
+        "quotes": {
+          "modelName": "MiniMax M3.1 Flash",
+          "eventType": "Today, we officially roll out MiniMax M3.1 Flash .",
+          "eventDate": "2026-10-19T00:00:00.000Z"
+        },
+        "dateBasis": {
+          "type": "article_date_today",
+          "value": "2026-10-19",
+          "quote": "2026-10-19T00:00:00.000Z",
+          "field": "JSON-LD Article datePublished matched by headline"
+        },
+        "title": "MiniMax M3.1 Flash: Redefining Agent Performance and Cost",
+        "recordHash": "008bb81d7b2393f9dcbc04fa608902923d867d44fc498fc0fee00b7df9300976",
+        "action": "publish",
+        "recordId": "auto-e6f4ecf2d6f879605285",
+        "reason": "官网原文通过自动核验"
+      },
+      "autoReview": {
+        "status": "published",
+        "recordId": "auto-e6f4ecf2d6f879605285",
+        "reason": "官网原文通过自动核验",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "b6b35db60504cd773bb89a73dd4f3fffedabc0667c4f44119079cb203b1a6c44"
+      }
     },
     {
       "id": "candidate-643740d8b1d776507524",
       "canonicalUrl": "https://www.minimax.io/blog/minimax-h3",
       "title": "MiniMax H3",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1511,14 +1768,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "ambiguous_model",
+        "reason": "官网标题未明确唯一、完整且带版本的本厂商通用模型",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "117fd5de300514fdecdb658c369c28ede391f2abe7690c04f776902edf742690"
+      }
     },
     {
       "id": "candidate-e8346da5cb44c235fa05",
       "canonicalUrl": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
       "title": "MiniMax Music 3.0",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1539,7 +1806,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution",
       "title": "AIM32026-06-09MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary SearchIn the M3 release post, we reported the performance of the M3 model on two international mathematical olympiad benchmarks: IMO 2025 and USAMO 2026. With the MaxProof framework, M3 exceeded the human gold-medal threshold on both. This article further elaborates on our technical path toward advancing mathematical proof capabilities, including base model enhancement, verifier alignment, refinement ",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1560,7 +1827,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953",
       "title": "AIAgent2026-05-27MiniMax Agent Team: Built for Long-Running Tasks and Continuous EvolutionToday we are introducing the overall upgrade of MiniMax Agent. We have given the upgraded Agent a new name: Mavis — MiniMax as a Jarvis, your AI butler.Read More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1581,7 +1848,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/sparse-token-forgetting",
       "title": "AILLM2026-05-26Why Can't the MiniMax LLM Say \"Ma Jiaqi\"? Internal Investigation of Sparse Token ForgettingThe MiniMax M2 series has attracted widespread attention from the developer community. This article presents our internal investigation into the sparse token forgetting phenomenon.Read More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1602,7 +1869,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-m27",
       "title": "AILLM2026-03-18MiniMax M2.7: Early Echoes of Self-Evolution M2.7 is MiniMax's first model deeply participating in its own evolution, excelling at software engineering, professional work, and entertainment with native Agent Teams and self-evolving capabilities. Read More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1623,7 +1890,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-m25",
       "title": "M2.5Model Release2026-02-12MiniMax M2.5: Built for Real-World Productivity.MiniMax M2.5: Built for Real-World Productivity.Read More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1644,7 +1911,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-m2-her",
       "title": "AIRole-Play2026-01-27A Deep Dive into the MiniMax-M2-herWorlds to Dream, Stories to Live. How we built a Role-Play Agent for the production usage. This year marks our third year optimizing Role-Play in Talkie / Xingye. Three years is long enough for a proRead More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1665,7 +1932,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-m21",
       "title": "AICoding2025-12-23MiniMax M2.1: Significantly Enhanced Multi-Language Programming, Built for Real-World Complex TasksMiniMax M2.1 delivers industry-leading multi-language programming capabilities across Rust, Java, Go, C++, TypeScript and more, with enhanced mobile development, aesthetic web design, concise responses, and robust Agent framework generalization.Read More",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -1707,7 +1974,7 @@
       "canonicalUrl": "https://huggingface.co/blog/allenai/fairstress",
       "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -1721,7 +1988,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "24d52b1d90a4c3cc6a075ebdd57505bb9571bd6b3e4d394921dfb58044fec438"
+      }
     },
     {
       "id": "candidate-536f23cd94f139849c62",
@@ -1742,14 +2019,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "dea27cd23272e897d5c13cb88c6192afd654db5314e115e2e8d12609b12444f9"
+      }
     },
     {
       "id": "candidate-41fb25a47d12d204a957",
       "canonicalUrl": "https://huggingface.co/blog/anylanguagemodel-1-0",
       "title": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -1763,14 +2050,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "fa1680c4835a39e082eda3e3b6b51e77a710980493e9c5f9c3bc6106a1bc5a04"
+      }
     },
     {
       "id": "candidate-5c52b7d34becd1ccf770",
       "canonicalUrl": "https://huggingface.co/blog/hf-torchneuron",
       "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-19",
       "vendor": null,
       "status": "pending",
@@ -1784,14 +2081,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "508ad5664879ca04d9f2bd17a70b2b9bff1199526359b87457c4ee57c98b789d"
+      }
     },
     {
       "id": "candidate-c9a6184923cc1a5837b4",
       "canonicalUrl": "https://huggingface.co/blog/reflection-beam",
       "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-16",
       "vendor": null,
       "status": "pending",
@@ -1805,14 +2112,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "63bf50beb45f02db5ea134936160f06abdffc81b8432563fb3678abe054b2002"
+      }
     },
     {
       "id": "candidate-39052ad94a8a76cc68a2",
       "canonicalUrl": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
       "title": "Apertus 1.5 Release Notes",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-15",
       "vendor": null,
       "status": "pending",
@@ -1826,14 +2143,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c1e9afc0a07d738f101542aadb3f235cca79b3d2ad163d30d40193c4f3187952"
+      }
     },
     {
       "id": "candidate-ff0cf28c5d7530571030",
       "canonicalUrl": "https://huggingface.co/blog/meta-muse-spark-open",
       "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-15",
       "vendor": null,
       "status": "pending",
@@ -1847,14 +2174,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "19d83edfd7938a447e604f8c499b27143c7ebc009942b78cc77d72460c8325dd"
+      }
     },
     {
       "id": "candidate-ffd2818196374b7e8d98",
       "canonicalUrl": "https://huggingface.co/blog/building-with-ml-intern",
       "title": "The model that didn't exist, so you made it yourself",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-08",
       "vendor": null,
       "status": "pending",
@@ -1868,14 +2205,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "739326af5d171758d8a30fead458dc7979b044e553a9202229b32e617eb14b4d"
+      }
     },
     {
       "id": "candidate-16b7810afb00bdc03cf9",
       "canonicalUrl": "https://huggingface.co/blog/tiiuae/falcon-asr",
       "title": "Introducing Falcon ASR",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-07",
       "vendor": null,
       "status": "pending",
@@ -1889,14 +2236,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "403ae8f3385ded963943bdcf53c9ca8a25930b4b6503d6ab8823fb77f87d03cb"
+      }
     },
     {
       "id": "candidate-689d78c6e007ab8e2c4f",
       "canonicalUrl": "https://huggingface.co/blog/transformers-llama-cpp-quants",
       "title": "Transformers now runs llama.cpp quants",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-22",
       "vendor": null,
       "status": "pending",
@@ -1910,14 +2267,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e855860d37a2799ce1d0c1c3761a499c78f469becc49367fd65540c1d31e54b1"
+      }
     },
     {
       "id": "candidate-a139f80b159295ada71d",
       "canonicalUrl": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
       "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-03",
       "vendor": null,
       "status": "pending",
@@ -1931,14 +2298,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "84114c8f54db7dbb59281547886d05328fceaba8c9c23791fc9afd8641c2f307"
+      }
     },
     {
       "id": "candidate-b5500bc6503561c622e2",
       "canonicalUrl": "https://huggingface.co/blog/train-to-paint-with-code",
       "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-03",
       "vendor": null,
       "status": "pending",
@@ -1952,14 +2329,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "423fcff784be66dc9043a14f77e527b44db8e9faa530c12636b3aab3d2fffe36"
+      }
     },
     {
       "id": "candidate-c35b3ef79c92279b18ef",
       "canonicalUrl": "https://arxiv.org/abs/2610.28686",
       "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -1973,14 +2360,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c2cd3ae2e6ecda72ec7485e0b2dcd88434ba10c07d9620fd2dba3cdcdbd5b347"
+      }
     },
     {
       "id": "candidate-071ab93645637197f556",
       "canonicalUrl": "https://arxiv.org/abs/2610.28706",
       "title": "SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -1994,14 +2391,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "29e13e9dbf005addaf2fbe49684db2f91739d5003a57e62f5dfce03ac285f6be"
+      }
     },
     {
       "id": "candidate-74655899d2c02f414ae4",
       "canonicalUrl": "https://arxiv.org/abs/2610.28826",
       "title": "Decision language models as affordable and rapid alternatives to LLM judges of clinical generative AI",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2015,14 +2422,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "4882193e7616de2d7bc7f775cf48c68d94d2e04da2a2b8dcebfd3f41dc5893c0"
+      }
     },
     {
       "id": "candidate-87880261304ab6a6301d",
       "canonicalUrl": "https://arxiv.org/abs/2610.28855",
       "title": "Speedrunning Relational Foundation Model Pretraining",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2036,14 +2453,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "208c11ed32bf7dffa79c6a31c1fc6e7cffe476bd3734dc49b2cf18ae2ad226f0"
+      }
     },
     {
       "id": "candidate-9050b7c4e37f6fb72c62",
       "canonicalUrl": "https://arxiv.org/abs/2610.28875",
       "title": "To Manipulate or Not: Opinion Dynamics in LLM Interactions",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2057,14 +2484,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "ace8c78b3b14532807a751727ddb8aa3d8879055a8128c63e98d170aa5e915ee"
+      }
     },
     {
       "id": "candidate-ed9e613c992f87fccd4e",
       "canonicalUrl": "https://arxiv.org/abs/2610.28905",
       "title": "Hidden Messages Between Diffusion Language Model Agents: Causal Evidence for Latent Communication",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2078,14 +2515,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c1230b5a69d6a6513d99c3d13aaaf5ff966b14ef6dae3fd47fd26b1d60585ae8"
+      }
     },
     {
       "id": "candidate-f991937645caaaa57d90",
       "canonicalUrl": "https://arxiv.org/abs/2610.28909",
       "title": "DiffResearch: Accelerating Deep Research with Diffusion Language Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2099,14 +2546,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "b4f827d5b7c21d2f5d6609223959244090d1c0d21d87d6bf13506c56bddca900"
+      }
     },
     {
       "id": "candidate-4de5b7368a607f9e9ab0",
       "canonicalUrl": "https://arxiv.org/abs/2610.28945",
       "title": "Self-Improving Agents with World Model Predictive Paths",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2120,14 +2577,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "6ea541e9d8372a7dd098c758a19055e4aa1b6a4cf097bcb9f618ad1da984d4f1"
+      }
     },
     {
       "id": "candidate-6838e85e8517e0afdccf",
       "canonicalUrl": "https://arxiv.org/abs/2610.28982",
       "title": "Behavior Beyond Text: Evaluating Refusal Transfer Failure in LLM Agents",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2141,14 +2608,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "d47e69e4500c5fdf7ba79330fee4c1d0ea054475557e99f7d2c493172858efeb"
+      }
     },
     {
       "id": "candidate-4cd0d3a23be15a1e655e",
       "canonicalUrl": "https://arxiv.org/abs/2610.28987",
       "title": "PerMIT: Securing Persistent Memory for LLM Agents via Machine-Checked Integrity Theorems and Scalable Community Trust",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2162,14 +2639,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e877c73c3c6a1f1b3e28e00fcf35c3e89f66a0694eb0e80199d4c61339854f07"
+      }
     },
     {
       "id": "candidate-4db8131df544b503780f",
       "canonicalUrl": "https://arxiv.org/abs/2610.29023",
       "title": "Inheritance as an Admission Test for LLM Prompt Merge Operators",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2183,14 +2670,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "1de125bd3ba8fc020fa7bff2122cf97b734e58e3668c54ff7a07ca50afe5bbb4"
+      }
     },
     {
       "id": "candidate-cb8fedecbe8959e7e8ba",
       "canonicalUrl": "https://arxiv.org/abs/2610.29057",
       "title": "Does Every Instance Count Equally? Order Effects in LLM Multi-Instance Processing",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2204,14 +2701,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "3faca097adc4096b64fb60218591d715c9b2874b7b61d1c7e648fd44d92a4c53"
+      }
     },
     {
       "id": "candidate-3ef310cbc0f6a8c1b675",
       "canonicalUrl": "https://arxiv.org/abs/2610.28767",
       "title": "SkillEval: Learning Interpretable Ability Profiles of LLMs via Cognitive Diagnosis Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2225,14 +2732,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "f6c0c60c45d7a2f778198639242e102985a708d421b58e815b427c933b4c7a80"
+      }
     },
     {
       "id": "candidate-8dfa7ef84d604711d92a",
       "canonicalUrl": "https://arxiv.org/abs/2610.28772",
       "title": "Scaling Therapy Supervision: Assessing Psychotherapy Fidelity Using Large Language Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2246,14 +2763,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "8e5447c8cad1398274feca2bdc1706123fdc4113e9c0d3b84fcbba137813fc54"
+      }
     },
     {
       "id": "candidate-440cf8eaec9bd58c6c20",
       "canonicalUrl": "https://arxiv.org/abs/2610.28787",
       "title": "Is Anyone Enforcing the Cartel? What Reinforcement Learning Teaches LLM Agents in Markets",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2267,14 +2794,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "f5baece3130d6458338331fd0346c432afb64dfb5e9cadb446949f9a8a5b84f4"
+      }
     },
     {
       "id": "candidate-2bb631880a190817b46f",
       "canonicalUrl": "https://arxiv.org/abs/2610.28886",
       "title": "SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2288,14 +2825,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "f73da29c7eb808954598990bcb5dac573c3f7211399b48e32ec89f86b1770985"
+      }
     },
     {
       "id": "candidate-7c53a3aaa3728c4d7896",
       "canonicalUrl": "https://arxiv.org/abs/2610.28992",
       "title": "Language Impairment as a Lens onto Large Language Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2309,14 +2856,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "cb33fa995c4c3dc10c7d7a1ed889890a3a62e09df95c7621f8ad3ff5181eddb5"
+      }
     },
     {
       "id": "candidate-178c37e603121edb425b",
       "canonicalUrl": "https://arxiv.org/abs/2610.29052",
       "title": "Our Own Jev: Typed Decisions in One Forward Pass, from an In-House Judge to Open LoRA Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2330,14 +2887,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "5ad4e33f8850906c70288d029c8b0cb186d828ffc142c50a7723ee7eaec3db7d"
+      }
     },
     {
       "id": "candidate-eb230394cfa121baf486",
       "canonicalUrl": "https://arxiv.org/abs/2610.29136",
       "title": "GRAFT: Restoring the Missing Sampling Interface in Continuous Diffusion Language Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2351,14 +2918,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "bfa99116f0cb3035ab0d66f42c7c400bce013f2153e319aae45af445be045c0a"
+      }
     },
     {
       "id": "candidate-f923cda5e69f12fb2ab7",
       "canonicalUrl": "https://arxiv.org/abs/2610.29188",
       "title": "LTEM: LLM-Friendly Table-Enhanced Markdown for Table Understanding and Generation",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2372,14 +2949,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "cffee0faf066a0cbc332bfee1445cafb07c545a961f75cd60bbd68b4d7adbb12"
+      }
     },
     {
       "id": "candidate-c59632dfe807bfeabe32",
       "canonicalUrl": "https://arxiv.org/abs/2610.29225",
       "title": "Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2393,14 +2980,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "772d45b92b9a1207b23fd2de8a76d42ad111a5c3b57764171ba13fcbc3f83c56"
+      }
     },
     {
       "id": "candidate-9e28930f18588c91613d",
       "canonicalUrl": "https://arxiv.org/abs/2610.29255",
       "title": "Hierarchical Masked Diffusion Language Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2414,14 +3011,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e6103f19432625735ea51f350d94d98078555c84976a20900a7178edd6e0bc95"
+      }
     },
     {
       "id": "candidate-94cefc517d8f7a4514f6",
       "canonicalUrl": "https://arxiv.org/abs/2610.29318",
       "title": "Asking What a Director Sees Can Change What Vision-Language Models Choose",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2435,14 +3042,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "8f8dadbf995a4995b6c83ef1367ad599db569d1f01f6fdb525345b68ee076935"
+      }
     },
     {
       "id": "candidate-f01efea88781f50fac50",
       "canonicalUrl": "https://arxiv.org/abs/2610.29413",
       "title": "Beyond Small Talk: Modeling Disclosure Trajectories in Human-AI Conversation",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -2456,7 +3073,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "2b714c6a832f36c27044fdd513b9453e4c1aa1abfd3a3b1c44d5ed1c71e04425"
+      }
     },
     {
       "id": "candidate-532983178914e7154ea9",
@@ -2477,14 +3104,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "27f8cb18de977046432a445c0a932b002b705f1e5b2f2cabcad78d091336ab34"
+      }
     },
     {
       "id": "candidate-258d5ff776fa8f139d32",
       "canonicalUrl": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
       "title": "Anthropic takes on Muse with Claude Duet, its new AI agent",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2498,14 +3135,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "78697a937d39a55c7edc5a2096c75b612d0a463f0812b58939f84eff4cb847f7"
+      }
     },
     {
       "id": "candidate-b3bb7eb8417b3c05c751",
       "canonicalUrl": "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps",
       "title": "Conversational Gemini navigation comes to Apple CarPlay",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2519,14 +3166,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "6d883fc0f8b267fdf88cc6b5ebece1ac260921c4ea9f30d12da12dc97d29bc54"
+      }
     },
     {
       "id": "candidate-8eaa1a0c536053841d6f",
       "canonicalUrl": "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems",
       "title": "OpenAI says an AI agent lied about disabling its safety monitoring system",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2540,7 +3197,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e25a5f90fd3d1bfa7fbc6ca189fa3e54ba1e3b27457637933a8f775cc774428c"
+      }
     },
     {
       "id": "candidate-925e6a635cad1b6fed42",
@@ -2561,14 +3228,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "896e6fe7f6192af5960d4a87d6fbc4f2b42c75ef39d927aa0f83d54f50921912"
+      }
     },
     {
       "id": "candidate-e9fc027fe2ea965dad45",
       "canonicalUrl": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai",
       "title": "Recursive launches Flint, a laptop coding model it says was largely built by AI",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2582,14 +3259,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "a09d660ce693792b3319a4c1c4c520af319508c73e75cd2063c0e78ce0fa3e1f"
+      }
     },
     {
       "id": "candidate-65d1f116dfc064015180",
       "canonicalUrl": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet",
       "title": "PHP Armageddon: OpenAI, Google’s Wiz find ancient holes, panicking the internet",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2603,14 +3290,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "1901706276446096162953a42abadbf9f767270c3b8fcc2ed4eb40c72d3a56b7"
+      }
     },
     {
       "id": "candidate-e7b8ac319d53b4c93efe",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed",
       "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2624,14 +3321,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "dfa04a9e20285344a63a70b316c17040856b080bcee89dcf6fd90f3071add2c6"
+      }
     },
     {
       "id": "candidate-a59cc9499bb94a9a0ae0",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate",
       "title": "Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2645,14 +3352,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "9a03cfffb160c039c3b3a78e8235d3d5dfcfe56cf10f3d6a416eb95e5ffd881f"
+      }
     },
     {
       "id": "candidate-eacbe85de5f03673a4b6",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy",
       "title": "Anthropic’s cloud partnerships are getting messy",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2666,14 +3383,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "43fa6385a9f7a39946c9a94f621f71eef677dc3fc875ed5b1f8b157623746fd8"
+      }
     },
     {
       "id": "candidate-70cbed806b5b38bf6725",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business",
       "title": "OpenAI acquires startup Orchestra Bio⁠ to beef up its biotech business",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2687,14 +3414,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "cb650f6b04867bfbbe4269765b2db6e9109c168cc0ad2bf806d46c6ca62b11ed"
+      }
     },
     {
       "id": "candidate-281e944a65307ffe6dd0",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats",
       "title": "ChatGPT now lets you lock your chats",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2708,14 +3445,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "ab818d68f3792d63a69817231ed60dd15973c480c7a963254706a70e5468abcc"
+      }
     },
     {
       "id": "candidate-11c7e6dde0dc11c16510",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei",
       "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2729,14 +3476,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "fdd8678350c436650b48600b2224c0e90c059ef8c4ddbbedc3fc75dab430be28"
+      }
     },
     {
       "id": "candidate-bccd85bd7921db35887b",
       "canonicalUrl": "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language",
       "title": "Plants can speak using electricity, so this startup built an AI model to decipher their language",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2750,14 +3507,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "20d0e21e1eb333dceb800ac878ad7eba435ba60f115403e729af7ab5d6dca9fc"
+      }
     },
     {
       "id": "candidate-bf7b07d2d53b813f8b54",
       "canonicalUrl": "https://arstechnica.com/ai/2026/10/openais-latest-ai-models-are-coming-to-google-cloud-and-antigravity",
       "title": "OpenAI's latest AI models are coming to Google Cloud and Antigravity",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2771,14 +3538,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "65655502f909176f42c480e5625b98e6cb4f20020dc85ebe4bec699a3a4fdf8b"
+      }
     },
     {
       "id": "candidate-dea62ae9e4b0aaf32327",
       "canonicalUrl": "https://arstechnica.com/google/2026/10/geminis-personal-intelligence-is-coming-to-cars",
       "title": "Gemini's Personal Intelligence is coming to cars",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -2792,14 +3569,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "2112cb113924169c7bc455714271473b8c941eb9f9a7a37e7d2d398af73f64f3"
+      }
     },
     {
       "id": "candidate-8adbc6a2d3ed293efc6b",
       "canonicalUrl": "https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says",
       "title": "Accused OpenAI spy had folder called “Saudi Gov Docs,” FBI says",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-19",
       "vendor": null,
       "status": "pending",
@@ -2813,14 +3600,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "77b9377719af6ab9fa0683368ba47b8de0fc5ac2b0f465ae1c0d3c1e143874fa"
+      }
     },
     {
       "id": "candidate-3055ac5eec49bd6dea89",
       "canonicalUrl": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access",
       "title": "Anthropic gives outside AI watchdog “employee-like” access",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-18",
       "vendor": null,
       "status": "pending",
@@ -2834,14 +3631,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "41f481ceffbbf55e318e6689acf12795c0ee2cac489045de810a90007d73c291"
+      }
     },
     {
       "id": "candidate-5b95b356b53e30b5501b",
       "canonicalUrl": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites",
       "title": "OpenAI models hacked a crypto wallet and breached more websites",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-16",
       "vendor": null,
       "status": "pending",
@@ -2855,14 +3662,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "9ba053e1620e7c4fdff3638335834c32f4a757011a7284d6fdb35ccb857dc2d3"
+      }
     },
     {
       "id": "candidate-ff09edf0775022ca4432",
       "canonicalUrl": "https://arstechnica.com/tech-policy/2026/10/ftc-probes-if-openai-anthropic-security-incidents-harmed-americans-report-says",
       "title": "Report: FTC probes Anthropic, OpenAI after Trump dismissed AI fears as “hoax”",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-15",
       "vendor": null,
       "status": "pending",
@@ -2876,14 +3693,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "9003ee800ef274eb78fa0494d533b5e2f43fcbd484ddcbd5356e0512ff845b58"
+      }
     },
     {
       "id": "candidate-7581d8c596d581b57a65",
       "canonicalUrl": "https://arstechnica.com/gaming/2026/10/programming-is-hard-epic-games-leans-on-vibe-coding-for-its-new-launcher-app",
       "title": "Epic says its new vibe-coded Epic Games Launcher is faster than Steam",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-14",
       "vendor": null,
       "status": "pending",
@@ -2897,7 +3724,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "a7bfc975d97de3871e32a9cd2efcdf66dc769767ec6854bbddd9af5f3be98692"
+      }
     },
     {
       "id": "candidate-3d42f5bc85a72e6c5f67",
@@ -2918,7 +3755,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "d93c85440e5269ca1c807c9bef88391bcb5bbd6f67a344289edc4888fa323bb3"
+      }
     },
     {
       "id": "candidate-3c693ab3618439a470e8",
@@ -2939,7 +3786,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "41cb012e3d5dd0f2a33d6ce17683391fae8e144c7fd065c64f836d9333c30ccc"
+      }
     },
     {
       "id": "candidate-bf4128f6671092f16ea0",
@@ -2960,14 +3817,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "402d5c6677404220e58f8b4204727574dfafb3281d2ef4437708375635897651"
+      }
     },
     {
       "id": "candidate-d33145e4b0cfb916e5c1",
       "canonicalUrl": "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites",
       "title": "OpenAI's GPT-5.6 Sol and Google's Gemini 4 Argon found critical PHP flaw affecting millions of websites",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -2981,14 +3848,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "a82acc6f854acff424f361f403e7c1a40ca5317bf99f8428390f129cbb90cd53"
+      }
     },
     {
       "id": "candidate-1f65e4bb016378344f0b",
       "canonicalUrl": "https://the-decoder.com/google-cloud-now-offers-openai-models-alongside-gemini-and-claude-becoming-the-only-major-provider-with-all-three",
       "title": "Google Cloud now offers OpenAI models alongside Gemini and Claude, becoming the only major provider with all three",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3002,14 +3879,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "cc468fc01db7aabf59fb71be3cd06e9ffb4aab79f8f8d846d2085d28c6705d80"
+      }
     },
     {
       "id": "candidate-0bc8de5889ba0bd88693",
       "canonicalUrl": "https://the-decoder.com/deepmind-founder-hassabis-shortens-agi-timeline-from-five-to-two-to-three-years",
       "title": "Deepmind founder Hassabis shortens AGI timeline from five to two to three years",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3023,14 +3910,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "67d455a716882bee5c98249ff43aea5fd26430fa849715b75c5f63f519da12ed"
+      }
     },
     {
       "id": "candidate-0abd62eb8d18234e7dee",
       "canonicalUrl": "https://the-decoder.com/inceptions-mercury-3-diffusion-model-claims-to-beat-gpt-6-luna-and-claude-haiku-5-5-at-a-fraction-of-the-wait",
       "title": "Inception's Mercury 3 diffusion model claims to beat GPT-6 Luna and Claude Haiku 5.5 at a fraction of the wait",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3044,14 +3941,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "309580164ccf6710e1284249b29bbf62db3ac5226ecc86ebae1a3be5496ce433"
+      }
     },
     {
       "id": "candidate-8c27dabb6da19485e6a3",
       "canonicalUrl": "https://the-decoder.com/mistral-and-nvidia-want-to-speed-up-industrial-design-with-physics-ai",
       "title": "Mistral and Nvidia want to speed up industrial design with physics AI",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3065,14 +3972,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "91078829c455396e804adcec475657762e79254ff6e5d009e09ebe8f1396585d"
+      }
     },
     {
       "id": "candidate-ff98189fa2ef3bb0e5c7",
       "canonicalUrl": "https://the-decoder.com/china-protests-the-us-deepseek-ban-while-blocking-chatgpt-claude-and-gemini-at-home",
       "title": "China protests the US Deepseek ban while blocking ChatGPT, Claude, and Gemini at home",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3086,7 +4003,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "2cf5ae7f6c151b65625ddddcb40f11c46bd923f6e896c0d01a03e075be1634a6"
+      }
     },
     {
       "id": "candidate-d2895ceb6fcba3ff551e",
@@ -3107,7 +4034,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c52d669c5f2ebf6880bdb8659c1306c718bdc5e070b062cdedb3aad37490c5c0"
+      }
     },
     {
       "id": "candidate-5d0b0d7d04399c51eee1",
@@ -3128,7 +4065,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "bea12d15f81f1c1eb5d085cdede398a9e4daa1088f3e574513c1f37ca3a1ff25"
+      }
     },
     {
       "id": "candidate-f491f8d73d9bf9618433",
@@ -3149,14 +4096,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "127067186f62fed1a6bb9e7a9a6350f6a8d951364dbf569bd81d4bb9ea44bba0"
+      }
     },
     {
       "id": "candidate-de377fdb3304eb693b54",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/21/php-security-release",
       "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3170,14 +4127,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "349e3e68e577bfe2412e2c88d9f88ef2ce23a5326e9ba220bf3d65d8badd8450"
+      }
     },
     {
       "id": "candidate-768169fbc5579b7b35e2",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette",
       "title": "llm-tools-datasette 0.1.1",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-18",
       "vendor": null,
       "status": "pending",
@@ -3191,14 +4158,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "3442c5eb0a0f0df5b6114d33704efe630c75f6482894d3855c7599aa998fcb81"
+      }
     },
     {
       "id": "candidate-d221188525e699b5e6bb",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/18/llm-echo",
       "title": "llm-echo 0.5",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-18",
       "vendor": null,
       "status": "pending",
@@ -3212,14 +4189,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "29dc94ed3996a682418de5057450846b4445673909f0738d8ea44e836793aef2"
+      }
     },
     {
       "id": "candidate-e58311dcd1376969cb59",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors",
       "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-15",
       "vendor": null,
       "status": "pending",
@@ -3233,14 +4220,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "0ef8fadd572fbd444728afddd401fb67a321bc3b255a2d972f7d64a3cbf512da"
+      }
     },
     {
       "id": "candidate-7e289d45dfc4cd8f5fef",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic",
       "title": "Redesigning source control at Anthropic",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-13",
       "vendor": null,
       "status": "pending",
@@ -3254,14 +4251,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e0c8d9e39989267089165fafd11122da5382ec2a49900e4dfbc194065002f32c"
+      }
     },
     {
       "id": "candidate-6451d923eed6bbe644db",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/13/llm-gemini",
       "title": "llm-gemini 0.35",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-13",
       "vendor": null,
       "status": "pending",
@@ -3275,14 +4282,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "47f541ac1801b6cbf3725adec4db8cf19b69ace122823f60219169ed159a99df"
+      }
     },
     {
       "id": "candidate-5ca8d6f055cb2e9fa5fb",
       "canonicalUrl": "https://simonwillison.net/2026/Oct/12/llm-meta-ai",
       "title": "llm-meta-ai 0.2",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-12",
       "vendor": null,
       "status": "pending",
@@ -3296,7 +4313,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "453b3e1c4afa07f6fcdd7a1ca6a92fa7314eeff3c48d9286a6fe570603a4836c"
+      }
     },
     {
       "id": "candidate-e70ec63b125f4db8fa8f",
@@ -3317,7 +4344,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "f35345ef51e53aebab0c7966aa08fc879c5aa67899fe1337ead1b8a4994cd22b"
+      }
     },
     {
       "id": "candidate-e039e9ecdf0a0e8f6a18",
@@ -3338,7 +4375,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "2cb6abdb55da70361724202717028fa66761a6d2998441e7a8c3a9d2e7da2f2c"
+      }
     },
     {
       "id": "candidate-eac2b5a58a094803e570",
@@ -3359,7 +4406,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "020d384cd54c6c5b12cfa16905f34fc2b9f83c1f2b5ceedbfef99f8040fb07f3"
+      }
     },
     {
       "id": "candidate-cc90ec0bce0196116fe5",
@@ -3380,7 +4437,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "07b30c2daa4b80a11801c8a890bb663eb08459630c404d1d8d8c7198d3f1b8d2"
+      }
     },
     {
       "id": "candidate-aa53761640d8008a9e0f",
@@ -3401,7 +4468,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "4420d0224717557a249ce2be5c48a1d2f06258bc11ca1498b11fee6f938de252"
+      }
     },
     {
       "id": "candidate-783d75fc8051a82a5980",
@@ -3422,7 +4499,17 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "dc5dd70a5aa6fa2ec359727cadcbe161b61bbcee72328b59d321518cad6c1251"
+      }
     },
     {
       "id": "candidate-72ff200139eebd33f2f5",
@@ -3443,14 +4530,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "384b9267feb94f411e87f388438b1a13b10602b41d1e276f7bfd4c902d39211e"
+      }
     },
     {
       "id": "candidate-1cd487805b8193f0c7f2",
       "canonicalUrl": "https://www.latent.space/p/claude-mods",
       "title": "Claude Mods: Flipping the Harness Inside Out",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3464,14 +4561,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "8ccda0774fbd9f0695a27b373fbe7563ccde74fbb3b85ef8c1b08596d721a694"
+      }
     },
     {
       "id": "candidate-9c99dc597b92594a7b49",
       "canonicalUrl": "https://www.latent.space/p/ainews-deepseek-deepinfer-open-source",
       "title": "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -3485,14 +4592,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e89ed26401ba909db3e0b19793efad5210638c87f07e8b02db48c9a330888fed"
+      }
     },
     {
       "id": "candidate-247153705736c57d29c6",
       "canonicalUrl": "https://www.latent.space/p/crossing-the-threshold",
       "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-14",
       "vendor": null,
       "status": "pending",
@@ -3506,14 +4623,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "f6207fb73effca281cfd2398a18bb5b4ad2695b14104c1d05080e367f90dc820"
+      }
     },
     {
       "id": "candidate-43abc94dd1f0ca280d72",
       "canonicalUrl": "https://www.latent.space/p/ainews-ai-engineer-nyc-gemini-4-argon",
       "title": "[AINews] AI Engineer NYC: Gemini 4 Argon, Vals AI Benchmarks",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-14",
       "vendor": null,
       "status": "pending",
@@ -3527,14 +4654,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c0c0d16f2f689d97761153d78c6224743977bd678270bbcab97e9d8349a3cfb7"
+      }
     },
     {
       "id": "candidate-21096782dd6c13ae5deb",
       "canonicalUrl": "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder",
       "title": "[AINews] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-13",
       "vendor": null,
       "status": "pending",
@@ -3548,14 +4685,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "45b4ac257f23c3763f30cbfbf973ee25f5a86a0b73d30e440bf61dcf34a317f4"
+      }
     },
     {
       "id": "candidate-e71374164f2cb1add8d9",
       "canonicalUrl": "https://www.latent.space/p/claude-dynamic-workflows",
       "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents (Updated with video!)",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-12",
       "vendor": null,
       "status": "pending",
@@ -3569,14 +4716,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "1abd05e0e7fd097201dba26053087c5d459fae9592973363f75cffdf2521e5ba"
+      }
     },
     {
       "id": "candidate-2e1397672f85f38dce73",
       "canonicalUrl": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
       "title": "[AINews] TypeSafe/Jev at >$100M ARR, $7.5B valuation 3 weeks after launch",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-10",
       "vendor": null,
       "status": "pending",
@@ -3590,14 +4747,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "3dde4735bff0aa22702ca049f510d2a964a0257fe30300160bd7bc865ba225a3"
+      }
     },
     {
       "id": "candidate-68a694837125984e014d",
       "canonicalUrl": "https://www.latent.space/p/biohub-deepmind",
       "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet Kohli, Google DeepMind & Sal Candido, Biohub",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-10",
       "vendor": null,
       "status": "pending",
@@ -3611,14 +4778,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "81c3807f37ebc87fc4cba72ceedf4a884a7a5343cded8e36140b3ee24a3fae01"
+      }
     },
     {
       "id": "candidate-d100e7052f5d6239d808",
       "canonicalUrl": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health",
       "title": "Unlocking Earth AI’s planetary geospatial foundation models for global public health",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-06",
       "vendor": "google",
       "status": "pending",
@@ -3639,7 +4816,7 @@
       "canonicalUrl": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting",
       "title": "TimesFM-3: A zero-shot foundation model for multivariate forecasting",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-31",
       "vendor": "google",
       "status": "pending",
@@ -3660,7 +4837,7 @@
       "canonicalUrl": "https://research.google/blog/planetary-prediction-engine-automating-global-models-via-earth-ai",
       "title": "Planetary prediction engine: Automating global models via Earth AI",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-27",
       "vendor": "google",
       "status": "pending",
@@ -3681,7 +4858,7 @@
       "canonicalUrl": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring",
       "title": "GlucoFM: Foundation model for continuous glucose monitoring",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-26",
       "vendor": "google",
       "status": "pending",
@@ -3702,7 +4879,7 @@
       "canonicalUrl": "https://research.google/blog/how-mobility-gives-language-models-a-deeper-understanding-of-place",
       "title": "How mobility gives language models a deeper understanding of place",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-08-21",
       "vendor": "google",
       "status": "pending",
@@ -3723,7 +4900,7 @@
       "canonicalUrl": "https://research.google/blog/towards-demystifying-the-creativity-of-diffusion-models",
       "title": "Towards demystifying the creativity of diffusion models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-07-15",
       "vendor": "google",
       "status": "pending",
@@ -3744,7 +4921,7 @@
       "canonicalUrl": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data",
       "title": "Introducing TabFM: A zero-shot foundation model for tabular data",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-06-30",
       "vendor": "google",
       "status": "pending",
@@ -3765,7 +4942,7 @@
       "canonicalUrl": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction",
       "title": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-06-26",
       "vendor": "google",
       "status": "pending",
@@ -3786,7 +4963,7 @@
       "canonicalUrl": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag",
       "title": "Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-06-05",
       "vendor": "google",
       "status": "pending",
@@ -3807,7 +4984,7 @@
       "canonicalUrl": "https://research.google/blog/improving-the-academic-workflow-introducing-two-ai-agents-for-better-figures-and-peer-review",
       "title": "Improving the academic workflow: Introducing two AI agents for better figures and peer review",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-04-08",
       "vendor": "google",
       "status": "pending",
@@ -3828,7 +5005,7 @@
       "canonicalUrl": "https://research.google/blog/vibe-coding-xr-accelerating-ai-xr-prototyping-with-xr-blocks-and-gemini",
       "title": "Vibe Coding XR: Accelerating AI + XR prototyping with XR Blocks and Gemini",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-03-25",
       "vendor": "google",
       "status": "pending",
@@ -3849,7 +5026,7 @@
       "canonicalUrl": "https://research.google/blog/introducing-groundsource-turning-news-reports-into-data-with-gemini",
       "title": "Introducing Groundsource: Turning news reports into data with Gemini",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-03-12",
       "vendor": "google",
       "status": "pending",
@@ -3870,7 +5047,7 @@
       "canonicalUrl": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology",
       "title": "Introducing Quine: An AI research system designed for the complexity of biology",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-09-29",
       "vendor": null,
       "status": "pending",
@@ -3884,14 +5061,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "b3a9b29d6fc865ec881a0820c3e4100150d0a8cc5530a7ce418c64a74f1ada72"
+      }
     },
     {
       "id": "candidate-f22a63cc12b9be504480",
       "canonicalUrl": "https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence",
       "title": "Leading European Financial Services Organizations Embrace Open Models to Build Proprietary Intelligence",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -3905,14 +5092,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "111b4026f912ec89d7200aee0b18c6e2f0d890dba1ec6202805b4ebb3272efb9"
+      }
     },
     {
       "id": "candidate-36ee8fe7cab29f5dfbb8",
       "canonicalUrl": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models",
       "title": "NVIDIA Cosmos Opens New Tools to Train, Evaluate and Deploy World Models",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -3926,14 +5123,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "f4f411d608e611bdc572b3ed19eceb6394cb45d158898f311f42daf389c460dc"
+      }
     },
     {
       "id": "candidate-898575ccc2fcbfd5eae1",
       "canonicalUrl": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics",
       "title": "NVIDIA Transforms European Retail, From Digital Discovery to Physical Operations",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -3947,14 +5154,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "67575930919bd4d55c5c963a2af130978ccea14dbc68b8b737444a27d2cbe189"
+      }
     },
     {
       "id": "candidate-89a4e6d4e0e5bb84c8c4",
       "canonicalUrl": "https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction",
       "title": "Pioneers Across Europe Deploy NVIDIA Earth-2 Open Models to Power Real-World Weather and Climate Prediction",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -3968,14 +5185,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "09a250b15873e6d3755b4655bf3f75eae1a766a49dcee98445e4eeac59682ee2"
+      }
     },
     {
       "id": "candidate-bc7e4740517cd6fe1e42",
       "canonicalUrl": "https://blogs.nvidia.com/blog/european-public-sector-open-models",
       "title": "NVIDIA Open Models Power a New Wave of European Public Sector Projects",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-22",
       "vendor": null,
       "status": "pending",
@@ -3989,14 +5216,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "e37956483d17e9cccd57caaeb52810b90bc98316c63e9ded12fc7b2b0bc4addb"
+      }
     },
     {
       "id": "candidate-653d201e892868835018",
       "canonicalUrl": "https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure",
       "title": "Google Cloud and NVIDIA Announce General Availability of NVIDIA Vera Rubin Infrastructure",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -4010,14 +5247,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "8cfecf2042f802262025187ffda3e456c16290fe60eb80231a832f738adec34e"
+      }
     },
     {
       "id": "candidate-ab1f29b681fe09cc1e44",
       "canonicalUrl": "https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure",
       "title": "NVIDIA Confidential Computing Expands, Enabling Frontier Model Builders to Securely Scale Across Global Infrastructure",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -4031,14 +5278,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c43aec334959d4d6c8ebf5771d7a7feab2a54ba01e8cfd0062ba5345e98ad276"
+      }
     },
     {
       "id": "candidate-fe2b50db8dabc11e2302",
       "canonicalUrl": "https://blogs.nvidia.com/blog/open-models-europe-industry",
       "title": "NVIDIA Open Models Advance Europe’s Sovereign Intelligence Across Industries",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -4052,14 +5309,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "aa044d8125e22af2ebc00f7153a9c4859fbac1ebb7fd99a5dcbbf73c4238faac"
+      }
     },
     {
       "id": "candidate-b39131c17298f1111bc3",
       "canonicalUrl": "https://aws.amazon.com/blogs/machine-learning/train-qwen3-on-aws-trainium-with-torchtitan",
       "title": "Train Qwen3 on AWS Trainium with torchtitan",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-21",
       "vendor": null,
       "status": "pending",
@@ -4073,14 +5340,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "cf56c081a4c588ab8302519db8dc04a00aa457c1a35973624dc86fe73b2e172d"
+      }
     },
     {
       "id": "candidate-542ed0bcb34611a395d9",
       "canonicalUrl": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch",
       "title": "Beyond the KV cache: Training and serving i14’s Laplace 3B linear attention model on AWS Trainium2 with native PyTorch",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -4094,14 +5371,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "3485b780be987b4538b71599784cf11b5a88fe21a025514fc315491c35fbe716"
+      }
     },
     {
       "id": "candidate-ff755ea8b40f5ff77cc7",
       "canonicalUrl": "https://aws.amazon.com/blogs/machine-learning/fine-tuning-gpt-oss-20b-for-multilingual-reasoning-on-amazon-sagemaker-hyperpod",
       "title": "Fine-tuning GPT-OSS-20B for multilingual reasoning on Amazon SageMaker HyperPod",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -4115,14 +5402,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "a54cd05f19dd344f420c154aaa5cbc2ea55294e3528c1e3713b78f0d4786290b"
+      }
     },
     {
       "id": "candidate-b7839fa2149bfc643893",
       "canonicalUrl": "https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference",
       "title": "Access OpenAI GPT models on Amazon Bedrock from Canada with cross-Region inference",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-20",
       "vendor": null,
       "status": "pending",
@@ -4136,14 +5433,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "ce6a32114fa78e90ee38c5d64d1ec1ef756762bbc64388a13e8aaf7c5f0f10fc"
+      }
     },
     {
       "id": "candidate-6c2a7f9e70f3b163982b",
       "canonicalUrl": "https://aws.amazon.com/blogs/machine-learning/structured-outputs-for-anthropic-claude-models-on-amazon-bedrock",
       "title": "Structured outputs for Anthropic Claude models on Amazon Bedrock",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2026-10-19",
       "vendor": null,
       "status": "pending",
@@ -4157,14 +5464,24 @@
         }
       ],
       "suggestedKind": "unknown",
-      "review": null
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "3c876a235d0b1df54d62152f0c6e2ae78f39b8ddc160575e7d9a991379df1c68"
+      }
     },
     {
       "id": "candidate-b1525886b462dbfac876",
       "canonicalUrl": "https://www.anthropic.com/news/100k-context-windows",
       "title": "Introducing 100K context windows",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2023-05-11",
       "vendor": "anthropic",
       "status": "pending",
@@ -4185,7 +5502,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund",
       "title": "Anthropic partners with Menlo Ventures to launch Anthology Fund",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2024-07-17",
       "vendor": "anthropic",
       "status": "pending",
@@ -4206,7 +5523,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/model-safety-bug-bounty",
       "title": "Expanding our model safety bug bounty program",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2024-08-08",
       "vendor": "anthropic",
       "status": "pending",
@@ -4227,7 +5544,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/3-5-models-and-computer-use",
       "title": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2024-10-22",
       "vendor": "anthropic",
       "status": "pending",
@@ -4248,7 +5565,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/lyft-announcement",
       "title": "Lyft to bring Claude to more than 40 million riders and over 1 million drivers",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-02-06",
       "vendor": "anthropic",
       "status": "pending",
@@ -4269,7 +5586,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/mou-uk-government",
       "title": "Anthropic signs MOU with UK Government to explore how AI can transform UK public services",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-02-14",
       "vendor": "anthropic",
       "status": "pending",
@@ -4290,7 +5607,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/visible-extended-thinking",
       "title": "Claude’s extended thinking",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-02-24",
       "vendor": "anthropic",
       "status": "pending",
@@ -4311,7 +5628,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/introducing-anthropic-transparency-hub",
       "title": "Introducing Anthropic's Transparency Hub",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-02-27",
       "vendor": "anthropic",
       "status": "pending",
@@ -4332,7 +5649,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/anthropic-partners-with-u-s-national-labs-for-first-1-000-scientist-ai-jam",
       "title": "Anthropic partners with U.S. National Labs for first 1,000 Scientist AI Jam",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-02-28",
       "vendor": "anthropic",
       "status": "pending",
@@ -4353,7 +5670,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025",
       "title": "Detecting and countering malicious uses of Claude: March 2025",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-04-23",
       "vendor": "anthropic",
       "status": "pending",
@@ -4374,7 +5691,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/introducing-the-anthropic-economic-advisory-council",
       "title": "Introducing the Anthropic Economic Advisory Council",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-04-28",
       "vendor": "anthropic",
       "status": "pending",
@@ -4395,7 +5712,7 @@
       "canonicalUrl": "https://www.anthropic.com/news/ai-for-science-program",
       "title": "Introducing Anthropic's AI for Science Program",
       "discoveredAt": "2026-10-22T07:01:51.599Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": "2025-05-05",
       "vendor": "anthropic",
       "status": "pending",
@@ -4416,7 +5733,7 @@
       "canonicalUrl": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
       "title": "MiniMax CodeMini App2026-10-22Introducing MiniMax Code Mini AppA Mini App is a long-running application with a frontend and a backend. It installs as a plugin, calls and is called by the Agent, and keeps the Agent’s work on a page that stays live.Read More",
       "discoveredAt": "2026-10-22T07:16:27.024Z",
-      "lastSeenAt": "2026-10-22T07:16:27.024Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
       "publishedAt": null,
       "vendor": "minimax",
       "status": "pending",
@@ -4431,6 +5748,192 @@
       ],
       "suggestedKind": "unknown",
       "review": null
+    },
+    {
+      "id": "candidate-0e5fad3ca5f8a881acf7",
+      "canonicalUrl": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "title": "Ensemble forecasting with IBM Granite time-series models",
+      "discoveredAt": "2026-10-22T12:41:57.213Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
+      "publishedAt": "2026-10-22",
+      "vendor": null,
+      "status": "pending",
+      "sources": [
+        {
+          "registryId": "huggingface-blog",
+          "name": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+          "sourceType": "aggregator",
+          "feedUrl": "https://huggingface.co/blog/feed.xml"
+        }
+      ],
+      "suggestedKind": "unknown",
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "2a4df33edb19c80721f843bbd9f170eb9bad6b97b9a4a9f479fab9d1996b6b91"
+      }
+    },
+    {
+      "id": "candidate-f2ef808e610cb1b89c93",
+      "canonicalUrl": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom",
+      "title": "Claude did not invent scorpion antivenom",
+      "discoveredAt": "2026-10-22T12:41:57.213Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
+      "publishedAt": "2026-10-22",
+      "vendor": null,
+      "status": "pending",
+      "sources": [
+        {
+          "registryId": "media-verge-ai",
+          "name": "The Verge · AI",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom",
+          "sourceType": "media",
+          "feedUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+        }
+      ],
+      "suggestedKind": "unknown",
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "c9bc8db6654f7465510af5a94922a9c68fb00d520f2021df18cff27e14a17f68"
+      }
+    },
+    {
+      "id": "candidate-c03b0011bc51080db07f",
+      "canonicalUrl": "https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks",
+      "title": "An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks",
+      "discoveredAt": "2026-10-22T12:41:57.213Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
+      "publishedAt": "2026-10-22",
+      "vendor": null,
+      "status": "pending",
+      "sources": [
+        {
+          "registryId": "media-the-decoder",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks",
+          "sourceType": "media",
+          "feedUrl": "https://the-decoder.com/feed/"
+        }
+      ],
+      "suggestedKind": "unknown",
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "ddefab062ed6fd3e0c5e33058f2f201ada2765e67ce9eef9f67b823c796aa90b"
+      }
+    },
+    {
+      "id": "candidate-37719ab40890fac2a965",
+      "canonicalUrl": "https://the-decoder.com/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans-months",
+      "title": "OpenAI agents analyze mouse brain data in 32 minutes, a job that would take humans months",
+      "discoveredAt": "2026-10-22T12:41:57.213Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
+      "publishedAt": "2026-10-22",
+      "vendor": null,
+      "status": "pending",
+      "sources": [
+        {
+          "registryId": "media-the-decoder",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans-months",
+          "sourceType": "media",
+          "feedUrl": "https://the-decoder.com/feed/"
+        }
+      ],
+      "suggestedKind": "unknown",
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "a559b2b4adbd1bef4fc1e85926d4435d56bcdf5c5f3098ff147414889946dbe8"
+      }
+    },
+    {
+      "id": "candidate-feaddedae556a56def97",
+      "canonicalUrl": "https://the-decoder.com/anthropic-takes-on-grok-bot-metas-muse-and-openais-dots-with-its-always-on-agent-claude-duet",
+      "title": "Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent \"Claude Duet\"",
+      "discoveredAt": "2026-10-22T12:41:57.213Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
+      "publishedAt": "2026-10-22",
+      "vendor": null,
+      "status": "pending",
+      "sources": [
+        {
+          "registryId": "media-the-decoder",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/anthropic-takes-on-grok-bot-metas-muse-and-openais-dots-with-its-always-on-agent-claude-duet",
+          "sourceType": "media",
+          "feedUrl": "https://the-decoder.com/feed/"
+        }
+      ],
+      "suggestedKind": "unknown",
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "2a6067523ccd73cdd5802e58d09ffbcca3646a5833f2ca604923f1c4afecb7ae"
+      }
+    },
+    {
+      "id": "candidate-4c49390f8994fee2de1e",
+      "canonicalUrl": "https://www.latent.space/p/ainews-openais-patch-the-planet-program",
+      "title": "[AINews] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months",
+      "discoveredAt": "2026-10-22T12:41:57.213Z",
+      "lastSeenAt": "2026-10-22T12:41:57.213Z",
+      "publishedAt": "2026-10-22",
+      "vendor": null,
+      "status": "pending",
+      "sources": [
+        {
+          "registryId": "commentary-latent-space",
+          "name": "Latent Space",
+          "url": "https://www.latent.space/p/ainews-openais-patch-the-planet-program",
+          "sourceType": "aggregator",
+          "feedUrl": "https://www.latent.space/feed"
+        }
+      ],
+      "suggestedKind": "unknown",
+      "review": null,
+      "autoReview": {
+        "status": "needs_review",
+        "code": "manual_source",
+        "reason": "非可自动核验的所属厂商官网来源，需人工核对",
+        "retryAfter": "2026-10-23T12:42:01.005Z",
+        "checkedAt": "2026-10-22T12:42:01.005Z",
+        "ruleVersion": "official-release-v1",
+        "policyHash": "ac06734098e74a3b6fa56fd078e0f73ccec9d0ff10168e4b1affc901a2002c5e",
+        "candidateRevision": "23b17a2936fbf80bb85259b26ae493a4624b714fabf205b83af78b2e6dfc993f"
+      }
     }
   ],
   "runs": [
@@ -5685,6 +7188,269 @@
           "discovered": 20,
           "filtered": 12,
           "collected": 8
+        },
+        {
+          "id": "research-bair",
+          "status": "empty",
+          "httpStatus": 200,
+          "discovered": 0,
+          "filtered": 0,
+          "reason": "no_article_entries",
+          "collected": 0
+        },
+        {
+          "id": "google-research",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 100,
+          "filtered": 82,
+          "collected": 12
+        },
+        {
+          "id": "ms-research",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 10,
+          "filtered": 9,
+          "collected": 1
+        },
+        {
+          "id": "nvidia-blog",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 18,
+          "filtered": 10,
+          "collected": 8
+        },
+        {
+          "id": "aws-ml-blog",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 20,
+          "filtered": 15,
+          "collected": 5
+        },
+        {
+          "id": "anthropic-community-mirror",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 82,
+          "filtered": 29,
+          "collected": 12
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-10-22T12:41:57.213Z",
+      "added": 6,
+      "merged": 194,
+      "skippedExisting": 5,
+      "filtered": 1902,
+      "failed": 3,
+      "empty": 3,
+      "sources": [
+        {
+          "id": "openai-news",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 1312,
+          "filtered": 604,
+          "collected": 12
+        },
+        {
+          "id": "anthropic-news",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 25,
+          "filtered": 16,
+          "collected": 9
+        },
+        {
+          "id": "google-keyword-ai",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 20,
+          "filtered": 16,
+          "collected": 4
+        },
+        {
+          "id": "google-deepmind",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 100,
+          "filtered": 46,
+          "collected": 12
+        },
+        {
+          "id": "mistral-news",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 92,
+          "filtered": 37,
+          "collected": 12
+        },
+        {
+          "id": "meta-ai-blog",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 10,
+          "filtered": 6,
+          "collected": 4
+        },
+        {
+          "id": "xai-news",
+          "status": "skipped",
+          "reason": "not_collectable",
+          "filtered": 0,
+          "collected": 0
+        },
+        {
+          "id": "deepseek-news",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 8,
+          "filtered": 0,
+          "collected": 8
+        },
+        {
+          "id": "deepseek-api-docs-news",
+          "status": "empty",
+          "httpStatus": 200,
+          "discovered": 1,
+          "filtered": 1,
+          "reason": "no_relevant_candidates",
+          "collected": 0
+        },
+        {
+          "id": "qwen-blog",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 5,
+          "filtered": 1,
+          "collected": 4
+        },
+        {
+          "id": "kimi-news",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 15,
+          "filtered": 6,
+          "collected": 9
+        },
+        {
+          "id": "glm-release-notes",
+          "status": "empty",
+          "httpStatus": 200,
+          "discovered": 0,
+          "filtered": 0,
+          "reason": "single_page_changelog",
+          "embeddedEntries": 8,
+          "note": "日期仅为同页章节；没有独立文章 URL，需另行设计条目级版本跟踪。",
+          "collected": 0
+        },
+        {
+          "id": "minimax-blog",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 14,
+          "filtered": 1,
+          "collected": 12
+        },
+        {
+          "id": "huggingface-blog",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 888,
+          "filtered": 546,
+          "collected": 12
+        },
+        {
+          "id": "arxiv-cs-ai",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 370,
+          "filtered": 261,
+          "collected": 12
+        },
+        {
+          "id": "arxiv-cs-cl",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 221,
+          "filtered": 151,
+          "collected": 12
+        },
+        {
+          "id": "github-blog-ai-ml",
+          "status": "failed",
+          "httpStatus": null,
+          "error": "unsafe_dns: non-public DNS address",
+          "filtered": 0,
+          "collected": 0
+        },
+        {
+          "id": "media-verge-ai",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 10,
+          "filtered": 6,
+          "collected": 4
+        },
+        {
+          "id": "media-techcrunch-ai",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 20,
+          "filtered": 11,
+          "collected": 9
+        },
+        {
+          "id": "media-ars-ai",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 20,
+          "filtered": 13,
+          "collected": 7
+        },
+        {
+          "id": "media-mit-tr-ai",
+          "status": "failed",
+          "httpStatus": null,
+          "error": "unsafe_dns: non-public DNS address",
+          "filtered": 0,
+          "collected": 0
+        },
+        {
+          "id": "media-the-decoder",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 10,
+          "filtered": 1,
+          "collected": 9
+        },
+        {
+          "id": "commentary-simonw",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 30,
+          "filtered": 23,
+          "collected": 7
+        },
+        {
+          "id": "commentary-import-ai",
+          "status": "failed",
+          "httpStatus": 403,
+          "error": "HTTP 403",
+          "filtered": 0,
+          "collected": 0
+        },
+        {
+          "id": "commentary-latent-space",
+          "status": "ok",
+          "httpStatus": 200,
+          "discovered": 20,
+          "filtered": 11,
+          "collected": 9
         },
         {
           "id": "research-bair",
