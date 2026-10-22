@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: atlas-data-write
   queue: max
@@ -24,15 +25,22 @@ jobs:
       - run: npm test
       - id: collect
         run: npm run collect
-      - name: 保存待审核队列
+      - id: auto
+        name: 核验官网已发布模型
+        run: npm run auto-publish
+      - name: 保存采集与核验结果
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add review/queue.json
+          git add review/queue.json public/data/atlas.json
           if ! git diff --cached --quiet; then
-            git commit -m 'chore: collect pending model candidates'
+            git commit -m 'data: collect candidates and verify official releases'
             git push origin HEAD:main
           fi
+      - name: 发布新内容或补发上次未成功的部署
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/ensure-deployment.mjs
       - name: 所有入口均不可用时报告失败
         if: steps.collect.outputs.outage == 'true'
         run: exit 1

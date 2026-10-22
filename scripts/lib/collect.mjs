@@ -443,7 +443,6 @@ async function pooled(sources, fn) {
 function atlasUrls(atlas) {
   const sources = [
     ...(atlas?.events || []).flatMap((event) => [event, ...(event.extraSources || []), ...(event.sources || [])]),
-    ...(atlas?.forecasts || []).flatMap((forecast) => forecast.sources || []),
   ];
   return new Set(sources.map((source) => canonicalize(source.url)).filter(Boolean));
 }

@@ -1,6 +1,7 @@
 // 数据校验：任何一条不通过都会让 CI 失败，阻止部署
 import fs from 'node:fs';
 import { recordFingerprint, sourceFor } from './lib/review.mjs';
+import { validateAutomaticReceipt } from './lib/auto-publish.mjs';
 
 const read = (p) => JSON.parse(fs.readFileSync(new URL(`../public/data/${p}`, import.meta.url), 'utf8'));
 const atlas = process.env.ATLAS_FILE ? JSON.parse(fs.readFileSync(process.env.ATLAS_FILE, 'utf8')) : read('atlas.json');
@@ -46,12 +47,14 @@ const checkSource = (where, s, { requireType = true } = {}) => {
 
 const watchIds = new Set(watch.accounts.map((a) => a.id));
 
-// New pipeline records remain bound to the exact content the reviewer approved.
+// Pipeline records remain bound to the exact facts verified by either review route.
 for (const record of [...atlas.events, ...atlas.forecasts]) {
   const review = record.pipelineReview;
   if (!review) continue; // Existing manually maintained records retain their original audits.
-  if (review.recordHash !== recordFingerprint(record)) err(record.id, '记录内容与人工审核版本不一致');
+  if (review.recordHash !== recordFingerprint(record)) err(record.id, '记录内容与核验版本不一致');
   try {
+    if (review.mode === 'automatic' && atlas.forecasts.includes(record)) throw new Error('未来预测不能由自动发布通道放行');
+    validateAutomaticReceipt(record, registry);
     const s = sourceFor(registry, review.sourceId, review.sourceUrl);
     if (s.sourceType === 'official' && s.vendor !== record.vendor) err(record.id, '官方来源所属厂商不一致');
   } catch (error) { err(record.id, error.message); }

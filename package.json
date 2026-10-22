@@ -10,6 +10,7 @@
     "check-links": "node scripts/check-links.mjs",
     "test": "node --test tests/*.test.mjs",
     "collect": "node scripts/collect.mjs",
+    "auto-publish": "node scripts/auto-publish.mjs",
     "review": "node scripts/review-server.mjs",
     "review:apply": "node scripts/review.mjs"
   },

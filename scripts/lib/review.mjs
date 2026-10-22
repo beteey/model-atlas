@@ -1,8 +1,8 @@
 import { createHash } from 'node:crypto';
 
 export const hash = value => createHash('sha256').update(typeof value === 'string' ? value : JSON.stringify(value)).digest('hex');
-export const candidateRevision = c => hash({ id: c.id, url: c.canonicalUrl, title: c.title, sources: c.sources });
-export const policyHash = r => hash(r.sources.map(s => ({ id: s.id, vendor: s.vendor, sourceType: s.sourceType, evidencePrefixes: s.evidencePrefixes })));
+export const candidateRevision = c => hash({ id: c.id, url: c.canonicalUrl, title: c.title, vendor: c.vendor || null, sources: c.sources });
+export const policyHash = r => hash({ version: r.policyVersion || 1, sources: r.sources.map(s => ({ id: s.id, vendor: s.vendor, sourceType: s.sourceType, evidencePrefixes: s.evidencePrefixes, autoPublish: s.autoPublish || null })) });
 export const confirmationHash = d => hash({ candidateId: d.candidateId, candidateRevision: d.candidateRevision, policyHash: d.policyHash, record: d.record, evidence: d.evidence, reason: d.reason });
 export function recordFingerprint(record) {
   const { pipelineReview, archiveUrl, archivedAt, ...facts } = record;
@@ -34,7 +34,8 @@ export function sourceFor(registry, id, url) {
   if (u.protocol !== 'https:' || u.username || u.password || u.port && u.port !== '443') fail('来源必须是无凭据的 HTTPS 原文');
   if (!s || !s.evidencePrefixes?.some(prefix => {
     const p = new URL(prefix);
-    return u.origin === p.origin && u.pathname.startsWith(p.pathname);
+    const path = p.pathname.replace(/\/+$/, '');
+    return u.origin === p.origin && (u.pathname === path || u.pathname.startsWith(`${path}/`));
   })) fail('来源不在可核验的原文范围内；转载入口只能发现线索，请补充官网或媒体原文');
   return s;
 }
@@ -44,7 +45,7 @@ export function applyDecision({ queue, atlas, registry, decision, evidence, acto
   const q = structuredClone(queue), a = structuredClone(atlas), d = decision;
   const c = q.candidates.find(x => x.id === d.candidateId);
   if (!c) fail('候选不存在');
-  if (['published', 'rejected'].includes(c.status)) fail('该候选已经处理，不可重复发布');
+  if (['published', 'rejected', 'duplicate'].includes(c.status)) fail('该候选已经处理，不可重复发布');
   if (d.candidateRevision !== candidateRevision(c)) fail('候选内容已变化，请重新审核');
   const at = now.toISOString(), date = today(now);
   if (['reject', 'defer'].includes(d.action)) {
@@ -78,7 +79,7 @@ export function applyDecision({ queue, atlas, registry, decision, evidence, acto
   if (!normalize(e.quotes.modelName).toLowerCase().includes(normalize(r.name).toLowerCase())) fail('模型名称必须与原文摘录一致');
   if (source.sourceType === 'official' && source.vendor !== r.vendor) fail('官方原文所属厂商与模型不一致');
   const method = '审核人阅读原文并逐项摘录；发布前再次读取正文比对 SHA-256';
-  const receipt = { candidateId: c.id, by: actor, at, decisionHash: hash(d), contentHash: e.contentHash, policyHash: d.policyHash, sourceId: source.id, quotes: e.quotes, sourceUrl: e.url };
+  const receipt = { mode: 'manual', candidateId: c.id, by: actor, at, decisionHash: hash(d), contentHash: e.contentHash, policyHash: d.policyHash, sourceId: source.id, quotes: e.quotes, sourceUrl: e.url };
   const events = ['首次宣布', '预览开放', 'API 上线', '正式发布', '权重开放', '论文公开'];
   let record;
   if (r.type === 'event') {

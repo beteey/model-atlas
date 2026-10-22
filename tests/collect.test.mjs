@@ -80,11 +80,12 @@ test('does not mutate inputs or reset reviewed/rejected candidates on rediscover
   assert.equal(c.discoveredAt, before.candidates[0].discoveredAt);
 });
 
-test('skips all atlas primary/extra/forecast source URLs after normalization', async () => {
+test('skips published history URLs but keeps forecast URLs eligible for factual verification', async () => {
   const atlas = { events: [{ url: 'https://example.com/a', extraSources: [{ url: 'https://example.com/b?utm_campaign=x' }] }], forecasts: [{ sources: [{ url: 'https://example.com/c#x' }] }] };
   const { queue, report } = await run([source()], async () => response(rss(['a/', 'b', 'c', 'd'].map((p) => item(`https://example.com/${p}`)).join(''))), { atlas });
-  assert.deepEqual(queue.candidates.map((c) => c.canonicalUrl), ['https://example.com/d']);
-  assert.equal(report.skippedExisting, 3);
+  assert.deepEqual(queue.candidates.map((c) => c.canonicalUrl), ['https://example.com/c', 'https://example.com/d']);
+  assert.equal(report.skippedExisting, 2);
+  assert.deepEqual(atlas.forecasts, [{ sources: [{ url: 'https://example.com/c#x' }] }]);
 });
 
 test('web lists require same origin + explicit path prefix, ignore assets/navigation/list page', async () => {

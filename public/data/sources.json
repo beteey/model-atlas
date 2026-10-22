@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-22",
-  "说明": "本站自动收料时盯哪里。优先级：rss > web_list > 暂缓。抓到的只是候选，必须经过三项检查后才写入 atlas.json。",
+  "说明": "官网明确已发布的模型经原文规则核验后自动收录；未来预测、非官方和不确定信息进入人工审核。",
   "kinds": {
     "rss": "对方提供订阅源，最稳",
     "web_list": "没有订阅源，去新闻/博客列表页抠链接；页面必须在不跑 JS 时就带文章链接",
@@ -22,7 +22,10 @@
       "evidencePrefixes": [
         "https://openai.com/index/",
         "https://openai.com/news/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "anthropic-news",
@@ -40,7 +43,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://www.anthropic.com/news/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "google-keyword-ai",
@@ -53,7 +59,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://blog.google/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "google-deepmind",
@@ -66,7 +75,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://deepmind.google/blog/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "mistral-news",
@@ -79,7 +91,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://mistral.ai/news/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "meta-ai-blog",
@@ -97,7 +112,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://ai.meta.com/blog/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "xai-news",
@@ -110,7 +128,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://x.ai/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "deepseek-news",
@@ -130,7 +151,10 @@
       "evidencePrefixes": [
         "https://www.deepseek.com/en/news/",
         "https://www.deepseek.com/news/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "deepseek-api-docs-news",
@@ -148,7 +172,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://api-docs.deepseek.com/news/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "qwen-blog",
@@ -166,7 +193,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://qwenlm.github.io/blog/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "kimi-news",
@@ -186,7 +216,10 @@
       "evidencePrefixes": [
         "https://www.kimi.com/en/blog/",
         "https://www.kimi.com/blog/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "glm-release-notes",
@@ -204,7 +237,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://docs.z.ai/release-notes/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "minimax-blog",
@@ -222,7 +258,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://www.minimax.io/blog/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "huggingface-blog",
@@ -392,7 +431,10 @@
       "sourceType": "official",
       "evidencePrefixes": [
         "https://research.google/blog/"
-      ]
+      ],
+      "autoPublish": {
+        "enabled": true
+      }
     },
     {
       "id": "ms-research",
@@ -461,5 +503,5 @@
   },
   "lastProbeAt": "2026-10-22T06:08:33.202Z",
   "probeNote": "礼貌探测（UA 标明身份、限并发、遇 403 不绕过）。完整原始结果见 tmp/source-probe-report.json。",
-  "policyVersion": 1
+  "policyVersion": 2
 }

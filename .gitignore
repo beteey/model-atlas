@@ -6,3 +6,4 @@ body.md
 tmp/
 review/*.tmp
 review/atlas-draft.json
+review/atlas-auto-draft.json

@@ -30,8 +30,8 @@ function choose(c) {
   $('empty').classList.add('hidden'); $('detail').classList.remove('hidden');
   $('title').textContent = c.title; $('original').href = c.canonicalUrl;
   $('discovery').textContent = `${c.sources.map(s => s.name).join(' · ')} · 发现于 ${c.discoveredAt?.slice(0, 10) || '未知'}`;
-  $('processed').textContent = c.review ? `${c.review.by} · ${c.review.at} · ${c.review.reason || c.review.action}` : '';
-  $('form').classList.toggle('hidden', ['published', 'rejected'].includes(c.status));
+  $('processed').textContent = c.review ? `${c.review.mode === 'automatic' ? '自动核验' : c.review.by} · ${c.review.at} · ${c.review.reason || c.review.action}` : c.autoReview?.reason || '';
+  $('form').classList.toggle('hidden', ['published', 'rejected', 'duplicate'].includes(c.status));
   $('url').value = c.canonicalUrl;
   const source = state.registry.sources.find(s => c.sources.some(x => x.registryId === s.id) && s.evidencePrefixes?.length);
   $('source').value = source?.id || '';
