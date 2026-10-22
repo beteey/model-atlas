@@ -1,0 +1,465 @@
+{
+  "checkedAt": "2026-10-22",
+  "说明": "本站自动收料时盯哪里。优先级：rss > web_list > 暂缓。抓到的只是候选，必须经过三项检查后才写入 atlas.json。",
+  "kinds": {
+    "rss": "对方提供订阅源，最稳",
+    "web_list": "没有订阅源，去新闻/博客列表页抠链接；页面必须在不跑 JS 时就带文章链接",
+    "json_list": "对方有 JSON 接口（如更新日志 API）",
+    "x": "X 账号，需要接口或人工贴原帖，不爬网页",
+    "manual": "只靠人工收录，不做自动抓取",
+    "deferred": "目前抓不到或成本过高，先放着"
+  },
+  "sources": [
+    {
+      "id": "openai-news",
+      "vendor": "openai",
+      "name": "OpenAI News",
+      "kind": "rss",
+      "url": "https://openai.com/news/rss.xml",
+      "status": "ready",
+      "note": "官方 RSS。首轮偶发网络失败，复测 HTTP 200 且可解析条目。",
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://openai.com/index/",
+        "https://openai.com/news/"
+      ]
+    },
+    {
+      "id": "anthropic-news",
+      "vendor": "anthropic",
+      "name": "Anthropic News",
+      "kind": "web_list",
+      "url": "https://www.anthropic.com/news",
+      "status": "ready",
+      "note": "无官方 RSS。列表页 HTML 可抠到文章链接。社区另有图灵研究所镜像 feed（非官方）。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://www.anthropic.com/news/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://www.anthropic.com/news/"
+      ]
+    },
+    {
+      "id": "google-keyword-ai",
+      "vendor": "google",
+      "name": "Google The Keyword · AI",
+      "kind": "rss",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+      "status": "ready",
+      "note": "官方 RSS，探测通过。",
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://blog.google/"
+      ]
+    },
+    {
+      "id": "google-deepmind",
+      "vendor": "google",
+      "name": "Google DeepMind Blog",
+      "kind": "rss",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "status": "ready",
+      "note": "官方 RSS，探测通过。",
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://deepmind.google/blog/"
+      ]
+    },
+    {
+      "id": "mistral-news",
+      "vendor": "mistral",
+      "name": "Mistral News",
+      "kind": "rss",
+      "url": "https://mistral.ai/news/rss",
+      "status": "ready",
+      "note": "官方 RSS，探测通过。",
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://mistral.ai/news/"
+      ]
+    },
+    {
+      "id": "meta-ai-blog",
+      "vendor": "meta",
+      "name": "Meta AI Blog",
+      "kind": "web_list",
+      "url": "https://ai.meta.com/blog/",
+      "status": "ready",
+      "note": "无官方 RSS（/blog/rss/ 返回 404）。列表页 HTML 可抠。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://ai.meta.com/blog/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://ai.meta.com/blog/"
+      ]
+    },
+    {
+      "id": "xai-news",
+      "vendor": "xai",
+      "name": "xAI News",
+      "kind": "deferred",
+      "url": "https://x.ai/news",
+      "status": "blocked",
+      "note": "列表页 HTTP 403；猜测的 /news/rss.xml 为 404。暂缓，不绕过。",
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://x.ai/"
+      ]
+    },
+    {
+      "id": "deepseek-news",
+      "vendor": "deepseek",
+      "name": "DeepSeek News",
+      "kind": "web_list",
+      "url": "https://www.deepseek.com/en/news/",
+      "status": "ready",
+      "note": "列表页可抠到文章链接；注意过滤图片等非文章 href。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://www.deepseek.com/en/news/",
+          "https://www.deepseek.com/news/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://www.deepseek.com/en/news/",
+        "https://www.deepseek.com/news/"
+      ]
+    },
+    {
+      "id": "deepseek-api-docs-news",
+      "vendor": "deepseek",
+      "name": "DeepSeek API Docs News",
+      "kind": "web_list",
+      "url": "https://api-docs.deepseek.com/news/",
+      "status": "weak",
+      "note": "只稳定识别到少量链接，选择器需收紧后用。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://api-docs.deepseek.com/news/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://api-docs.deepseek.com/news/"
+      ]
+    },
+    {
+      "id": "qwen-blog",
+      "vendor": "qwen",
+      "name": "Qwen Blog",
+      "kind": "web_list",
+      "url": "https://qwenlm.github.io/blog/",
+      "status": "ready",
+      "note": "列表页正文/脚本中含 blog/slug 路径（如 blog/qwen3guard），需按文本路径解析，不是普通 a[href]。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://qwenlm.github.io/blog/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://qwenlm.github.io/blog/"
+      ]
+    },
+    {
+      "id": "kimi-news",
+      "vendor": "kimi",
+      "name": "Kimi News",
+      "kind": "web_list",
+      "url": "https://www.kimi.com/news",
+      "status": "ready",
+      "note": "列表页可抠到 /en/blog/... 等链接。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://www.kimi.com/en/blog/",
+          "https://www.kimi.com/blog/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://www.kimi.com/en/blog/",
+        "https://www.kimi.com/blog/"
+      ]
+    },
+    {
+      "id": "glm-release-notes",
+      "vendor": "glm",
+      "name": "Z.ai Release Notes",
+      "kind": "web_list",
+      "url": "https://docs.z.ai/release-notes/new-released",
+      "status": "weak",
+      "note": "单页更新日志：日期位于同页锚点，尚无稳定的独立文章链接。当前报告空列表，新增条目仍需人工查看原文；不拼造日期路径。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://docs.z.ai/release-notes/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://docs.z.ai/release-notes/"
+      ]
+    },
+    {
+      "id": "minimax-blog",
+      "vendor": "minimax",
+      "name": "MiniMax Blog",
+      "kind": "web_list",
+      "url": "https://www.minimax.io/blog",
+      "status": "ready",
+      "note": "列表页可抠到 /blog/... 文章链接。",
+      "webList": {
+        "allowUrlPrefixes": [
+          "https://www.minimax.io/blog/"
+        ]
+      },
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://www.minimax.io/blog/"
+      ]
+    },
+    {
+      "id": "huggingface-blog",
+      "vendor": null,
+      "name": "Hugging Face Blog",
+      "kind": "rss",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "status": "ready",
+      "note": "官方 RSS，探测通过。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "arxiv-cs-ai",
+      "vendor": null,
+      "name": "arXiv cs.AI",
+      "kind": "rss",
+      "url": "https://rss.arxiv.org/rss/cs.AI",
+      "status": "ready",
+      "note": "官方 RSS，探测通过；噪声大，只作候选。",
+      "sourceType": "paper",
+      "evidencePrefixes": [
+        "https://arxiv.org/abs/"
+      ]
+    },
+    {
+      "id": "arxiv-cs-cl",
+      "vendor": null,
+      "name": "arXiv cs.CL",
+      "kind": "rss",
+      "url": "https://rss.arxiv.org/rss/cs.CL",
+      "status": "ready",
+      "note": "官方 RSS，探测通过；噪声大，只作候选。",
+      "sourceType": "paper",
+      "evidencePrefixes": [
+        "https://arxiv.org/abs/"
+      ]
+    },
+    {
+      "id": "github-blog-ai-ml",
+      "vendor": null,
+      "name": "GitHub Blog · AI & ML",
+      "kind": "rss",
+      "url": "https://github.blog/ai-and-ml/feed/",
+      "status": "ready",
+      "note": "来自 AIHOT 示范信源。产品/生态动态，不直接等于模型发布。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "media-verge-ai",
+      "vendor": null,
+      "name": "The Verge · AI",
+      "kind": "rss",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "status": "ready",
+      "note": "媒体 RSS（AIHOT 示范）。只作线索，不能单独确认发布。",
+      "sourceType": "media",
+      "evidencePrefixes": [
+        "https://www.theverge.com/"
+      ]
+    },
+    {
+      "id": "media-techcrunch-ai",
+      "vendor": null,
+      "name": "TechCrunch · AI",
+      "kind": "rss",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "status": "ready",
+      "note": "媒体 RSS（AIHOT 示范）。只作线索。",
+      "sourceType": "media",
+      "evidencePrefixes": [
+        "https://techcrunch.com/"
+      ]
+    },
+    {
+      "id": "media-ars-ai",
+      "vendor": null,
+      "name": "Ars Technica · AI",
+      "kind": "rss",
+      "url": "https://arstechnica.com/ai/feed/",
+      "status": "ready",
+      "note": "媒体 RSS（AIHOT 示范）。只作线索。",
+      "sourceType": "media",
+      "evidencePrefixes": [
+        "https://arstechnica.com/"
+      ]
+    },
+    {
+      "id": "media-mit-tr-ai",
+      "vendor": null,
+      "name": "MIT Technology Review · AI",
+      "kind": "rss",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "status": "ready",
+      "note": "媒体 RSS（AIHOT 示范）。只作线索。",
+      "sourceType": "media",
+      "evidencePrefixes": [
+        "https://www.technologyreview.com/"
+      ]
+    },
+    {
+      "id": "media-the-decoder",
+      "vendor": null,
+      "name": "The Decoder",
+      "kind": "rss",
+      "url": "https://the-decoder.com/feed/",
+      "status": "ready",
+      "note": "媒体 RSS（AIHOT 示范）。只作线索。",
+      "sourceType": "media",
+      "evidencePrefixes": [
+        "https://the-decoder.com/"
+      ]
+    },
+    {
+      "id": "commentary-simonw",
+      "vendor": null,
+      "name": "Simon Willison",
+      "kind": "rss",
+      "url": "https://simonwillison.net/atom/everything/",
+      "status": "ready",
+      "note": "个人技术博客（AIHOT 示范）。偏工具与实践，偶有模型动态。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "commentary-import-ai",
+      "vendor": null,
+      "name": "Import AI",
+      "kind": "rss",
+      "url": "https://importai.substack.com/feed",
+      "status": "ready",
+      "note": "行业通讯（AIHOT 示范）。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "commentary-latent-space",
+      "vendor": null,
+      "name": "Latent Space",
+      "kind": "rss",
+      "url": "https://www.latent.space/feed",
+      "status": "ready",
+      "note": "播客/通讯（AIHOT 示范）。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "research-bair",
+      "vendor": null,
+      "name": "Berkeley AI Research",
+      "kind": "rss",
+      "url": "https://bair.berkeley.edu/blog/feed.xml",
+      "status": "ready",
+      "note": "学术实验室博客（AIHOT 示范）。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "google-research",
+      "vendor": "google",
+      "name": "Google Research",
+      "kind": "rss",
+      "url": "https://research.google/blog/rss/",
+      "status": "ready",
+      "note": "官方研究博客 RSS。",
+      "sourceType": "official",
+      "evidencePrefixes": [
+        "https://research.google/blog/"
+      ]
+    },
+    {
+      "id": "ms-research",
+      "vendor": null,
+      "name": "Microsoft Research",
+      "kind": "rss",
+      "url": "https://www.microsoft.com/en-us/research/feed/",
+      "status": "ready",
+      "note": "官方研究博客 RSS（AIHOT 示范）。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "nvidia-blog",
+      "vendor": null,
+      "name": "NVIDIA Blog",
+      "kind": "rss",
+      "url": "https://blogs.nvidia.com/feed/",
+      "status": "ready",
+      "note": "官方博客 RSS。偏硬件与生态。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "aws-ml-blog",
+      "vendor": null,
+      "name": "AWS Machine Learning Blog",
+      "kind": "rss",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "status": "ready",
+      "note": "云厂商博客 RSS。偏部署与产品。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    },
+    {
+      "id": "anthropic-community-mirror",
+      "vendor": "anthropic",
+      "name": "Anthropic News（社区镜像）",
+      "kind": "rss",
+      "url": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/main/feeds/anthropic-news.xml",
+      "status": "ready",
+      "note": "图灵研究所开源镜像，非 Anthropic 官方。可用作备份线索，核验仍以 anthropic.com 原文为准。来源：alan-turing-institute/ai-rss-feeds。",
+      "sourceType": "aggregator",
+      "evidencePrefixes": []
+    }
+  ],
+  "community": {
+    "说明": "社区大 V 不走网页列表。账号名单见 watchlist.json；说法必须带原帖链接。",
+    "platform": "X",
+    "watchlistFile": "watchlist.json",
+    "ingest": "manual_or_api",
+    "note": "自动抓 X 需要付费接口（如 SocialData），本阶段默认人工 / Issue 提交。"
+  },
+  "media": {
+    "说明": "已配置的媒体 RSS 自动入待审核；其他媒体人工补充。媒体报道仅作为媒体级未来线索，不能自动确认发布。",
+    "status": "rss_and_manual",
+    "examples": [
+      "wired.com",
+      "apnews.com",
+      "reuters.com",
+      "bloomberg.com",
+      "lemonde.fr",
+      "theverge.com",
+      "techcrunch.com"
+    ]
+  },
+  "lastProbeAt": "2026-10-22T06:08:33.202Z",
+  "probeNote": "礼貌探测（UA 标明身份、限并发、遇 403 不绕过）。完整原始结果见 tmp/source-probe-report.json。",
+  "policyVersion": 1
+}

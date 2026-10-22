@@ -3,3 +3,6 @@ node_modules/
 .wrangler/
 report.txt
 body.md
+tmp/
+review/*.tmp
+review/atlas-draft.json

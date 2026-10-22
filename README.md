@@ -29,9 +29,32 @@ scripts/
   check-links.mjs  检查来源链接是否失效
 ```
 
-`模型纪元-完整单文件.html` 是拆分前的原始版本，保留作对照，不参与部署。
+## 自动采集与审核
 
-## 日常维护
+已接入 GitHub Actions，每 6 小时采集一次（平台调度可能延迟）。读取 `public/data/sources.json` 的公开 RSS 和官网列表，新条目只写入 `review/queue.json`，不会修改正式数据。失败入口会留下原因；403、登录墙和付费 X 接口不会被绕过。GitHub 自带的工作流令牌即可运行，不需要 AI API key。
+
+在本机启动审核入口（需要 Node 22+、Git、已登录仓库维护者账户的 GitHub CLI）：
+
+```bash
+cd /Users/xixi/Documents/Codex/model-atlas
+npm run review
+```
+
+打开 <http://127.0.0.1:8787>，选择候选，读取原文，填写模型名称、事件类型和支持它们的摘录，再点击「审核通过并发布」。未来计划没有明确日期就留空；误报可忽略，证据不足可暂缓。更新已有记录时选择「更新」，旧值、来源和修改原因都会保留。
+
+页面提交人工审核后，GitHub 会再读一次原文，核对正文指纹、来源归属、候选版本与审核内容。通过后提交正式数据并触发部署；页面上的「已提交」不等于已经上线，以工作流结果为准。原文发生变化或无法读取时，保留待审，需重新核对。自动检查不能判断一句话的全部语义，最终的名称、日期和事件对应关系仍由审核人核实。
+
+- [采集运行记录](https://github.com/beteey/model-atlas/actions/workflows/collect.yml)
+- [审核运行记录](https://github.com/beteey/model-atlas/actions/workflows/review.yml)
+- [部署运行记录](https://github.com/beteey/model-atlas/actions/workflows/deploy.yml)
+
+`review/` 不在网站发布目录中；队列和审核记录保存在 Git 仓库，仓库若公开则也可被查看，不适合保存私密信息。网络正文仅用于当前审核，不整篇写入仓库。采集和审核共用写入队列，失败的 Git 推送不会强行覆盖远端；失败后同步并重新提交。机器人提交不会自动触发另一个 push 工作流，因此审核任务会显式启动部署。
+
+本机读取来源会使用 macOS 已启用的 HTTPS 回环代理（如果有）；GitHub 定时采集直接运行在云端，电脑无需保持开启。来源网页有地区差异、动态内容或无法提取正文时，暂缓处理。
+
+手动启动云端采集：`gh workflow run collect.yml`。`npm run collect` 只更新本地队列，提交到仓库后云端审核任务才能读取。回归检查：`npm test`。`scripts/probe-sources.mjs` 仍仅用于诊断入口，不承担发布。GLM 当前是单页更新日志，页内新增条目和 X 原帖暂需人工补充，不拼造独立文章链接。
+
+## 手动维护已有资料
 
 1. 改 `public/data/*.json`。
 2. `npm run validate`，有错误必须先修。

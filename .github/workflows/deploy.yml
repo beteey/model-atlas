@@ -3,16 +3,16 @@ name: 校验并部署
 on:
   push:
     branches: [main]
+    paths-ignore: ['review/**']
   pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -24,9 +24,14 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/validate.mjs
+      - run: npm test
 
   deploy:
-    if: github.event_name != 'pull_request' && vars.DEPLOY_TARGET != 'cloudflare'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.DEPLOY_TARGET != 'cloudflare'
     needs: validate
     runs-on: ubuntu-latest
     environment:

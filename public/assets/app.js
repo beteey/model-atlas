@@ -12,8 +12,7 @@ const SOURCE_TYPE = {
   official: '官方一手', paper: '论文', press_release: '厂商新闻稿', media: '媒体报道',
   vendor_community: '厂商社区文章', community: '社区账号', aggregator: '第三方整理',
 };
-const fallbackType = (u) => /prnewswire/.test(u) ? 'press_release' : /wired|lemonde|apnews|reuters|bloomberg/.test(u) ? 'media' : /arxiv/.test(u) ? 'paper' : /huggingface/.test(u) ? 'vendor_community' : 'official';
-const tier = (e) => SOURCE_TYPE[e.sourceType || fallbackType(e.url)] || e.sourceType;
+const tier = (e) => SOURCE_TYPE[e.sourceType] || '来源待核实';
 
 const ACCOUNT_TYPE = { leaker: '爆料', 'reverse-engineer': '逆向分析', analyst: '行业分析', aggregator: '资讯聚合', commentator: '评论解读', reporter: '记者' };
 const OUTCOME = { hit: ['命中', 't-v'], partial: ['部分命中', 't-b'], miss: ['未命中', 't-u'], pending: ['待比对', 't-m'] };

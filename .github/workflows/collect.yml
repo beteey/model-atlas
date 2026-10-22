@@ -1,0 +1,38 @@
+name: 采集模型线索
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: atlas-data-write
+  queue: max
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - id: collect
+        run: npm run collect
+      - name: 保存待审核队列
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/queue.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: collect pending model candidates'
+            git push origin HEAD:main
+          fi
+      - name: 所有入口均不可用时报告失败
+        if: steps.collect.outputs.outage == 'true'
+        run: exit 1
