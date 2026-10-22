@@ -15,8 +15,11 @@ const validDate = d => /^\d{4}-\d{2}-\d{2}$/.test(d || '') && Number.isFinite(Da
 export const normalize = s => String(s || '').replace(/\s+/g, ' ').trim();
 
 export function articleText(html) {
-  let body = html.replace(/<(script|style|nav|header|footer|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ');
-  body = body.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)?.[1] || body.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || body;
+  let body = html.replace(/<(script|style|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ');
+  const article = body.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)?.[1] || body.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
+  // Article headers often hold the model name and publication date; keep those as evidence.
+  body = (article || body).replace(/<(nav|footer)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ');
+  if (!article) body = body.replace(/<header\b[^>]*>[\s\S]*?<\/header>/gi, ' ');
   const entities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
   return normalize(body.replace(/<[^>]*>/g, ' ').replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi, (m, key) => {
     if (entities[key]) return entities[key];

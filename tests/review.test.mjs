@@ -102,6 +102,9 @@ test('normalized names cannot duplicate the same event', () => {
 test('article text strips scripts and navigation instead of trusting markup', () => {
   assert.equal(articleText('<nav>Menu</nav><article><h1>A &amp; B</h1><script>alert(1)</script><p>Model</p></article>'), 'A & B Model');
 });
+test('article headings and date metadata remain available for review', () => {
+  assert.equal(articleText('<header>Global menu</header><article><header><h1>Atlas Model</h1><time>2026-10-20</time></header><p>Available today.</p></article>'), 'Atlas Model 2026-10-20 Available today.');
+});
 test('archive metadata may be added later, but reviewed facts cannot change', () => {
   const out = applyDecision(fixture()); const record = out.atlas.events[0];
   assert.equal(record.pipelineReview.recordHash, recordFingerprint(record));

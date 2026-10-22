@@ -422,12 +422,35 @@ test('compressed content-length exceeding the limit fails even if the actual bod
   await assert.rejects(fetchSourceText('https://example.com/feed'), /response_too_large/);
 });
 
+test('native identity bodies retain the header and streamed byte limits', async (t) => {
+  compressedNativeMock(t, 'identity', Buffer.alloc(2 * 1024 * 1024 + 1));
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /response_too_large/);
+});
+
+test('buffered oversized native identity headers close the wire response safely', async (t) => {
+  const wire = new PassThrough();
+  wire.write('already buffered bytes');
+  compressedNativeMock(t, 'identity', wire, { 'content-length': String(2 * 1024 * 1024 + 1) });
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /response_too_large/);
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(wire.destroyed, true);
+});
+
 for (const encoding of ['zstd', '__proto__', 'constructor']) {
   test(`unsupported encoding ${encoding} remains a failure without fallback or alternate request`, async (t) => {
     compressedNativeMock(t, encoding, Buffer.from('not supported'));
     await assert.rejects(fetchSourceText('https://example.com/feed'), /unsupported_content_encoding/);
   });
 }
+
+test('buffered unsupported native responses close without a later uncaught stream error', async (t) => {
+  const wire = new PassThrough();
+  wire.write('already buffered bytes');
+  compressedNativeMock(t, 'zstd', wire);
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /unsupported_content_encoding/);
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(wire.destroyed, true);
+});
 
 test('truncated gzip is rejected instead of returning partially decoded evidence', async (t) => {
   const packed = gzipSync(Buffer.from('Evidence must be complete.'));

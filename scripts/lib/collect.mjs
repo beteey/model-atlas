@@ -6,7 +6,7 @@ import { request as httpRequest } from 'node:http';
 import { connect as tlsConnect } from 'node:tls';
 import { execFile } from 'node:child_process';
 import { platform } from 'node:os';
-import { Readable, Transform } from 'node:stream';
+import { Transform } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { createGunzip, createBrotliDecompress, createInflate } from 'node:zlib';
 
@@ -71,15 +71,11 @@ function requestResponse(url, options, connection) {
       for (const [key, value] of Object.entries(res.headers)) {
         if (value !== undefined) headers.set(key, Array.isArray(value) ? value.join(', ') : value);
       }
-      resolve({ status: res.statusCode, headers, body: byteStream(res), url: url.href });
+      resolve({ status: res.statusCode, headers, nativeBody: res, url: url.href });
     });
     req.on('error', reject);
     req.end();
   });
-}
-
-function byteStream(readable) {
-  return Readable.toWeb(readable, { strategy: { highWaterMark: 16_384, size: chunk => chunk.byteLength } });
 }
 
 async function nativeResponse(url, options) {
@@ -154,6 +150,7 @@ async function proxyResponse(url, options, proxy) {
 }
 
 async function cancelBody(response) {
+  if (response.nativeBody) { response.nativeBody.destroy(); return; }
   try { await response.body?.cancel(); } catch { /* Stream may already be locked/closed. */ }
 }
 
@@ -186,9 +183,35 @@ async function boundedText(response, signal) {
   }
 }
 
+async function boundedNativeText(stream, headers, signal) {
+  if (Number(headers.get('content-length')) > MAX_BYTES) {
+    stream.destroy();
+    throw new Error('response_too_large: exceeds 2 MB');
+  }
+  const decoder = new TextDecoder();
+  let bytes = 0;
+  let text = '';
+  const abort = () => stream.destroy(signal.reason);
+  signal.addEventListener('abort', abort, { once: true });
+  try {
+    signal.throwIfAborted();
+    for await (const chunk of stream) {
+      signal.throwIfAborted();
+      bytes += chunk.byteLength;
+      if (bytes > MAX_BYTES) throw new Error('response_too_large: exceeds 2 MB');
+      text += decoder.decode(chunk, { stream: true });
+    }
+    signal.throwIfAborted();
+    return text + decoder.decode();
+  } finally {
+    signal.removeEventListener('abort', abort);
+    stream.destroy();
+  }
+}
+
 async function nativeText(response, signal) {
   const encoding = (response.headers.get('content-encoding') || 'identity').trim().toLowerCase();
-  if (encoding === 'identity') return boundedText(response, signal);
+  if (encoding === 'identity') return boundedNativeText(response.nativeBody, response.headers, signal);
   const createDecoder = CONTENT_DECODERS.get(encoding);
   if (!createDecoder) { await cancelBody(response); throw new Error('unsupported_content_encoding'); }
   if (Number(response.headers.get('content-length')) > MAX_BYTES) {
@@ -200,17 +223,16 @@ async function nativeText(response, signal) {
     received += chunk.byteLength;
     callback(received > MAX_BYTES ? new Error('response_too_large: compressed body exceeds 2 MB') : null, chunk);
   } });
-  const input = Readable.fromWeb(response.body);
+  const input = response.nativeBody;
   const decoder = createDecoder({ chunkSize: 16_384 });
   // Observe all pipeline errors immediately; never return a partially decoded response.
   const completed = pipeline(input, compressedLimit, decoder, { signal }).then(() => null, error => error);
   try {
-    const text = await boundedText({ ...response, body: byteStream(decoder) }, signal);
+    const text = await boundedNativeText(decoder, response.headers, signal);
     const error = await completed;
     if (error) throw error;
     return text;
   } catch (error) {
-    // Node's web-stream adapter may wrap zlib failures in a TypeError with an empty message.
     throw new Error(`decompression_failed: ${error.cause?.message || error.message || encoding}`, { cause: error });
   } finally {
     input.destroy(); compressedLimit.destroy(); decoder.destroy();
