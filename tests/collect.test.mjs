@@ -9,6 +9,7 @@ import childProcess from 'node:child_process';
 import { syncBuiltinESMExports } from 'node:module';
 import { EventEmitter } from 'node:events';
 import { Readable, PassThrough } from 'node:stream';
+import { gzipSync, deflateSync, brotliCompressSync } from 'node:zlib';
 import { collectCandidates, fetchSourceText } from '../scripts/lib/collect.mjs';
 
 const now = new Date('2026-10-22T08:00:00Z');
@@ -379,4 +380,70 @@ test('retains only the latest 100 run summaries without mutating the original hi
   assert.equal(result.queue.runs.length, 100);
   assert.equal(result.queue.runs[0].id, 6);
   assert.deepEqual(result.queue.runs.at(-1), result.report);
+});
+
+function compressedNativeMock(t, encoding, data, headers = {}) {
+  t.mock.method(os, 'platform', () => 'linux');
+  t.mock.method(dns, 'lookup', async () => [{ address: '93.184.216.34', family: 4 }]);
+  const wire = data instanceof Readable ? data : Readable.from(Array.isArray(data) ? data : [data]);
+  t.mock.method(https, 'request', (_url, _options, callback) => {
+    const req = new EventEmitter();
+    req.end = () => { wire.statusCode = 200; wire.headers = { 'content-type': 'text/xml', 'content-encoding': encoding, ...headers }; callback(wire); };
+    return req;
+  });
+  syncBuiltinESMExports();
+  t.after(() => { wire.destroy(); t.mock.restoreAll(); syncBuiltinESMExports(); });
+  return wire;
+}
+
+for (const [encoding, compress] of [['gzip', gzipSync], ['br', brotliCompressSync], ['deflate', deflateSync]]) {
+  test(`native ${encoding} responses decode streamed UTF-8 safely`, async (t) => {
+    const expected = rss(item('https://example.com/model', '中文模型发布'));
+    const packed = compress(Buffer.from(expected));
+    compressedNativeMock(t, encoding, [packed.subarray(0, 3), packed.subarray(3)], { 'content-length': String(packed.length) });
+    assert.equal((await fetchSourceText('https://example.com/feed')).text, expected);
+  });
+}
+
+test('compressed wire bytes exceeding 2 MB fail before entering the decompressor', async (t) => {
+  compressedNativeMock(t, 'gzip', Buffer.concat([gzipSync(Buffer.from('small model')), Buffer.alloc(2 * 1024 * 1024)]));
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /compressed.*2 MB/);
+});
+
+test('a small gzip payload expanding beyond 2 MB is stopped while decoding', async (t) => {
+  const packed = gzipSync(Buffer.alloc(2 * 1024 * 1024 + 1, 65));
+  assert.ok(packed.length < 10_000);
+  compressedNativeMock(t, 'gzip', packed);
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /response_too_large/);
+});
+
+test('compressed content-length exceeding the limit fails even if the actual body is small', async (t) => {
+  compressedNativeMock(t, 'gzip', gzipSync(Buffer.from('small')), { 'content-length': String(2 * 1024 * 1024 + 1) });
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /response_too_large/);
+});
+
+for (const encoding of ['zstd', '__proto__', 'constructor']) {
+  test(`unsupported encoding ${encoding} remains a failure without fallback or alternate request`, async (t) => {
+    compressedNativeMock(t, encoding, Buffer.from('not supported'));
+    await assert.rejects(fetchSourceText('https://example.com/feed'), /unsupported_content_encoding/);
+  });
+}
+
+test('truncated gzip is rejected instead of returning partially decoded evidence', async (t) => {
+  const packed = gzipSync(Buffer.from('Evidence must be complete.'));
+  compressedNativeMock(t, 'gzip', packed.subarray(0, packed.length - 4));
+  await assert.rejects(fetchSourceText('https://example.com/feed'), /unexpected end|decompress/i);
+});
+
+test('20-second deadline cancels an unfinished compressed stream and destroys its wire source', async (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const wire = new PassThrough();
+  compressedNativeMock(t, 'gzip', wire);
+  wire.write(gzipSync(Buffer.from('partial model')).subarray(0, 12));
+  const pending = fetchSourceText('https://example.com/feed');
+  await new Promise(resolve => setImmediate(resolve));
+  t.mock.timers.tick(20_000);
+  await assert.rejects(pending, /timeout/);
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(wire.destroyed, true);
 });

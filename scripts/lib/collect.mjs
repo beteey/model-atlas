@@ -6,13 +6,16 @@ import { request as httpRequest } from 'node:http';
 import { connect as tlsConnect } from 'node:tls';
 import { execFile } from 'node:child_process';
 import { platform } from 'node:os';
-import { Readable } from 'node:stream';
+import { Readable, Transform } from 'node:stream';
+import { pipeline } from 'node:stream/promises';
+import { createGunzip, createBrotliDecompress, createInflate } from 'node:zlib';
 
 const MAX_BYTES = 2 * 1024 * 1024;
 const TIMEOUT_MS = 20_000;
 const CONCURRENCY = 3;
 const MAX_REDIRECTS = 5;
 const MAX_RUN_SUMMARIES = 100;
+const CONTENT_DECODERS = new Map([['gzip', createGunzip], ['br', createBrotliDecompress], ['deflate', createInflate]]);
 const UA = 'model-atlas-collector/1.0 (+https://github.com/beteey/model-atlas; candidate discovery only)';
 const SOURCE_TYPES = new Set(['official', 'paper', 'press_release', 'media', 'vendor_community', 'community', 'aggregator']);
 const MODEL_WORDS = /model|llm\b|gpt|chatgpt|openai|claude|anthropic|gemini|deepmind|deepseek|qwen|kimi|moonshot|glm|z[.\s-]?ai\b|grok|xai|llama|mistral|minimax|muse\s?spark|模型|发布|预览|release|launch|preview|introduc|announc/i;
@@ -68,11 +71,15 @@ function requestResponse(url, options, connection) {
       for (const [key, value] of Object.entries(res.headers)) {
         if (value !== undefined) headers.set(key, Array.isArray(value) ? value.join(', ') : value);
       }
-      resolve({ status: res.statusCode, headers, body: Readable.toWeb(res), url: url.href });
+      resolve({ status: res.statusCode, headers, body: byteStream(res), url: url.href });
     });
     req.on('error', reject);
     req.end();
   });
+}
+
+function byteStream(readable) {
+  return Readable.toWeb(readable, { strategy: { highWaterMark: 16_384, size: chunk => chunk.byteLength } });
 }
 
 async function nativeResponse(url, options) {
@@ -179,6 +186,38 @@ async function boundedText(response, signal) {
   }
 }
 
+async function nativeText(response, signal) {
+  const encoding = (response.headers.get('content-encoding') || 'identity').trim().toLowerCase();
+  if (encoding === 'identity') return boundedText(response, signal);
+  const createDecoder = CONTENT_DECODERS.get(encoding);
+  if (!createDecoder) { await cancelBody(response); throw new Error('unsupported_content_encoding'); }
+  if (Number(response.headers.get('content-length')) > MAX_BYTES) {
+    await cancelBody(response);
+    throw new Error('response_too_large: compressed body exceeds 2 MB');
+  }
+  let received = 0;
+  const compressedLimit = new Transform({ transform(chunk, _encoding, callback) {
+    received += chunk.byteLength;
+    callback(received > MAX_BYTES ? new Error('response_too_large: compressed body exceeds 2 MB') : null, chunk);
+  } });
+  const input = Readable.fromWeb(response.body);
+  const decoder = createDecoder({ chunkSize: 16_384 });
+  // Observe all pipeline errors immediately; never return a partially decoded response.
+  const completed = pipeline(input, compressedLimit, decoder, { signal }).then(() => null, error => error);
+  try {
+    const text = await boundedText({ ...response, body: byteStream(decoder) }, signal);
+    const error = await completed;
+    if (error) throw error;
+    return text;
+  } catch (error) {
+    // Node's web-stream adapter may wrap zlib failures in a TypeError with an empty message.
+    throw new Error(`decompression_failed: ${error.cause?.message || error.message || encoding}`, { cause: error });
+  } finally {
+    input.destroy(); compressedLimit.destroy(); decoder.destroy();
+    await completed;
+  }
+}
+
 /**
  * Shared transport for registry-approved URLs; callers enforce their source allowlist.
  * macOS may use its configured loopback HTTPS proxy, trusting that proxy's DNS/routing policy.
@@ -223,12 +262,8 @@ export async function fetchSourceText(rawUrl, { fetchImpl = fetch, timeoutMs = T
         error.status = res.status;
         throw error;
       }
-      const encoding = res.headers.get('content-encoding');
-      if (fetchImpl === globalThis.fetch && encoding && encoding !== 'identity') {
-        await cancelBody(res);
-        throw new Error('unsupported_content_encoding');
-      }
-      return { text: await boundedText(res, controller.signal), url: url.href, status: res.status, contentType: res.headers.get('content-type') || '' };
+      const text = await (fetchImpl === globalThis.fetch ? nativeText(res, controller.signal) : boundedText(res, controller.signal));
+      return { text, url: url.href, status: res.status, contentType: res.headers.get('content-type') || '' };
     }
   };
   try { return await Promise.race([work(), deadline]); }
