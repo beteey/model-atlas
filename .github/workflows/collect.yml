@@ -1,7 +1,7 @@
 name: 采集模型线索
 on:
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '23,53 * * * *'
   workflow_dispatch:
 permissions:
   contents: write

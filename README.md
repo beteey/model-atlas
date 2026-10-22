@@ -31,7 +31,7 @@ scripts/
 
 ## 自动采集与审核
 
-已接入 GitHub Actions，每 6 小时采集一次（平台调度可能延迟）。读取 `public/data/sources.json` 的公开 RSS 和官网列表，新条目只写入 `review/queue.json`，不会修改正式数据。失败入口会留下原因；403、登录墙和付费 X 接口不会被绕过。GitHub 自带的工作流令牌即可运行，不需要 AI API key。
+已接入 GitHub Actions，每 30 分钟采集一次（每小时第 23 和 53 分钟，平台调度可能延迟）。读取 `public/data/sources.json` 的公开 RSS 和官网列表，新条目只写入 `review/queue.json`，不会修改正式数据。失败入口会留下原因；403、登录墙和付费 X 接口不会被绕过。GitHub 自带的工作流令牌即可运行，不需要 AI API key。
 
 在本机启动审核入口（需要 Node 22+、Git、已登录仓库维护者账户的 GitHub CLI）：
 
