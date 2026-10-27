@@ -6,6 +6,7 @@ import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import { applyDecision, articleText, candidateRevision, hash, policyHash, sourceFor } from './lib/review.mjs';
 import { fetchSourceText } from './lib/collect.mjs';
+import { sortReviewCandidates } from './lib/review-order.mjs';
 
 const project = fileURLToPath(new URL('../', import.meta.url));
 const run = promisify(execFile);
@@ -42,7 +43,7 @@ export function createReviewServer({ root = project, execute = run, fetchText = 
       if (req.method === 'GET') {
         if (req.url === '/api/state') {
           state ||= await load();
-          return json(200, { ...state, csrf: token, actor: await getActor(), policyHash: policyHash(state.registry), candidates: state.queue.candidates.map(c => ({ ...c, revision: candidateRevision(c), submitted: submitted.has(c.id) })), records: [...state.atlas.events, ...state.atlas.forecasts].map(r => ({ ...r, baseHash: hash(r) })) });
+          return json(200, { ...state, csrf: token, actor: await getActor(), policyHash: policyHash(state.registry), candidates: sortReviewCandidates(state.queue.candidates, state.registry).map(c => ({ ...c, revision: candidateRevision(c), submitted: submitted.has(c.id) })), records: [...state.atlas.events, ...state.atlas.forecasts].map(r => ({ ...r, baseHash: hash(r) })) });
         }
         const file = { '/': ['review/index.html', 'text/html'], '/app.js': ['review/app.js', 'text/javascript'] }[req.url];
         if (!file) return json(404, { error: 'Not found' });

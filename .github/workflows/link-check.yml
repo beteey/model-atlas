@@ -17,18 +17,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: npm test
       - id: check
         run: node scripts/check-links.mjs > report.txt 2>&1
         continue-on-error: true
-      - if: steps.check.outcome == 'failure'
+      - name: 保存分类检查报告
+        if: always()
+        run: |
+          if test -f report.txt; then
+            cat report.txt
+            cat report.txt >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - if: steps.check.outputs.broken > 0
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           {
-            echo '以下来源链接疑似失效，需要人工复核后更新记录状态或换成存档链接。'
+            echo '检查发现 HTTP 404/410 的来源链接，需要人工复核。付费、登录、限流及网络故障不计为失效，未核实正文内容。'
             echo
             echo '```'
             tail -n 40 report.txt
             echo '```'
           } > body.md
           gh issue create --title "来源链接疑似失效 $(date -u +%F)" --body-file body.md
+      - name: 检查程序异常时报告失败
+        if: steps.check.outcome == 'failure' && steps.check.outputs.broken == ''
+        run: exit 1
