@@ -29,7 +29,7 @@ async function loadJSON(path) {
 
 function showLoadError(err) {
   const isFile = location.protocol === 'file:';
-  $('#lead').innerHTML = `<span class="err" style="display:block">数据加载失败：${h(err.message)}。${isFile ? '本页需要通过 HTTP 访问，不能直接双击打开。请在项目目录运行 <code>npm run dev</code> 或 <code>python3 -m http.server -d public 8080</code>，然后访问 <code>http://localhost:8080</code>。' : '请稍后刷新，或到勘误页反馈。'}</span>`;
+  $('main').insertAdjacentHTML('afterbegin', `<p class="err" role="alert">数据加载失败：${h(err.message)}。${isFile ? '本页需要通过 HTTP 访问，不能直接双击打开。请在项目目录运行 <code>npm run dev</code> 或 <code>python3 -m http.server -d public 8080</code>，然后访问 <code>http://localhost:8080</code>。' : '请稍后刷新，或到勘误页反馈。'}</p>`);
 }
 
 function init({ D, W, SITE }) {
@@ -82,14 +82,6 @@ function init({ D, W, SITE }) {
     return `<span class="badge" title="${h(a.name)} 历史记录：命中 ${st.hit} · 部分 ${st.partial} · 未命中 ${st.miss} · 待比对 ${st.pending}">${h(a.handle || a.name)} · ${h(st.enough ? '命中率 ' + rateText(st) : rateText(st))}</span>`;
   };
 
-  // ---------- 核验条 ----------
-  const fsrc = D.forecasts.flatMap((x) => x.sources);
-  const cnt = (s) => E.filter((e) => e.audit.status === s).length + fsrc.filter((x) => (x.verification || 'unverified') === s).length;
-  const nv = cnt('verified'), nb = cnt('blocked') + cnt('unverified'), nu = cnt('unavailable'), tot = nv + nb + nu;
-  $('#lead').textContent = `${D.vendors.length} 家厂商、${E.length} 条发布记录、${D.forecasts.length} 条未来线索、${(W.accounts || []).length} 个观察账号。历史记录与雷达来源共 ${tot} 项核验，已核验 ${nv} 项，其余如实标注。`;
-  $('#bar').setAttribute('aria-label', `核验记录：已核验 ${nv}，待复核或未核验 ${nb}，无法读取 ${nu}`);
-  $('#bar').innerHTML = [[nv, '--ok'], [nb, '--warn'], [nu, '--bad']].map(([n, c]) => `<i style="width:${n / tot * 100}%;background:var(${c})"></i>`).join('');
-  $('#bl').innerHTML = [[nv, '--ok', '已核验'], [nb, '--warn', '待复核 / 未核验'], [nu, '--bad', '无法读取']].map(([n, c, t]) => `<span><i class="dot-k" style="background:var(${c})"></i><b>${n}</b> ${t}</span>`).join('');
   $('#snap').textContent = f([D.checkedAt, D.historyCheckedAt, D.radarCheckedAt, W.checkedAt].filter(Boolean).sort().at(-1));
 
   // ---------- 雷达 ----------
