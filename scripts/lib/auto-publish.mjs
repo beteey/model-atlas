@@ -23,11 +23,12 @@ function officialSource(candidate, registry, vendors) {
   });
 }
 
-function assertExtraction(result, html, now) {
+function assertExtraction(result, html, now, epochStart) {
   if (!result?.eligible) fail(result?.reason || '原文不足以确认已发布');
   const { record: r, evidence: e } = result;
   if (!r || !e || !KINDS.has(r.kind) || !normalize(r.name) || !normalize(r.summary)) fail('模型名称、事件类型或摘要不完整');
   if (!validDate(r.date) || r.date > today(now)) fail('实际发布日期无效或仍在未来');
+  if (epochStart && r.date < epochStart) fail(`发布日期早于收录起点 ${epochStart}，不自动收录`);
   if (!e.ruleVersion || !e.title || e.text !== articleText(html) || e.text.length < 80) fail('没有取得一致的官网正文');
   for (const key of ['modelName', 'eventType']) {
     const quote = normalize(e.quotes?.[key]);
@@ -45,19 +46,19 @@ function proofHash(result) {
 }
 
 // Fetches and parses original documents twice; it never manufactures a human decision.
-async function verify(candidate, source, registry, fetchText, extractRelease, now) {
+async function verify(candidate, source, registry, fetchText, extractRelease, now, epochStart) {
   const options = { validateUrl: url => sourceFor(registry, source.id, url) };
   try {
     const first = await fetchText(candidate.canonicalUrl, options);
     sourceFor(registry, source.id, first.url);
     const result = extractRelease({ html: first.text, url: first.url, source, now });
     if (!result.eligible) return { status: 'needs_review', code: result.code, reason: result.reason || '官网正文尚不能确认实际发布' };
-    try { assertExtraction(result, first.text, now); } catch (error) { return { status: 'needs_review', code: 'incomplete_evidence', reason: error.message }; }
+    try { assertExtraction(result, first.text, now, epochStart); } catch (error) { return { status: 'needs_review', code: 'incomplete_evidence', reason: error.message }; }
     const second = await fetchText(first.url, options);
     sourceFor(registry, source.id, second.url);
     const confirmed = extractRelease({ html: second.text, url: second.url, source, now });
     try {
-      assertExtraction(confirmed, second.text, now);
+      assertExtraction(confirmed, second.text, now, epochStart);
       if (second.url !== first.url || proofHash(result) !== proofHash(confirmed)) fail('官网正文或日期依据发生变化，需要人工核对');
     } catch (error) { return { status: 'needs_review', code: 'changed_evidence', reason: error.message }; }
     return { status: 'verified', result, source, url: second.url, documentHash: hash(second.text) };
@@ -101,7 +102,7 @@ export function validateAutomaticReceipt(record, registry) {
   if (!/自动|规则/.test(record.audit?.method || '') || /审核人阅读/.test(record.audit?.method || '')) fail('自动核验不能标为人工阅读');
 }
 
-export async function autoReviewCandidates({ queue, atlas, registry, fetchText = fetchSourceText, extractRelease = extractOfficialRelease, now = new Date(), maxCandidates = 24, concurrency = 3 }) {
+export async function autoReviewCandidates({ queue, atlas, registry, fetchText = fetchSourceText, extractRelease = extractOfficialRelease, now = new Date(), maxCandidates = 24, concurrency = 3, epochStart }) {
   if (!Number.isInteger(maxCandidates) || maxCandidates < 1 || maxCandidates > 120 || !Number.isInteger(concurrency) || concurrency < 1 || concurrency > 6) fail('自动核验批次或并发参数无效');
   const policy = policyHash(registry), at = now.toISOString(), vendors = new Set(atlas.vendors.map(v => v.id));
   const updates = new Map(), groups = new Map();
@@ -133,7 +134,7 @@ export async function autoReviewCandidates({ queue, atlas, registry, fetchText =
     while (cursor < selected.length) {
       const index = cursor++;
       const { candidate, source } = selected[index];
-      results[index] = await verify(candidate, source, registry, fetchText, extractRelease, now);
+      results[index] = await verify(candidate, source, registry, fetchText, extractRelease, now, epochStart);
     }
   }));
   let resultAtlas = structuredClone(atlas);

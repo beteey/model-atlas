@@ -19,7 +19,7 @@ export function createReviewServer({ root = project, execute = run, fetchText = 
   const load = async () => {
     const [queue, atlas, registry, site] = await Promise.all(['review/queue.json', 'public/data/atlas.json', 'public/data/sources.json', 'public/data/site.json'].map(read));
     if (!/^https:\/\/github\.com\/[\w-]+\/[\w.-]+$/.test(site.repo)) throw new Error('仓库地址无效');
-    return { queue, atlas, registry, repo: site.repo.slice('https://github.com/'.length) };
+    return { queue, atlas, registry, epochStart: site.epochStart, repo: site.repo.slice('https://github.com/'.length) };
   };
   const getActor = async () => actor ||= (await command('gh', ['api', 'user', '--jq', '.login'])).stdout.trim();
   const sync = async () => {

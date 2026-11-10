@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-21",
+  "checkedAt": "2026-11-10",
   "rules": {
     "hitWindowDays": 7,
     "minResolvedForRate": 5,
@@ -18,7 +18,9 @@
       "handle": "@apples_jimmy",
       "url": "https://x.com/apples_jimmy",
       "type": "leaker",
-      "focus": ["openai"],
+      "focus": [
+        "openai"
+      ],
       "profileCheckedAt": null,
       "note": "长期发布 OpenAI 相关的发布时间暗示，多为隐晦提示而非明确日期；需要按本页规则逐条记录后才能计算命中率。",
       "trackRecord": []
@@ -30,7 +32,11 @@
       "handle": "@btibor91",
       "url": "https://x.com/btibor91",
       "type": "reverse-engineer",
-      "focus": ["openai", "anthropic", "google"],
+      "focus": [
+        "openai",
+        "anthropic",
+        "google"
+      ],
       "profileCheckedAt": null,
       "note": "通过客户端代码、配置字符串与模型目录变动推断未发布功能与模型；线索通常附带截图，可独立复核。",
       "trackRecord": []
@@ -42,10 +48,48 @@
       "handle": "@testingcatalog",
       "url": "https://x.com/testingcatalog",
       "type": "reverse-engineer",
-      "focus": ["openai", "anthropic", "google", "xai"],
-      "profileCheckedAt": null,
+      "focus": [
+        "openai",
+        "anthropic",
+        "google",
+        "xai"
+      ],
+      "profileCheckedAt": "2026-11-10",
       "note": "跟踪产品灰度与界面改动，偏产品功能而非模型本体；对模型发布日期的直接判断较少。",
-      "trackRecord": []
+      "trackRecord": [
+        {
+          "claim": "GPT-6.2 Sol 与 GPT-6.2 Astra “今天？”发布",
+          "claimUrl": "https://x.com/testingcatalog/status/2118644436917793116",
+          "claimedAt": "2026-11-06",
+          "windowEnd": "2026-11-13",
+          "outcome": "pending",
+          "note": "原帖带问号；11 月 6 日当天没有官方发布。"
+        },
+        {
+          "claim": "Claude Fable 5.5 “soon”",
+          "claimUrl": "https://x.com/testingcatalog/status/2118644436917793116",
+          "claimedAt": "2026-11-06",
+          "windowEnd": "2026-12-06",
+          "outcome": "pending",
+          "note": "原帖未给日期，按 30 天窗口比对。11 月 9 日官方发布的是 Fable 5.2。"
+        },
+        {
+          "claim": "Gemini 4 Carbon “soon”（扩大开放）",
+          "claimUrl": "https://x.com/testingcatalog/status/2118644436917793116",
+          "claimedAt": "2026-11-06",
+          "windowEnd": "2026-12-06",
+          "outcome": "pending",
+          "note": "原帖未给日期，按 30 天窗口比对。"
+        },
+        {
+          "claim": "Grok 4.8 “not soon???”",
+          "claimUrl": "https://x.com/testingcatalog/status/2118644436917793116",
+          "claimedAt": "2026-11-06",
+          "windowEnd": "2026-12-06",
+          "outcome": "pending",
+          "note": "反向判断：30 天内没有发布则算命中。"
+        }
+      ]
     },
     {
       "id": "dylan-patel",
@@ -54,7 +98,13 @@
       "handle": "@dylan522p",
       "url": "https://x.com/dylan522p",
       "type": "analyst",
-      "focus": ["openai", "anthropic", "google", "meta", "xai"],
+      "focus": [
+        "openai",
+        "anthropic",
+        "google",
+        "meta",
+        "xai"
+      ],
       "profileCheckedAt": null,
       "note": "供应链与算力侧分析，偶尔给出训练进度与发布节奏判断；更适合作为周期推测的佐证而非具体日期来源。",
       "trackRecord": []
@@ -66,10 +116,32 @@
       "handle": "@kimmonismus",
       "url": "https://x.com/kimmonismus",
       "type": "aggregator",
-      "focus": ["openai", "anthropic", "google", "xai"],
-      "profileCheckedAt": null,
+      "focus": [
+        "openai",
+        "anthropic",
+        "google",
+        "xai"
+      ],
+      "profileCheckedAt": "2026-11-10",
       "note": "转发量大的 AI 资讯聚合账号，多数线索来自他处；记录时应回溯到最初来源，而不是记在该账号名下。",
-      "trackRecord": []
+      "trackRecord": [
+        {
+          "claim": "GPT-6.2 “非常接近，很快发布”",
+          "claimUrl": "https://x.com/kimmonismus/status/2116846125126693368",
+          "claimedAt": "2026-11-01",
+          "windowEnd": "2026-11-08",
+          "outcome": "pending",
+          "note": "转述他人消息；7 天窗口内没有官方发布，待按规则在窗口过期 30 天后定案。"
+        },
+        {
+          "claim": "GPT-6.2 “今天发布”",
+          "claimUrl": "https://x.com/kimmonismus/status/2118585457076248628",
+          "claimedAt": "2026-11-06",
+          "windowEnd": "2026-11-13",
+          "outcome": "pending",
+          "note": "11 月 6 日当天没有官方发布。"
+        }
+      ]
     },
     {
       "id": "guizang",
@@ -78,7 +150,14 @@
       "handle": "@op7418",
       "url": "https://x.com/op7418",
       "type": "commentator",
-      "focus": ["openai", "anthropic", "google", "qwen", "deepseek", "kimi"],
+      "focus": [
+        "openai",
+        "anthropic",
+        "google",
+        "qwen",
+        "deepseek",
+        "kimi"
+      ],
       "profileCheckedAt": null,
       "note": "中文 AI 社区高频评论账号，常整理国内外发布动态；对国产模型的发布消息转达较快，原始来源多为厂商群或社区。",
       "trackRecord": []
@@ -90,10 +169,90 @@
       "handle": "@dotey",
       "url": "https://x.com/dotey",
       "type": "commentator",
-      "focus": ["openai", "anthropic"],
+      "focus": [
+        "openai",
+        "anthropic"
+      ],
       "profileCheckedAt": null,
       "note": "以翻译与解读英文一手信息为主，本身较少首发传闻；可作为中文语境下核对原文的中转。",
       "trackRecord": []
+    },
+    {
+      "id": "mark-kretschmann",
+      "name": "Mark Kretschmann",
+      "platform": "X",
+      "handle": "@mark_k",
+      "url": "https://x.com/mark_k",
+      "type": "aggregator",
+      "focus": [
+        "openai",
+        "anthropic",
+        "google",
+        "xai",
+        "deepseek",
+        "qwen"
+      ],
+      "profileCheckedAt": "2026-11-10",
+      "note": "定期汇总各家下一代模型的传闻发布窗口，自述依据是爆料、预测市场与历史发布节奏，并标明均未获官方确认。属于二手汇总，适合用来看社区共识落在哪个时间段，单条日期的出处需要另行回溯。",
+      "trackRecord": [
+        {
+          "claim": "GPT-6.2 Astra 在 11 月 2–15 日发布",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-15",
+          "outcome": "pending"
+        },
+        {
+          "claim": "GPT-6.2 Sol 在 11 月 10–15 日发布",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-15",
+          "outcome": "pending"
+        },
+        {
+          "claim": "Grok 4.8 在 11 月 19–30 日发布",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-30",
+          "outcome": "pending"
+        },
+        {
+          "claim": "Claude Fable 5.5 在 11 月发布，可能在 30 日前后",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-30",
+          "outcome": "pending",
+          "note": "11 月 9 日官方发布的是 Fable 5.2。"
+        },
+        {
+          "claim": "DeepSeek V4.1 Pro 在 11 月 12 日前后发布",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-19",
+          "outcome": "pending"
+        },
+        {
+          "claim": "Qwen 4 Max 在 11 月 16 日前后发布",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-23",
+          "outcome": "pending"
+        },
+        {
+          "claim": "Gemini 4 Carbon 可能在 11 月扩大开放",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-11-30",
+          "outcome": "pending"
+        },
+        {
+          "claim": "Claude Opus 5.6 在 11 月下旬或 12 月发布",
+          "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
+          "claimedAt": "2026-11-03",
+          "windowEnd": "2026-12-31",
+          "outcome": "pending"
+        }
+      ]
     }
   ]
 }

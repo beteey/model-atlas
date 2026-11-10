@@ -497,3 +497,12 @@ test('the single-run candidate limit and request concurrency limit bound indepen
   assert.equal(maxActive, 2);
   assert.deepEqual(out.queue.candidates.slice(4), f.queue.candidates.slice(4));
 });
+
+test('a verified release dated before the site epoch waits for review instead of breaking validation', async () => {
+  const f = fixture({ epochStart: '2099-01-01' });
+  const out = await autoReviewCandidates(f);
+  assert.equal(out.report.published, 0);
+  assert.equal(out.atlas.events.length, 0);
+  assert.equal(out.queue.candidates[0].autoReview.status, 'needs_review');
+  assert.match(out.queue.candidates[0].autoReview.reason, /收录起点/);
+});

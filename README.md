@@ -69,6 +69,10 @@ npm run review
 
 校验会拦下这些情况：重复 ID、未知厂商、日期格式错误、历史事件日期在未来、非 https 链接、“已核验”却没有核验日期或只读到检索摘录、分级高于证据所能支撑的级别、社区来源没有关联观察名单账号、社区说法没有原帖链接、已比对说法没有官方依据。
 
+## 收录范围与重要节点
+
+时间线从 `site.json` 的 `epochStart`（2022-11-01，ChatGPT 上线）开始，更早的事件会被校验拦下。首页默认只显示 `"milestone": true` 的事件，切到「全部记录」才显示其余条目。自动采集的新发布默认不带这个标记，旗舰级发布需要手动补上；`milestone` 不计入核验指纹，改它不会让自动核验记录失效。
+
 ## 添加社区说法
 
 在 `watchlist.json` 对应账号的 `trackRecord` 中追加：
@@ -83,7 +87,7 @@ npm run review
 }
 ```
 
-时间窗结束后改 `outcome`（`hit` / `partial` / `miss`），并补 `resolvedAt`、`evidenceUrl`，有对应历史事件时填 `eventId`。判定规则见 `about.html#watchlist`。
+原帖没有给日期（如只说 “soon”）时，`windowEnd` 取发帖后 30 天并在 `note` 里写明。时间窗结束后改 `outcome`（`hit` / `partial` / `miss`），并补 `resolvedAt`、`evidenceUrl`，有对应历史事件时填 `eventId`。判定规则见 `about.html#watchlist`。
 
 把一条社区说法挂到未来线索上：在 forecast 的 `sources` 中加一条 `"sourceType": "community"`，并填 `"watchlistId": "账号 id"`。
 

@@ -8,5 +8,6 @@
   "author": "xixi",
   "contact": "",
   "timezone": "Asia/Taipei",
-  "timezoneLabel": "台北时间"
+  "timezoneLabel": "台北时间",
+  "epochStart": "2022-11-01"
 }

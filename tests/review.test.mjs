@@ -113,3 +113,25 @@ test('archive metadata may be added later, but reviewed facts cannot change', ()
   record.date = '2026-10-01';
   assert.notEqual(record.pipelineReview.recordHash, recordFingerprint(record));
 });
+
+test('milestone is an editorial mark: toggling it keeps the verified fingerprint, changing facts does not', () => {
+  const record = { id: 'atlas-test', vendor: 'openai', name: 'Atlas Test Model', date: '2026-10-20', kind: 'API 上线' };
+  assert.equal(recordFingerprint({ ...record, milestone: true }), recordFingerprint(record));
+  assert.equal(recordFingerprint({ ...record, milestone: false }), recordFingerprint(record));
+  assert.notEqual(recordFingerprint({ ...record, date: '2026-10-21' }), recordFingerprint(record));
+});
+
+test('updating an event keeps its milestone mark', () => {
+  const f = fixture(); const old = { id: 'atlas-test', vendor: 'openai', name: 'Old', date: '2026-10-19', kind: 'API 上线', summary: 'Old', url: 'https://openai.com/index/old', milestone: true };
+  f.atlas.events.push(old);
+  Object.assign(f.decision.record, { operation: 'update', baseHash: hash(old) }); f.decision.reason = '更正摘要';
+  f.decision.confirmationHash = confirmationHash(f.decision);
+  const out = applyDecision(f);
+  assert.equal(out.atlas.events[0].milestone, true);
+  assert.equal(out.atlas.events[0].pipelineReview.recordHash, recordFingerprint(out.atlas.events[0]));
+});
+test('events before the site epoch are refused at review time', () => {
+  const f = fixture();
+  assert.throws(() => applyDecision({ ...f, epochStart: '2026-11-01' }), /收录起点/);
+  assert.equal(applyDecision({ ...fixture(), epochStart: '2022-11-01' }).atlas.events.length, 1);
+});

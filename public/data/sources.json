@@ -377,6 +377,20 @@
       ]
     },
     {
+      "id": "community-testingcatalog",
+      "vendor": null,
+      "name": "TestingCatalog",
+      "kind": "rss",
+      "url": "https://www.testingcatalog.com/rss/",
+      "status": "ready",
+      "note": "观察名单账号 @testingcatalog 的网站 RSS，整理 X 上的灰度与爆料线索。只作未来线索，进人工审核，不能确认发布；引用时关联 watchlistId testingcatalog。",
+      "sourceType": "community",
+      "watchlistId": "testingcatalog",
+      "evidencePrefixes": [
+        "https://www.testingcatalog.com/"
+      ]
+    },
+    {
       "id": "commentary-simonw",
       "vendor": null,
       "name": "Simon Willison",
@@ -486,7 +500,7 @@
     "platform": "X",
     "watchlistFile": "watchlist.json",
     "ingest": "manual_or_api",
-    "note": "自动抓 X 需要付费接口（如 SocialData），本阶段默认人工 / Issue 提交。"
+    "note": "自动抓 X 需要付费接口（如 SocialData），本阶段默认人工 / Issue 提交。TestingCatalog 网站的 RSS 已作为免费替代接入（community-testingcatalog），条目进人工审核。"
   },
   "media": {
     "说明": "已配置的媒体 RSS 自动入待审核；其他媒体人工补充。媒体报道仅作为媒体级未来线索，不能自动确认发布。",

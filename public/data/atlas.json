@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-16",
-  "historyCheckedAt": "2026-10-22",
-  "radarCheckedAt": "2026-10-18",
+  "checkedAt": "2026-11-10",
+  "historyCheckedAt": "2026-11-10",
+  "radarCheckedAt": "2026-11-10",
   "vendors": [
     {
       "id": "openai",
@@ -83,109 +83,6 @@
   ],
   "events": [
     {
-      "id": "transformer",
-      "vendor": "google",
-      "name": "Transformer",
-      "date": "2017-06-12",
-      "kind": "论文公开",
-      "summary": "提出以注意力机制为核心的 Transformer 架构，为此后的语言与多模态模型发展提供基础。",
-      "url": "https://arxiv.org/abs/1706.03762",
-      "sourceType": "paper",
-      "tags": [
-        "基础架构",
-        "研究里程碑"
-      ],
-      "audit": {
-        "status": "verified",
-        "checkedAt": "2026-10-18",
-        "verifiedAt": "2026-10-18",
-        "supports": "arXiv 首次提交日期为 2017-06-12，摘要提出 Transformer 架构；支持论文公开事件。",
-        "support": {
-          "modelName": true,
-          "eventDate": true,
-          "eventType": true
-        },
-        "method": "官方原文 / 论文正文"
-      }
-    },
-    {
-      "id": "gpt1",
-      "vendor": "openai",
-      "name": "GPT-1",
-      "date": "2018-06-11",
-      "kind": "研究发布",
-      "summary": "通过生成式预训练与监督微调，探索通用语言理解。",
-      "url": "https://openai.com/index/language-unsupervised/",
-      "sourceType": "official",
-      "tags": [
-        "预训练",
-        "语言理解"
-      ],
-      "audit": {
-        "status": "verified",
-        "checkedAt": "2026-10-18",
-        "verifiedAt": "2026-10-18",
-        "supports": "OpenAI 原文日期为 2018-06-11，介绍通用语言预训练研究与系统；支持研究发布。原文未使用 GPT-1 名称，GPT-1 是回溯命名。",
-        "support": {
-          "modelName": "retrospective_name_not_literal_in_original",
-          "eventDate": true,
-          "eventType": true
-        },
-        "method": "一手资料正文"
-      }
-    },
-    {
-      "id": "gpt2",
-      "vendor": "openai",
-      "name": "GPT-2",
-      "date": "2019-02-14",
-      "kind": "首次宣布",
-      "summary": "展示无需专项训练的文本生成能力。当天并未开放最大规模模型的完整权重。",
-      "url": "https://openai.com/index/better-language-models/",
-      "sourceType": "official",
-      "tags": [
-        "文本生成"
-      ],
-      "audit": {
-        "status": "verified",
-        "checkedAt": "2026-10-18",
-        "verifiedAt": "2026-10-18",
-        "supports": "OpenAI 原文日期为 2019-02-14，明确介绍 GPT-2，并说明当时只发布较小版本；支持首次宣布，不支持当日完整最大模型权重发布。",
-        "support": {
-          "modelName": true,
-          "eventDate": true,
-          "eventType": true
-        },
-        "method": "一手资料正文"
-      }
-    },
-    {
-      "id": "gpt3",
-      "vendor": "openai",
-      "name": "GPT-3",
-      "date": "2020-05-28",
-      "kind": "论文公开",
-      "summary": "规模扩展推动少样本学习，模型可通过提示完成多类语言任务。",
-      "url": "https://arxiv.org/abs/2005.14165",
-      "sourceType": "paper",
-      "tags": [
-        "少样本学习",
-        "规模扩展"
-      ],
-      "audit": {
-        "status": "verified",
-        "checkedAt": "2026-10-18",
-        "verifiedAt": "2026-10-18",
-        "supports": "arXiv 首次提交日期为 2020-05-28，摘要明确 GPT-3；支持论文公开事件。",
-        "support": {
-          "modelName": true,
-          "eventDate": true,
-          "eventType": true
-        },
-        "method": "官方原文 / 论文正文"
-      }
-    },
-    {
       "id": "chatgpt",
       "vendor": "openai",
       "name": "ChatGPT",
@@ -209,7 +106,8 @@
           "eventType": true
         },
         "method": "一手资料正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "gpt4",
@@ -235,7 +133,8 @@
           "eventType": true
         },
         "method": "一手资料正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "gpt4o",
@@ -261,7 +160,8 @@
           "eventType": true
         },
         "method": "一手资料正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "o1",
@@ -287,7 +187,8 @@
           "eventType": true
         },
         "method": "一手资料正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "sol61",
@@ -321,7 +222,8 @@
           "note": "9 月 29 日官方回顾宣布 GPT-6.1 Sol，并说明 API 与付费计划可用。",
           "sourceType": "official"
         }
-      ]
+      ],
+      "milestone": true
     },
     {
       "id": "claude3",
@@ -347,7 +249,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "claude4",
@@ -373,7 +276,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "opus55",
@@ -399,7 +303,8 @@
           "eventType": true
         },
         "method": "官方正文交叉复核"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "gemini15",
@@ -425,7 +330,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "gemini25",
@@ -451,7 +357,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "gemini4-announce",
@@ -478,7 +385,8 @@
         },
         "method": "官方正文交叉复核",
         "note": "本轮已将误引的 10 月 13 日广泛开放文章更正为 9 月 30 日首宣原文。"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "gemini4",
@@ -530,7 +438,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "dsr1",
@@ -556,7 +465,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "dsv41",
@@ -634,7 +544,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "qwen38",
@@ -661,7 +572,8 @@
         },
         "method": "官方正文交叉复核",
         "note": "本轮只能读取到官网页面外壳，无法核对模型名称、2026 年 8 月 3 日日期或 API 上线状态。该条暂不计入已核验记录。"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "kimik2",
@@ -687,7 +599,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "kimik3",
@@ -713,7 +626,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "kimik3-weights",
@@ -764,7 +678,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "glm46",
@@ -868,7 +783,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "llama3",
@@ -893,7 +809,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "muse",
@@ -919,7 +836,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "minimax01",
@@ -971,7 +889,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "mistral7b",
@@ -996,7 +915,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "mistrallarge",
@@ -1048,7 +968,8 @@
           "eventType": true
         },
         "method": "官方原文 / 论文正文"
-      }
+      },
+      "milestone": true
     },
     {
       "id": "auto-e6f4ecf2d6f879605285",
@@ -1098,9 +1019,646 @@
         "title": "MiniMax M3.1 Flash: Redefining Agent Performance and Cost",
         "recordHash": "008bb81d7b2393f9dcbc04fa608902923d867d44fc498fc0fee00b7df9300976"
       }
+    },
+    {
+      "id": "claude2",
+      "vendor": "anthropic",
+      "name": "Claude 2",
+      "date": "2023-07-11",
+      "kind": "API / 产品上线",
+      "summary": "第二代 Claude，输入上下文扩展到 10 万 token，并通过 API 与 claude.ai 测试版开放。",
+      "url": "https://www.anthropic.com/news/claude-2",
+      "sourceType": "official",
+      "tags": [
+        "长上下文",
+        "对话"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章发布于 2023-07-11，原文“We are pleased to announce Claude 2, our new model.”，并说明可通过 API 与 claude.ai beta 使用。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "llama2",
+      "vendor": "meta",
+      "name": "Llama 2",
+      "date": "2023-07-18",
+      "kind": "权重发布",
+      "summary": "Meta 与微软合作发布 Llama 2，预训练与对话微调版本的权重可免费用于研究和商用。",
+      "url": "https://ai.meta.com/blog/llama-2/",
+      "sourceType": "official",
+      "tags": [
+        "开放权重"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章日期为 2023-07-18，原文“Today, we're introducing the availability of Llama 2”，并说明权重可供研究与商业使用。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "gemini1",
+      "vendor": "google",
+      "name": "Gemini 1.0",
+      "date": "2023-12-06",
+      "kind": "首次发布",
+      "summary": "首个 Gemini 系列，分 Ultra、Pro、Nano 三档，原生多模态；Pro 自 12 月 13 日起向开发者开放。",
+      "url": "https://blog.google/technology/ai/google-gemini-ai/",
+      "sourceType": "official",
+      "tags": [
+        "多模态",
+        "模型家族"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Google 官方博客日期为 2023-12-06，原文“Gemini 1.0 is now rolling out across a range of products and platforms”；Pro 的 API 自 12 月 13 日开放，Ultra 当时仅称即将向部分客户提供。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "claude35-sonnet",
+      "vendor": "anthropic",
+      "name": "Claude 3.5 Sonnet",
+      "date": "2024-06-21",
+      "kind": "API / 产品上线",
+      "summary": "Claude 3.5 家族的首个模型，在多项评测上超过 Claude 3 Opus，免费用户也可使用。",
+      "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+      "sourceType": "official",
+      "tags": [
+        "编程",
+        "视觉理解"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章显示日期为 2024-06-21，原文“Today, we're launching Claude 3.5 Sonnet”，并说明在 Claude.ai、API、Amazon Bedrock 与 Vertex AI 可用。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文",
+        "note": "日期按官网页面显示记录；不少第三方时间线按美国当地时间记为 6 月 20 日。"
+      }
+    },
+    {
+      "id": "gemini2-flash",
+      "vendor": "google",
+      "name": "Gemini 2.0 Flash",
+      "date": "2024-12-11",
+      "kind": "实验版上线",
+      "summary": "Gemini 2.0 家族的首个模型，支持多模态输出与原生工具调用，以实验版向全部开发者开放。",
+      "url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+      "sourceType": "official",
+      "tags": [
+        "多模态",
+        "Agent"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Google 官方博客日期为 2024-12-11，原文“Today, we are releasing the first model in the Gemini 2.0 family of models: an experimental version of Gemini 2.0 Flash.”；正式可用当时称将于次年 1 月跟进。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "grok3",
+      "vendor": "xai",
+      "name": "Grok 3",
+      "date": "2025-02-19",
+      "kind": "Beta 上线",
+      "summary": "带推理模式（Think）的 Grok 3 向 X Premium 订阅用户和 Grok.com 开放，API 当时尚未上线。",
+      "url": "https://x.ai/news/grok-3",
+      "sourceType": "official",
+      "tags": [
+        "推理",
+        "搜索"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "xAI 官网文章日期为 2025-02-19，原文“Grok 3 is now available to 𝕏 Premium and Premium+ users on 𝕏 and Grok.com.”；API 写明“未来几周”提供。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文",
+        "note": "日期按官网文章记录；第三方时间线多把直播发布记在 2 月 17 日。"
+      }
+    },
+    {
+      "id": "claude37-sonnet",
+      "vendor": "anthropic",
+      "name": "Claude 3.7 Sonnet",
+      "date": "2025-02-24",
+      "kind": "API / 产品上线",
+      "summary": "首个混合推理模型，可在普通与扩展思考模式间切换；同一公告推出 Claude Code 研究预览。",
+      "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "sourceType": "official",
+      "tags": [
+        "推理",
+        "编程"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章日期为 2025-02-24，原文“Today, we're announcing Claude 3.7 Sonnet, our most intelligent model to date and the first hybrid reasoning model on the market.”，并说明各订阅档与 API 当日可用。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "grok4",
+      "vendor": "xai",
+      "name": "Grok 4",
+      "date": "2025-07-09",
+      "kind": "API / 产品上线",
+      "summary": "Grok 4 带原生工具调用与实时搜索，同时推出并行推理的 Grok 4 Heavy。",
+      "url": "https://x.ai/news/grok-4",
+      "sourceType": "official",
+      "tags": [
+        "推理",
+        "工具使用"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "xAI 官网文章日期为 2025-07-09，原文说明 Grok 4“is available now to SuperGrok and Premium+ subscribers, as well as through the xAI API”。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "gpt5",
+      "vendor": "openai",
+      "name": "GPT-5",
+      "date": "2025-08-07",
+      "kind": "API / 产品上线",
+      "summary": "把快速回答与深度推理合并为一个统一系统，向包括免费用户在内的所有 ChatGPT 用户开放。",
+      "url": "https://openai.com/index/introducing-gpt-5/",
+      "sourceType": "official",
+      "tags": [
+        "推理",
+        "统一模型"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "OpenAI 官网文章日期为 2025-08-07，正文宣布推出 GPT-5，并说明向所有用户开放、Pro 用户可用 GPT-5 Pro。本次读取的是官网中文版页面。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "gemini3",
+      "vendor": "google",
+      "name": "Gemini 3",
+      "date": "2025-11-18",
+      "kind": "预览上线",
+      "summary": "Gemini 3 Pro 以预览形式在 Gemini 应用、搜索 AI 模式、AI Studio 与 Vertex AI 同步上线。",
+      "url": "https://blog.google/products/gemini/gemini-3/",
+      "sourceType": "official",
+      "tags": [
+        "推理",
+        "多模态"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Google 官方博客日期为 2025-11-18，原文“Today we're taking another big step on the path toward AGI and releasing Gemini 3.”；Gemini 3 Pro 标注为 preview。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "opus45",
+      "vendor": "anthropic",
+      "name": "Claude Opus 4.5",
+      "date": "2025-11-24",
+      "kind": "API / 产品上线",
+      "summary": "Opus 档新旗舰，面向编程、Agent 与计算机操作，API 价格降至每百万 token 5 / 25 美元。",
+      "url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "sourceType": "official",
+      "tags": [
+        "编程",
+        "Agent"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章日期为 2025-11-24，原文“Our newest model, Claude Opus 4.5, is available today.”，并说明在应用、API 与三大云平台当日可用。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "glm5",
+      "vendor": "glm",
+      "name": "GLM-5",
+      "date": "2026-02-12",
+      "kind": "模型上线",
+      "summary": "面向复杂系统工程与长程 Agent 任务的新一代 GLM。",
+      "url": "https://docs.z.ai/release-notes/new-released",
+      "sourceType": "official",
+      "tags": [
+        "编程",
+        "Agent"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Z.ai 官方更新日志在 2026-02-12 条目下收录 GLM-5，原文称其“Designed for complex system engineering and long-range Agent tasks”。该条目未单独说明 API 或权重的开放方式。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "mythos-preview",
+      "vendor": "anthropic",
+      "name": "Claude Mythos Preview",
+      "date": "2026-04-07",
+      "kind": "限量研究预览",
+      "summary": "随 Project Glasswing 向合作伙伴限量提供、用于防御性网络安全的前沿模型，官方明确不计划全面开放。",
+      "url": "https://www.anthropic.com/glasswing",
+      "sourceType": "official",
+      "tags": [
+        "网络安全",
+        "限量开放"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Project Glasswing 页面在 2026-04-07 条目下写明合作伙伴“will receive access to Claude Mythos Preview”，并称“We do not plan to make Claude Mythos Preview generally available.”",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "gpt55",
+      "vendor": "openai",
+      "name": "GPT-5.5",
+      "date": "2026-04-23",
+      "kind": "产品上线",
+      "summary": "强调自主完成多阶段任务，当日起向 ChatGPT 与 Codex 的付费用户开放，API 稍后上线。",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "sourceType": "official",
+      "tags": [
+        "Agent",
+        "计算机操作"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "OpenAI 官网文章日期为 2026-04-23，正文宣布正式发布 GPT-5.5，即日起面向 Plus、Pro、Business、Enterprise 用户陆续开放；API 写明“近期上线”。本次读取的是官网中文版页面。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "dsv4",
+      "vendor": "deepseek",
+      "name": "DeepSeek-V4 Preview",
+      "date": "2026-04-24",
+      "kind": "API / 权重发布",
+      "summary": "V4-Pro 与 V4-Flash 同时上线 API 并开放权重，上下文 100 万 token。",
+      "url": "https://www.deepseek.com/en/news/v4-preview/",
+      "sourceType": "official",
+      "tags": [
+        "开放权重",
+        "长上下文"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "DeepSeek 官网文章日期为 2026-04-24，原文“DeepSeek-V4 Preview is officially live & open-sourced!”，并说明 API 当日可用、权重发布在 Hugging Face。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "fable5",
+      "vendor": "anthropic",
+      "name": "Claude Fable 5",
+      "date": "2026-06-09",
+      "kind": "API / 产品上线",
+      "summary": "首个面向公众的 Mythos 级模型；同底座、防护更少的 Mythos 5 只向 Project Glasswing 伙伴提供。",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "sourceType": "official",
+      "tags": [
+        "Mythos 级",
+        "专业工作"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章发布于 2026-06-09，原文“Today we're launching Claude Fable 5: a Mythos-class model that we've made safe for general use.”。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文",
+        "note": "同一页面的更新记录显示：6 月 12 日暂停访问，7 月 1 日恢复。"
+      }
+    },
+    {
+      "id": "gpt6-astra",
+      "vendor": "openai",
+      "name": "GPT-6 Astra",
+      "date": "2026-09-03",
+      "kind": "限量推出 / 逐步开放",
+      "summary": "GPT-6 系列的首个模型，先向部分组织推出，随后数日内向 ChatGPT 付费用户与 API 开放。",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "sourceType": "official",
+      "tags": [
+        "推理",
+        "计算机操作"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官方发布页正文宣布推出 GPT-6 Astra，并说明“即日起面向部分组织逐步推出”、未来几天向付费用户与 API 开放；发布页本身不显示日期。同日的官方安全概述标注 2026-09-03，并写“今天，我们正式发布 GPT-6 Astra”。两篇一手正文共同支持名称、日期与事件类型。本次读取的是官网中文版页面。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      },
+      "extraSources": [
+        {
+          "title": "OpenAI · 安全概述：GPT-6 Astra · 日期补证",
+          "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
+          "note": "页面日期 2026-09-03，正文写明当天发布 GPT-6 Astra。",
+          "sourceType": "official"
+        }
+      ]
+    },
+    {
+      "id": "mistral4-weights",
+      "vendor": "mistral",
+      "name": "Mistral Large 4",
+      "date": "2026-10-29",
+      "kind": "权重开放",
+      "summary": "兑现 10 月初“月底前开放权重”的承诺，以 Mistral Ecosystem Open-Weight License 发布权重。",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "sourceType": "official",
+      "tags": [
+        "开放权重"
+      ],
+      "milestone": false,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Mistral 官网文章原文“Today, we're releasing the weights of this improved Mistral Large 4.”；文章正文不显示日期，官网新闻列表把该文章列在 2026-10-29。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "gemini4-carbon",
+      "vendor": "google",
+      "name": "Gemini 4 Carbon",
+      "date": "2026-10-28",
+      "kind": "首次宣布 / 限量预览",
+      "summary": "Google 称其为最强模型，侧重网络安全防御与长程任务；先经 Fairwind 计划向部分网络防御方开放。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "sourceType": "official",
+      "tags": [
+        "网络安全",
+        "限量开放"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "Google 官方博客日期为 2026-10-28，原文“Today, we're announcing the next frontier model: Gemini 4 Carbon”；当周起仅向部分网络防御方开放，面向开发者与消费者的时间只写“as soon as possible”。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
+    },
+    {
+      "id": "fable52",
+      "vendor": "anthropic",
+      "name": "Claude Fable 5.2",
+      "date": "2026-11-09",
+      "kind": "API / 产品上线",
+      "summary": "Fable 系列升级，同时发布仅向核验机构开放的 Mythos 5.2；API 价格为每百万 token 8 / 40 美元。",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "sourceType": "official",
+      "tags": [
+        "编程",
+        "推理"
+      ],
+      "milestone": true,
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-10",
+        "verifiedAt": "2026-11-10",
+        "supports": "官网文章日期为 2026-11-09，原文“Claude Fable 5.2 is available today on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure.”",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
     }
   ],
   "forecasts": [
+    {
+      "confidence": "community",
+      "evidenceLabel": "社区线索 · 未证实",
+      "status": "未官宣",
+      "checkedAt": "2026-11-10",
+      "id": "gpt62",
+      "vendor": "openai",
+      "name": "GPT-6.2 Astra / Sol",
+      "kind": "模型发布",
+      "dateLabel": "传闻 11 月中旬前",
+      "dateDetail": "社区传闻：Astra 11 月 2–15 日，Sol 11 月 10–15 日；官方未确认",
+      "windowStart": "2026-11-02",
+      "windowEnd": "2026-11-15",
+      "summary": "目前信号最密集的一条线索。11 月 1 日起有用户在 Codex 用量统计里看到 gpt-6.2-astra 这个模型 ID，TestingCatalog 判断是灰度或 A/B 测试。多个账号押 11 月 6 日发布，当天没有发生。OpenAI 没有在任何官方渠道提到 GPT-6.2，模型 ID 出现在服务端也不等于发布日期。",
+      "sources": [
+        {
+          "title": "TestingCatalog · GPT-6.2 Astra 出现在 Codex 用量统计",
+          "url": "https://www.testingcatalog.com/gpt-6-2-astra-appears-codex-usage/",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "2026.11.02 · 附多位用户的用量截图与一条原始响应事件。",
+          "publishedAt": "2026-11-02",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "文章正文",
+          "supports": "多位 Codex 用户的用量页在 10 月 31 日出现 gpt-6.2-astra，占比因账号而异；文章同时写明 OpenAI 尚未在任何地方提到这个模型。",
+          "quote": "That's strong evidence the ID is live on OpenAI's servers, but it isn't an announcement."
+        },
+        {
+          "title": "TestingCatalog · 11 月 6 日每日简报",
+          "url": "https://x.com/testingcatalog/status/2118644436917793116",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "简报开头的 MODEL FORECAST 列表，只给方向不给日期。",
+          "publishedAt": "2026-11-06",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "11 月 6 日的预测列表对 Sol 与 Astra 都写“today?”，带问号。当天没有官方发布。",
+          "quote": "GPT-6.2 Sol, today? / GPT-6.2 Astra, today?"
+        },
+        {
+          "title": "Chubby · “GPT-6.2 very close”",
+          "url": "https://x.com/kimmonismus/status/2116846125126693368",
+          "sourceType": "community",
+          "watchlistId": "chubby",
+          "note": "转述他人消息，未给出处与日期。",
+          "publishedAt": "2026-11-01",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "称 GPT-6.2 发布在即，并猜测是回应 Fable 5.5 的新旗舰。",
+          "quote": "Confirmed. GPT-6.2 very close. Expect a release soon."
+        },
+        {
+          "title": "Chubby · “今天就是那一天”",
+          "url": "https://x.com/kimmonismus/status/2118585457076248628",
+          "sourceType": "community",
+          "watchlistId": "chubby",
+          "note": "引用他人截图推断当日发布，未兑现。",
+          "publishedAt": "2026-11-06",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "11 月 6 日称“今天”发布 GPT-6.2；同日早些时候的另一帖称周四不会发、周五大概率发。",
+          "quote": "We are so back. Looks like today is the day: GPT-6.2 incoming"
+        },
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "给出 Astra 11 月 2–15 日、Sol 11 月 10–15 日的传闻窗口，并声明未经官方确认。",
+          "quote": "GPT-6.2 Astra (OpenAI): November 2–15 • GPT-6.2 Sol (OpenAI): November 10–15"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-11-10",
+          "text": "建档。四条 X 原帖与一篇 TestingCatalog 文章均已直接读取；11 月 6 日的“今天发布”说法没有兑现，已记入对应账号的历史说法。OpenAI 新闻页本次因访问限制未能读取，官方侧是否有公告以第三方转述为准，不计入证据。"
+        }
+      ]
+    },
     {
       "id": "fable55",
       "vendor": "anthropic",
@@ -1109,10 +1667,60 @@
       "confidence": "community",
       "evidenceLabel": "社区线索 · 未证实",
       "status": "未官宣",
-      "dateLabel": "日期未知",
-      "dateDetail": "传闻称 10 月中旬，未获官方确认",
-      "summary": "目前收录的四条来源均为第三方整理或媒体对社交媒体说法的转述，本页尚未读取这些报道原文，也未找到可独立核验的原帖。按本站规则，这类线索保持「社区线索 · 未证实」，不升级为官方或媒体计划，也不给出预计日期。后续若找到最初说出该说法的账号原帖，应回溯建档到观察名单，并以账号历史命中率作为可信度依据。",
+      "dateLabel": "传闻 11 月内",
+      "dateDetail": "社区传闻：11 月，可能在 30 日前后；官方未确认",
+      "summary": "Anthropic 已在 11 月 9 日发布 Fable 5.2，官方至今没有提到 Fable 5.5。社区一侧，TestingCatalog 在 11 月 6 日的预测列表里写“soon”，Mark Kretschmann 汇总的传闻窗口是 11 月、可能在 30 日前后。Fable 5.2 发布后这个版本号是否还会出现并不确定，继续按社区线索处理。",
       "sources": [
+        {
+          "title": "TestingCatalog · 11 月 6 日每日简报",
+          "url": "https://x.com/testingcatalog/status/2118644436917793116",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "简报开头的 MODEL FORECAST 列表，只给方向不给日期。",
+          "publishedAt": "2026-11-06",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "11 月 6 日的预测列表把 Claude Fable 5.5 标为“soon”，同时把 Mythos 5.5 标为“never?”。没有给出日期。",
+          "quote": "Claude Fable 5.5, soon"
+        },
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "给出 11 月、可能在 30 日前后的传闻窗口，并声明未经官方确认。",
+          "quote": "Claude Fable 5.5 (Anthropic): November, possibly around the 30th"
+        },
+        {
+          "title": "TestingCatalog · Opus 5.5 流量疑似被路由到新模型",
+          "url": "https://www.testingcatalog.com/anthropic-tests-new-model-opus-5-5-routing-opus-5-6-fable-5-5/",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "2026.10.12 · 汇总多位 X 用户的测试截图，属于灰度迹象而非发布信息。",
+          "publishedAt": "2026-10-12",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "文章正文",
+          "supports": "报道称部分 Opus 5.5 请求落到未公布的新模型上，并明确写“最终是 Opus 5.6 还是 Fable 5.5 尚不清楚”。"
+        },
+        {
+          "title": "Anthropic · Claude Fable 5.2 与 Mythos 5.2 发布公告",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "sourceType": "official",
+          "note": "2026.11.09 · 官方实际发布的是 Fable 5.2，全文未提 Fable 5.5。",
+          "publishedAt": "2026-11-09",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "官网正文",
+          "supports": "确认 11 月 9 日发布的是 Fable 5.2；不构成 Fable 5.5 的任何依据。",
+          "quote": "Claude Fable 5.2 is available today on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure."
+        },
         {
           "title": "OrcaRouter · Azure 目录出现 claude-fable-5-5",
           "url": "https://www.orcarouter.ai/blog/claude-fable-5-5-azure-listing",
@@ -1182,24 +1790,403 @@
         {
           "date": "2026-10-21",
           "text": "站点拆分上线：明确四条来源均为聚合/转述，尚未关联观察名单账号；等待可核验的原帖后再按社区线索规则建档。"
+        },
+        {
+          "date": "2026-11-10",
+          "text": "Anthropic 于 11 月 9 日发布 Fable 5.2，而不是传闻中的 5.5。补入直接读取的两条 X 原帖并关联观察名单账号；10 月中旬的说法没有兑现，窗口改记为社区传闻的 11 月内。"
         }
       ],
-      "checkedAt": "2026-10-18"
+      "checkedAt": "2026-11-10",
+      "windowStart": "2026-11-03",
+      "windowEnd": "2026-11-30"
     },
     {
-      "id": "mistral4-weights",
+      "confidence": "official",
+      "evidenceLabel": "官方计划 · 无日期",
+      "status": "限量预览中",
+      "checkedAt": "2026-11-10",
+      "id": "gemini4-carbon-ga",
+      "vendor": "google",
+      "name": "Gemini 4 Carbon",
+      "kind": "扩大开放",
+      "dateLabel": "日期未定",
+      "dateDetail": "官方只说“尽快”；社区传闻 11 月内扩大开放",
+      "summary": "Google 在 10 月 28 日宣布 Carbon，目前只经 Fairwind 计划向部分网络防御方开放，对开发者和消费者的时间只写了“尽快”。社区一侧，TestingCatalog 标为“soon”，Mark Kretschmann 认为 11 月可能扩大开放。",
+      "sources": [
+        {
+          "title": "Google · Gemini 4 Carbon 发布公告",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+          "sourceType": "official",
+          "note": "2026.10.28 · 限量预览，未给出全面开放日期。",
+          "publishedAt": "2026-10-28",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "官网正文",
+          "supports": "确认当周起向部分网络防御方开放，并称会尽快带给开发者、企业与消费者；没有具体日期。",
+          "quote": "Today, we're announcing the next frontier model: Gemini 4 Carbon, our strongest model with state-of-the-art cybersecurity and long horizon capabilities."
+        },
+        {
+          "title": "TestingCatalog · 11 月 6 日每日简报",
+          "url": "https://x.com/testingcatalog/status/2118644436917793116",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "简报开头的 MODEL FORECAST 列表，只给方向不给日期。",
+          "publishedAt": "2026-11-06",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "预测列表把 Carbon 与 Gemini 4 Hydrogen (Flash) 都标为“soon”。",
+          "quote": "Gemini 4 Carbon, soon"
+        },
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "认为 11 月可能扩大开放，措辞为“potentially”。",
+          "quote": "Gemini 4 Carbon (Google): Wider rollout potentially in November"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-11-10",
+          "text": "建档。官方公告确认有扩大开放的计划但没有日期，分级按官方计划；社区的 11 月说法只写在说明里，不设预计窗口。"
+        }
+      ]
+    },
+    {
+      "confidence": "official",
+      "evidenceLabel": "官方计划",
+      "status": "计划中",
+      "checkedAt": "2026-11-10",
+      "id": "kimi-k31-weights",
+      "vendor": "kimi",
+      "name": "Kimi K3.1 Pro",
+      "kind": "权重开放",
+      "dateLabel": "11 月 4 日前",
+      "dateDetail": "官方承诺 2026 年 11 月 4 日前发布完整权重",
+      "windowStart": "2026-10-24",
+      "windowEnd": "2026-11-04",
+      "summary": "K3.1 Pro 已在 10 月 24 日上线产品与 API，官方文章写明完整权重会在 11 月 4 日前发布。截至本次检查，Kimi 官网新闻列表里没有权重发布的公告，是否已如期发布尚未确认。",
+      "sources": [
+        {
+          "title": "Kimi · K3.1 Pro 发布文章",
+          "url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+          "sourceType": "official",
+          "note": "2026.10.24 · 日期取自官网新闻列表；文章正文不显示日期。",
+          "publishedAt": "2026-10-24",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "官网正文",
+          "supports": "确认模型已在 Kimi 应用与 API 上线，并承诺 11 月 4 日前发布完整权重。",
+          "quote": "The full model weights will be released by Nov 4."
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-11-10",
+          "text": "建档。官方窗口已过，官网未见权重发布公告；Hugging Face 上有同名仓库，但本次没有打开核对，暂不据此确认。"
+        }
+      ]
+    },
+    {
+      "confidence": "community",
+      "evidenceLabel": "社区线索 · 未证实",
+      "status": "未官宣",
+      "checkedAt": "2026-11-10",
+      "id": "dsv41-pro",
+      "vendor": "deepseek",
+      "name": "DeepSeek V4.1 Pro",
+      "kind": "模型发布",
+      "dateLabel": "传闻 11 月 12 日前后",
+      "dateDetail": "社区传闻：11 月 12 日前后；官方未确认",
+      "windowStart": "2026-11-05",
+      "windowEnd": "2026-11-19",
+      "summary": "DeepSeek 已在 9 月发布 V4.1-Flash，Pro 档还没有对应版本。社区传闻 V4.1 Pro 在 11 月 12 日前后发布，目前只有一条汇总帖提到；DeepSeek 官网新闻页没有任何 V4.1 Pro 的信息。",
+      "sources": [
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "给出 11 月 12 日前后的传闻日期，并声明未经官方确认。",
+          "quote": "DeepSeek V4.1 Pro: Around November 12"
+        },
+        {
+          "title": "DeepSeek · 官网新闻列表",
+          "url": "https://www.deepseek.com/en/news",
+          "sourceType": "official",
+          "note": "2026.11.10 读取：列表中没有 V4.1 Pro。",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "官网正文",
+          "supports": "新闻列表收录了 V4 Preview 与 V4.1-Flash，没有 V4.1 Pro 的条目；只能说明官方尚未宣布。"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-11-10",
+          "text": "建档。窗口按观察名单规则取传闻日期前后 7 天。"
+        }
+      ]
+    },
+    {
+      "id": "qwen4",
+      "vendor": "qwen",
+      "name": "Qwen 4",
+      "kind": "下一代基础模型",
+      "confidence": "official",
+      "evidenceLabel": "官方路线图",
+      "status": "训练中",
+      "dateLabel": "发布时间待定",
+      "dateDetail": "官方未公布上线日期；社区传闻 Qwen 4 Max 约在 11 月 16 日",
+      "summary": "阿里巴巴已确认 Qwen 4 正在训练，但没有公布上线时间。社区流传 Qwen 4 Max 在 11 月 16 日前后发布，目前只有一条汇总帖提到，没有官方或媒体佐证。",
+      "sources": [
+        {
+          "title": "Alibaba Cloud · 全栈 AI 路线图",
+          "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1",
+          "sourceType": "official",
+          "note": "2026.09.22 · 确认下一代 Qwen 4 正在训练，未公布上线日。",
+          "publishedAt": "2026-09-22",
+          "verification": "verified",
+          "verifiedAt": "2026-10-18",
+          "method": "官网正文",
+          "supports": "官方确认 Qwen 4 正在训练；该公告没有提供上线日期。",
+          "quote": "its next-generation model, Qwen 4, is currently in training."
+        },
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "给出 11 月 16 日前后的传闻日期，并声明未经官方确认。Qwen 官网博客为动态渲染页面，本次未能读取，无法从官方侧印证。",
+          "quote": "Qwen 4 Max (Alibaba): Around November 16"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-09-22",
+          "text": "官方路线图确认 Qwen 4 正在训练。"
+        },
+        {
+          "date": "2026-10-16",
+          "text": "本轮核验未找到官方发布日期，继续标记“待定”。"
+        },
+        {
+          "date": "2026-10-18",
+          "text": "重新读取阿里云官方路线图，确认训练中；来源仍未提供上线日期。"
+        },
+        {
+          "date": "2026-11-10",
+          "text": "补入社区传闻日期（约 11 月 16 日）。官方来源没有变化，分级维持“官方路线图”，传闻日期只写在说明里，不作为预计日期。"
+        }
+      ],
+      "checkedAt": "2026-11-10"
+    },
+    {
+      "confidence": "community",
+      "evidenceLabel": "社区线索 · 未证实",
+      "status": "未官宣",
+      "checkedAt": "2026-11-10",
+      "id": "grok48",
+      "vendor": "xai",
+      "name": "Grok 4.8",
+      "kind": "模型发布",
+      "dateLabel": "说法不一",
+      "dateDetail": "一说 11 月 19–30 日，一说“短期内不会”；官方未确认",
+      "windowStart": "2026-11-19",
+      "windowEnd": "2026-11-30",
+      "summary": "两个账号的判断相反：Mark Kretschmann 汇总的传闻窗口是 11 月 19–30 日，TestingCatalog 在 11 月 6 日写的是“not soon???”。xAI 新闻页本次无法读取，没有官方信息可对照。",
+      "sources": [
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "给出 11 月 19–30 日的传闻窗口，并声明未经官方确认。",
+          "quote": "Grok 4.8 (SpaceXSI): November 19–30"
+        },
+        {
+          "title": "TestingCatalog · 11 月 6 日每日简报",
+          "url": "https://x.com/testingcatalog/status/2118644436917793116",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "简报开头的 MODEL FORECAST 列表，只给方向不给日期。",
+          "publishedAt": "2026-11-06",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "预测列表认为 Grok 4.8 短期内不会发布，带三个问号。",
+          "quote": "Grok 4.8, not soon???"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-11-10",
+          "text": "建档。两条社区说法方向相反，一并保留；时间地图上的节点按较晚的传闻窗口截止日显示。"
+        }
+      ]
+    },
+    {
+      "confidence": "community",
+      "evidenceLabel": "社区线索 · 未证实",
+      "status": "未官宣",
+      "checkedAt": "2026-11-10",
+      "id": "opus56",
+      "vendor": "anthropic",
+      "name": "Claude Opus 5.6",
+      "kind": "模型发布",
+      "dateLabel": "传闻 11 月底至 12 月",
+      "dateDetail": "社区传闻：11 月下旬或 12 月；官方未确认",
+      "windowStart": "2026-11-20",
+      "windowEnd": "2026-12-31",
+      "summary": "10 月中旬起有用户反映 Opus 5.5 的请求被路由到更强的新模型，名字是 Opus 5.6 还是别的并不清楚。Mark Kretschmann 汇总的传闻窗口是 11 月下旬或 12 月。Anthropic 没有提过这个型号。",
+      "sources": [
+        {
+          "title": "Mark Kretschmann · 11 月发布窗口汇总",
+          "url": "https://x.com/mark_k/status/2117323044213625181",
+          "sourceType": "community",
+          "watchlistId": "mark-kretschmann",
+          "note": "发帖人自述窗口基于爆料、预测市场与历史节奏推测，均未获官方确认。",
+          "publishedAt": "2026-11-03",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "X 原帖（浏览器直接读取）",
+          "supports": "给出 11 月下旬或 12 月的传闻窗口，并声明未经官方确认。",
+          "quote": "Claude Opus 5.6 (Anthropic): Late November or December"
+        },
+        {
+          "title": "TestingCatalog · Opus 5.5 流量疑似被路由到新模型",
+          "url": "https://www.testingcatalog.com/anthropic-tests-new-model-opus-5-5-routing-opus-5-6-fable-5-5/",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "2026.10.12 · 汇总多位 X 用户的测试结果。",
+          "publishedAt": "2026-10-12",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "文章正文",
+          "supports": "报道称部分 Opus 5.5 请求落到未公布的新检查点上，名称可能是 Opus 5.6 或 Fable 5.5；属于灰度迹象，不含发布日期。"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-11-10",
+          "text": "建档。窗口取自单一汇总帖，宽度超过一个月，可信度有限。"
+        }
+      ]
+    },
+    {
+      "id": "astra61",
+      "vendor": "openai",
+      "name": "GPT-6.1 Astra",
+      "kind": "模型发布",
+      "confidence": "media",
+      "evidenceLabel": "媒体报道",
+      "status": "发布暂缓",
+      "dateLabel": "新日期未知",
+      "dateDetail": "原计划 2026 年 10 月 → 新日期未知",
+      "summary": "据 WIRED 报道，原定 10 月的发布因安全评估暂缓，至今没有新的发布日期。社区线索已转向 GPT-6.2 Astra，见对应条目。",
+      "sources": [
+        {
+          "title": "WIRED · OpenAI 推迟模型发布",
+          "url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/",
+          "sourceType": "media",
+          "note": "2026.09.29 · 报道引述 OpenAI；未达到发布所需的安全标准。",
+          "publishedAt": "2026-09-29",
+          "verification": "verified",
+          "verifiedAt": "2026-10-18",
+          "method": "媒体正文",
+          "supports": "WIRED 报道原定次月的发布被取消，并引述公司对安全标准的解释。没有给出新的发布日期。"
+        },
+        {
+          "title": "Associated Press · 补充报道",
+          "url": "https://apnews.com/article/5afb865b2cddc439efdcf31ebdc406a5",
+          "sourceType": "media",
+          "note": "2026.10.18 复核：原文访问失败，暂不作为确认依据。",
+          "verification": "unavailable",
+          "attemptedAt": "2026-10-18",
+          "method": "访问失败",
+          "supports": "本次未能读取原文，不计入可核验来源，也不据此增加可信度。"
+        },
+        {
+          "title": "TestingCatalog · GPT-6.2 Astra 出现在 Codex 用量统计",
+          "url": "https://www.testingcatalog.com/gpt-6-2-astra-appears-codex-usage/",
+          "sourceType": "community",
+          "watchlistId": "testingcatalog",
+          "note": "2026.11.02 · 文末回顾 6.1 Astra 的去向。",
+          "publishedAt": "2026-11-02",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "文章正文",
+          "supports": "文章称 OpenAI 在 9 月下旬搁置了 GPT-6.1 Astra，版本号直接跳到 6.2 可能意味着问题已修复。这是该站的判断，不是官方说法。"
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-09-29",
+          "text": "WIRED 报道回顾：原定次月发布 → 因安全评估暂缓，新日期未知。原计划日期来自同篇报道。"
+        },
+        {
+          "date": "2026-10-16",
+          "text": "核验后保持“发布暂缓”。本轮未找到厂商官网的重新排期公告。"
+        },
+        {
+          "date": "2026-10-18",
+          "text": "重新读取 WIRED 正文，维持媒体报道分类；AP 补充链接本次不可读取，移出可核验来源计数。"
+        },
+        {
+          "date": "2026-11-10",
+          "text": "未找到 OpenAI 对 6.1 Astra 重新排期的公告。社区讨论已转向 GPT-6.2 Astra，另立条目跟踪；本条维持“发布暂缓”。"
+        }
+      ],
+      "checkedAt": "2026-11-10"
+    },
+    {
+      "id": "mistral4-weights-plan",
       "vendor": "mistral",
       "name": "Mistral Large 4",
       "kind": "开放权重",
       "confidence": "official",
       "evidenceLabel": "官方计划",
-      "status": "计划中",
-      "dateLabel": "10 月底前",
-      "dateDetail": "2026 年 10 月底前",
+      "status": "已发布",
+      "dateLabel": "已于 10 月 29 日发布",
+      "dateDetail": "官方计划 10 月底前 → 10 月 29 日发布权重",
       "windowStart": "2026-10-06",
       "windowEnd": "2026-10-31",
-      "summary": "预览 API 已开放。官方计划于 10 月底发布模型权重，具体日期尚未官宣。",
+      "summary": "官方在 10 月 29 日发布了 Mistral Large 4 的权重，赶在承诺的月底之前。媒体此前报道的 10 月 27 日晚了两天。",
       "sources": [
+        {
+          "title": "Mistral · 权重开放公告",
+          "url": "https://mistral.ai/news/mistral-large-4-oss/",
+          "sourceType": "official",
+          "note": "2026.10.29 · 官网新闻列表所列日期；文章正文不显示日期。",
+          "publishedAt": "2026-10-29",
+          "verification": "verified",
+          "verifiedAt": "2026-11-10",
+          "method": "官网正文",
+          "supports": "确认权重已发布，许可为 Mistral Ecosystem Open-Weight License。",
+          "quote": "Today, we're releasing the weights of this improved Mistral Large 4."
+        },
         {
           "title": "Mistral · 官方发布公告",
           "url": "https://mistral.ai/news/mistral-large-4/",
@@ -1236,100 +2223,13 @@
         {
           "date": "2026-10-18",
           "text": "重新读取官网及 Le Monde 报道；官方月底前窗口与媒体 10 月 27 日分别保留。"
-        }
-      ],
-      "checkedAt": "2026-10-18"
-    },
-    {
-      "id": "qwen4",
-      "vendor": "qwen",
-      "name": "Qwen 4",
-      "kind": "下一代基础模型",
-      "confidence": "official",
-      "evidenceLabel": "官方路线图",
-      "status": "训练中",
-      "dateLabel": "发布时间待定",
-      "dateDetail": "未公布上线日期",
-      "summary": "阿里巴巴已确认 Qwen 4 正在训练。新一代模型的能力与上线时间仍有待披露。",
-      "sources": [
-        {
-          "title": "Alibaba Cloud · 全栈 AI 路线图",
-          "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1",
-          "sourceType": "official",
-          "note": "2026.09.22 · 确认下一代 Qwen 4 正在训练，未公布上线日。",
-          "publishedAt": "2026-09-22",
-          "verification": "verified",
-          "verifiedAt": "2026-10-18",
-          "method": "官网正文",
-          "supports": "官方确认 Qwen 4 正在训练；该公告没有提供上线日期。",
-          "quote": "its next-generation model, Qwen 4, is currently in training."
-        }
-      ],
-      "changes": [
-        {
-          "date": "2026-09-22",
-          "text": "官方路线图确认 Qwen 4 正在训练。"
         },
         {
-          "date": "2026-10-16",
-          "text": "本轮核验未找到官方发布日期，继续标记“待定”。"
-        },
-        {
-          "date": "2026-10-18",
-          "text": "重新读取阿里云官方路线图，确认训练中；来源仍未提供上线日期。"
+          "date": "2026-11-10",
+          "text": "读取官网权重开放公告：10 月 29 日发布，官方窗口兑现。线索关闭，并新增对应的历史事件。"
         }
       ],
-      "checkedAt": "2026-10-18"
-    },
-    {
-      "id": "astra61",
-      "vendor": "openai",
-      "name": "GPT-6.1 Astra",
-      "kind": "模型发布",
-      "confidence": "media",
-      "evidenceLabel": "媒体报道",
-      "status": "发布暂缓",
-      "dateLabel": "新日期未知",
-      "dateDetail": "原计划 2026 年 10 月 → 新日期未知",
-      "summary": "据 WIRED 报道，原定 10 月的发布因安全评估暂缓，尚未公布新的发布日期。",
-      "sources": [
-        {
-          "title": "WIRED · OpenAI 推迟模型发布",
-          "url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/",
-          "sourceType": "media",
-          "note": "2026.09.29 · 报道引述 OpenAI；未达到发布所需的安全标准。",
-          "publishedAt": "2026-09-29",
-          "verification": "verified",
-          "verifiedAt": "2026-10-18",
-          "method": "媒体正文",
-          "supports": "WIRED 报道原定次月的发布被取消，并引述公司对安全标准的解释。没有给出新的发布日期。"
-        },
-        {
-          "title": "Associated Press · 补充报道",
-          "url": "https://apnews.com/article/5afb865b2cddc439efdcf31ebdc406a5",
-          "sourceType": "media",
-          "note": "2026.10.18 复核：原文访问失败，暂不作为确认依据。",
-          "verification": "unavailable",
-          "attemptedAt": "2026-10-18",
-          "method": "访问失败",
-          "supports": "本次未能读取原文，不计入可核验来源，也不据此增加可信度。"
-        }
-      ],
-      "changes": [
-        {
-          "date": "2026-09-29",
-          "text": "WIRED 报道回顾：原定次月发布 → 因安全评估暂缓，新日期未知。原计划日期来自同篇报道。"
-        },
-        {
-          "date": "2026-10-16",
-          "text": "核验后保持“发布暂缓”。本轮未找到厂商官网的重新排期公告。"
-        },
-        {
-          "date": "2026-10-18",
-          "text": "重新读取 WIRED 正文，维持媒体报道分类；AP 补充链接本次不可读取，移出可核验来源计数。"
-        }
-      ],
-      "checkedAt": "2026-10-18"
+      "checkedAt": "2026-11-10"
     }
   ]
 }

@@ -4,6 +4,11 @@ const h = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&
 const f = (d) => String(d).replace(/-/g, '.');
 const T = (d) => new Date(d + 'T00:00:00Z').getTime();
 const DAY = 864e5;
+const SRC_PREVIEW = 3; // 预测卡片上直接展示的来源条数，其余进详情
+const TRACK_TAIL = 220; // 时间轴右侧留白，容纳最后一个节点的标签
+const LABEL_ROWS = 4, LABEL_GAP = 10; // 时间地图每条泳道的标签行数与最小间距
+const DONE = ['已发布', '已取消', '取消'];
+const CLOSED = [...DONE, '发布暂缓', '已暂停'];
 
 const ST = { verified: ['已核验', 't-v'], unverified: ['未核验', 't-b'], blocked: ['待复核', 't-b'], unavailable: ['无法读取', 't-u'] };
 const chip = (s) => { const a = ST[s] || ['未知', 't-b']; return `<span class="tag ${a[1]}">${a[0]}</span>`; };
@@ -40,7 +45,8 @@ function init({ D, W, SITE }) {
   if (SITE.repo) $('#repo-link').href = SITE.repo;
   if (SITE.issues) $('#issues-link').href = SITE.issues;
 
-  const E = D.events.slice().sort((a, b) => b.date.localeCompare(a.date));
+  const EPOCH = SITE.epochStart || '2022-11-01';
+  const E = D.events.filter((e) => e.date >= EPOCH).sort((a, b) => b.date.localeCompare(a.date));
   const todayKey = () => {
     const parts = new Intl.DateTimeFormat('en-US', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
     const part = (t) => parts.find((p) => p.type === t).value;
@@ -56,7 +62,7 @@ function init({ D, W, SITE }) {
     return d.toISOString().slice(0, 10);
   }
   function forecastState(x, today = TODAY) {
-    const closed = ['已发布', '已取消', '取消', '发布暂缓', '已暂停'].includes(x.status);
+    const closed = CLOSED.includes(x.status);
     const overdue = Boolean(x.windowEnd && x.windowEnd < today && !closed);
     return {
       status: overdue ? '窗口已过 · 待核实' : x.status,
@@ -75,7 +81,7 @@ function init({ D, W, SITE }) {
     const rate = resolved ? (hit + partial * 0.5) / resolved : null;
     return { hit, partial, miss, pending, resolved, rate, enough: resolved >= minN };
   }
-  const rateText = (st) => st.resolved === 0 ? '尚无建档记录' : st.enough ? `${Math.round(st.rate * 100)}%` : `样本不足（${st.resolved}/${minN}）`;
+  const rateText = (st) => st.resolved === 0 ? (st.pending ? `已建档 ${st.pending} 条 · 待比对` : '尚无建档记录') : st.enough ? `${Math.round(st.rate * 100)}%` : `样本不足（${st.resolved}/${minN}）`;
   const accountBadge = (id) => {
     const a = A[id]; if (!a) return '';
     const st = accountStats(a);
@@ -91,10 +97,11 @@ function init({ D, W, SITE }) {
   const srcLine = (s) => `<div>${chip(s.verification || 'unverified')}${link(s.url, s.title)}${archiveLink(s)}${s.watchlistId ? accountBadge(s.watchlistId) : ''}</div>`;
   function radar() {
     $('#rf').innerHTML = RL.map(([k, t]) => `<button class="chip" data-k="${k}" aria-pressed="${rf === k}">${t}</button>`).join('');
-    const L = D.forecasts.filter((x) => rf === 'all' || x.confidence === rf);
-    $('#rg').innerHTML = L.length ? L.map((x) => {
-      const state = forecastState(x);
-      return `<article class="rc"><div class="meta"><span style="color:${V[x.vendor].color};font-weight:600">${h(V[x.vendor].name)}</span><span>${h(state.status)}</span></div><h3>${h(x.name)} · ${h(x.kind)}</h3><div class="date">${h(state.dateLabel)}</div><div class="meter" title="可信等级">${[1, 2, 3].map((i) => `<i class="${i <= CL[x.confidence] ? 'on' : ''}"></i>`).join('')}&nbsp;${h(x.evidenceLabel)}</div><p style="margin:0">${h(x.summary)}</p>${state.notice ? `<p class="notice">${h(state.notice)}</p>` : ''}<div class="src">${x.sources.map(srcLine).join('')}</div><button class="btn" data-f="${x.id}">查看证据与变更记录</button></article>`;
+    const done = (x) => DONE.includes(x.status) ? 2 : CLOSED.includes(x.status) ? 1 : 0;
+    const L = D.forecasts.filter((x) => rf === 'all' || x.confidence === rf).sort((a, b) => done(a) - done(b));
+    $('#rg').innerHTML = L.length ? L.map((x, i) => {
+      const state = forecastState(x), shownSources = x.sources.slice(0, SRC_PREVIEW), hidden = x.sources.length - shownSources.length;
+      return `<article class="rc${done(x) === 2 ? ' closed' : ''}" style="--c:${V[x.vendor].color};--i:${i}"><div class="meta"><span>${h(V[x.vendor].name)}</span><span>${h(state.status)}</span></div><h3>${h(x.name)} · ${h(x.kind)}</h3><div class="date">${h(state.dateLabel)}</div><div class="meter" title="可信等级">${[1, 2, 3].map((i) => `<i class="${i <= CL[x.confidence] ? 'on' : ''}"></i>`).join('')}&nbsp;${h(x.evidenceLabel)}</div><p style="margin:0">${h(x.summary)}</p>${state.notice ? `<p class="notice">${h(state.notice)}</p>` : ''}<div class="src">${shownSources.map(srcLine).join('')}${hidden > 0 ? `<div class="more">另有 ${hidden} 条来源，见证据详情</div>` : ''}</div><button class="btn" data-f="${x.id}">查看证据与变更记录</button></article>`;
     }).join('') : '<p class="sub">这一类别暂无线索。</p>';
   }
   $('#rf').onclick = (e) => { const k = e.target.dataset.k; if (k) { rf = k; radar(); } };
@@ -107,9 +114,9 @@ function init({ D, W, SITE }) {
     const vendorsInUse = D.vendors.filter((v) => (W.accounts || []).some((a) => (a.focus || []).includes(v.id)));
     $('#wf').innerHTML = [['all', '全部账号'], ...vendorsInUse.map((v) => [v.id, v.name])].map(([k, t]) => `<button class="chip" data-w="${k}" aria-pressed="${wf === k}">${h(t)}</button>`).join('');
     const L = (W.accounts || []).filter((a) => wf === 'all' || (a.focus || []).includes(wf));
-    $('#wg').innerHTML = L.length ? L.map((a) => {
+    $('#wg').innerHTML = L.length ? L.map((a, i) => {
       const st = accountStats(a);
-      return `<article class="wc"><div class="meta"><span>${h(ACCOUNT_TYPE[a.type] || a.type)} · ${h(a.platform)}</span><span>${a.profileCheckedAt ? '账号核对于 ' + f(a.profileCheckedAt) : '<span class="t-b">账号待核对</span>'}</span></div><h3>${h(a.name)}<small>${link(a.url, a.handle || a.url)}</small></h3><div class="rate"><b>${h(rateText(st))}</b><small>${st.resolved ? `命中 ${st.hit} · 部分 ${st.partial} · 未命中 ${st.miss}${st.pending ? ` · 待比对 ${st.pending}` : ''}` : '尚未录入可比对的说法'}</small></div><div class="focus">${(a.focus || []).map((v) => `<span style="color:${V[v]?.color || 'inherit'}">${h(V[v]?.name || v)}</span>`).join('')}</div><p>${h(a.note || '')}</p><button class="btn" data-a="${a.id}">查看历史说法</button></article>`;
+      return `<article class="wc" style="--i:${i}"><div class="meta"><span>${h(ACCOUNT_TYPE[a.type] || a.type)} · ${h(a.platform)}</span><span>${a.profileCheckedAt ? '账号核对于 ' + f(a.profileCheckedAt) : '<span class="t-b">账号待核对</span>'}</span></div><h3>${h(a.name)}<small>${link(a.url, a.handle || a.url)}</small></h3><div class="rate"><b>${h(rateText(st))}</b><small>${st.resolved ? `命中 ${st.hit} · 部分 ${st.partial} · 未命中 ${st.miss}${st.pending ? ` · 待比对 ${st.pending}` : ''}` : '尚未录入可比对的说法'}</small></div><div class="focus">${(a.focus || []).map((v) => `<span style="color:${V[v]?.color || 'inherit'}">${h(V[v]?.name || v)}</span>`).join('')}</div><p>${h(a.note || '')}</p><button class="btn" data-a="${a.id}">查看历史说法</button></article>`;
     }).join('') : '<p class="sub">这一厂商暂无跟踪账号。</p>';
   }
   $('#wf').onclick = (e) => { const k = e.target.dataset.w; if (k) { wf = k; watch(); } };
@@ -117,22 +124,24 @@ function init({ D, W, SITE }) {
   watch();
 
   // ---------- 时间地图 ----------
-  const S = { range: '3y', view: 'map', vendor: 'all', q: '' };
+  const S = { range: 'all', tier: 'key', view: 'map', vendor: 'all', q: '' };
   const shown = (v) => S.vendor === 'all' || S.vendor === v;
-  const rangeStart = () => S.range === '3y' ? shiftMonths(TODAY, -36) : '2017-04-01';
+  const rangeStart = () => S.range === '1y' ? shiftMonths(TODAY, -12) : EPOCH;
   const rangeEnd = () => [shiftMonths(TODAY, 3), ...E.map((e) => e.date), ...D.forecasts.map((x) => x.windowEnd)].filter(Boolean).sort().at(-1);
   function chips() {
-    $('#rng').innerHTML = [['3y', '近三年'], ['all', '全部历史']].map(([k, t]) => `<button class="chip" data-r="${k}" aria-pressed="${S.range === k}">${t}</button>`).join('');
+    $('#rng').innerHTML = [['all', `${EPOCH.slice(0, 4)}.${EPOCH.slice(5, 7)} 至今`], ['1y', '近一年']].map(([k, t]) => `<button class="chip" data-r="${k}" aria-pressed="${S.range === k}">${t}</button>`).join('');
+    $('#tr').innerHTML = [['key', '重要节点'], ['all', '全部记录']].map(([k, t]) => `<button class="chip" data-t="${k}" aria-pressed="${S.tier === k}">${t}</button>`).join('');
     $('#vw').innerHTML = [['map', '地图'], ['list', '列表']].map(([k, t]) => `<button class="chip" data-v="${k}" aria-pressed="${S.view === k}">${t}</button>`).join('');
     $('#vf').innerHTML = [['all', '全部厂商'], ...D.vendors.map((v) => [v.id, v.name])].map(([k, t]) => `<button class="chip" data-c="${k}" aria-pressed="${S.vendor === k}">${h(t)}</button>`).join('');
   }
   function items() {
     const q = S.q.trim().toLowerCase(), start = rangeStart();
-    const a = E.filter((e) => e.date >= start && shown(e.vendor) && (!q || (e.name + V[e.vendor].name + V[e.vendor].zh + e.tags.join('') + e.summary).toLowerCase().includes(q)));
-    const b = D.forecasts.filter((x) => x.windowEnd && x.windowEnd >= start && shown(x.vendor) && (!q || (x.name + V[x.vendor].name).toLowerCase().includes(q)));
+    const a = E.filter((e) => e.date >= start && (S.tier === 'all' || e.milestone || q) && shown(e.vendor) && (!q || (e.name + V[e.vendor].name + V[e.vendor].zh + e.tags.join('') + e.summary).toLowerCase().includes(q)));
+    const b = D.forecasts.filter((x) => x.windowEnd && x.windowEnd >= start && !DONE.includes(x.status) && shown(x.vendor) && (!q || (x.name + V[x.vendor].name).toLowerCase().includes(q)));
     return [a, b];
   }
-  function draw() {
+  const labelWidth = (s) => [...s].reduce((w, ch) => w + (ch.charCodeAt(0) > 255 ? 12 : 6.8), 12);
+  function draw(animate = true) {
     chips();
     const [a, b] = items();
     $('#sc').hidden = S.view !== 'map'; $('#ls').hidden = S.view !== 'list';
@@ -141,30 +150,32 @@ function init({ D, W, SITE }) {
       $('#ls').innerHTML = Object.keys(y).sort().reverse().map((k) => `<h4>${k}</h4>` + y[k].map((e) => `<button class="row" data-e="${e.id}"><small>${f(e.date)}</small><span><b>${h(e.name)}</b> <small>${h(V[e.vendor].name)} · ${h(e.kind)}</small></span>${chip(e.audit.status)}</button>`).join('')).join('') || '<p class="sub">没有匹配的记录。</p>';
       return;
     }
-    const s0 = rangeStart(), end = rangeEnd(), ppd = S.range === 'all' ? .42 : 1.05, x0 = T(s0);
+    const s0 = rangeStart(), end = rangeEnd(), ppd = S.range === 'all' ? .9 : 2.4, x0 = T(s0);
     const W_ = Math.round((T(end) - x0) / DAY * ppd), X = (d) => Math.round((T(d) - x0) / DAY * ppd);
     let ticks = '';
-    for (let yy = +s0.slice(0, 4); yy <= +end.slice(0, 4); yy++) for (const m of S.range === 'all' ? [1] : [1, 4, 7, 10]) {
+    for (let yy = +s0.slice(0, 4); yy <= +end.slice(0, 4); yy++) for (const m of S.range === 'all' ? [1, 7] : [1, 4, 7, 10]) {
       const d = `${yy}-${String(m).padStart(2, '0')}-01`;
       if (d >= s0 && d <= end) ticks += `<div class="tick" style="left:${X(d)}px">${m === 1 ? yy : yy + '.' + m}</div>`;
     }
     const lanes = D.vendors.filter((v) => a.some((e) => e.vendor === v.id && T(e.date) >= x0) || b.some((x) => x.vendor === v.id)).map((v) => {
-      let last = -999, lv = 0;
+      const rowEnds = Array(LABEL_ROWS).fill(-Infinity);
       const mk = (o, cls, id, d, nm) => {
         const x = X(d), label = id[0] === 'f' ? `${o.name} · ${o.dateDetail} · ${forecastState(o).status}（节点按窗口截止位置显示）` : `${nm} ${f(d)}`;
-        lv = x - last < 120 ? (lv + 1) % 3 : 0; last = x;
-        return `<button class="ev ${cls}" style="left:${x}px;--c:${v.color};--y:${20 + lv * 20}px" data-${id[0]}="${id[1]}" aria-label="${h(label)}" title="${h(label)}"><i></i><span>${h(nm)}</span></button>`;
+        const free = rowEnds.findIndex((end) => end + LABEL_GAP <= x), lv = free >= 0 ? free : rowEnds.indexOf(Math.min(...rowEnds));
+        rowEnds[lv] = x + labelWidth(nm);
+        return `<button class="ev ${cls}" style="left:${x}px;--c:${v.color};--y:${20 + lv * 19}px;--d:${Math.round(x / W_ * 500)}ms" data-${id[0]}="${id[1]}" aria-label="${h(label)}" title="${h(label)}"><i></i><span>${h(nm)}</span></button>`;
       };
       const evs = [...a.filter((e) => e.vendor === v.id && T(e.date) >= x0).map((e) => [e.date, e, 0]), ...b.filter((x) => x.vendor === v.id).map((x) => [x.windowEnd, x, 1])].sort((p, q) => p[0].localeCompare(q[0]));
-      return `<div class="lane"><div class="ln" style="color:${v.color}">${h(v.name)}<small>${h(v.zh)}</small></div><div class="track" style="width:${W_}px">${ticks}<div class="today" style="left:${X(TODAY)}px" aria-label="今天 ${f(TODAY)}"></div>${evs.map(([d, o, fc]) => fc ? mk(o, 'fc', ['f', o.id], d, o.name + (forecastState(o).notice ? '（待核实）' : '（预期）')) : mk(o, o.audit.status === 'verified' ? '' : 'bk', ['e', o.id], d, o.name)).join('')}</div></div>`;
+      return `<div class="lane"><div class="ln" style="color:${v.color}">${h(v.name)}<small>${h(v.zh)}</small></div><div class="track" style="width:${W_ + TRACK_TAIL}px">${ticks}<div class="today" style="left:${X(TODAY)}px" aria-label="今天 ${f(TODAY)}"></div>${evs.map(([d, o, fc]) => fc ? mk(o, 'fc', ['f', o.id], d, o.name + (forecastState(o).notice ? '（待核实）' : '（预期）')) : mk(o, o.audit.status === 'verified' ? '' : 'bk', ['e', o.id], d, o.name)).join('')}</div></div>`;
     }).join('');
     $('#sc').innerHTML = lanes || '<p class="sub" style="padding:20px">没有匹配的记录。</p>';
-    const sc = $('#sc'); sc.scrollLeft = S.range === 'all' ? W_ : X(TODAY) - sc.clientWidth * .6 + 112;
+    const sc = $('#sc'); sc.classList.toggle('anim', animate); sc.scrollLeft = X(TODAY) - sc.clientWidth * .6 + 112;
   }
   $('#rng').onclick = (e) => { if (e.target.dataset.r) { S.range = e.target.dataset.r; draw(); } };
+  $('#tr').onclick = (e) => { if (e.target.dataset.t) { S.tier = e.target.dataset.t; draw(); } };
   $('#vw').onclick = (e) => { if (e.target.dataset.v) { S.view = e.target.dataset.v; draw(); } };
   $('#vf').onclick = (e) => { if (e.target.dataset.c) { S.vendor = e.target.dataset.c; draw(); } };
-  $('#q').oninput = (e) => { S.q = e.target.value; draw(); };
+  $('#q').oninput = (e) => { S.q = e.target.value; draw(false); };
   const open = (e) => { const t = e.target.closest('[data-e],[data-f]'); if (!t) return; t.dataset.e ? openE(t.dataset.e) : openF(t.dataset.f); };
   $('#sc').onclick = open; $('#ls').onclick = open; draw();
 
@@ -172,7 +183,7 @@ function init({ D, W, SITE }) {
   let lf = 'all';
   function ledger() {
     $('#lf').innerHTML = [['all', '全部'], ['verified', '已核验'], ['blocked', '待复核']].map(([k, t]) => `<button class="chip" data-s="${k}" aria-pressed="${lf === k}">${t}</button>`).join('');
-    $('#lb').innerHTML = E.filter((e) => lf === 'all' || e.audit.status === lf).map((e) => `<tr data-e="${e.id}"><td>${f(e.date)}</td><td>${h(V[e.vendor].name)}</td><td><b>${h(e.name)}</b> <span style="color:var(--mute)">${h(e.kind)}</span></td><td>${h(tier(e))}</td><td>${h(e.audit.method)}</td><td class="ck">${ck(e.audit.support)}</td><td>${e.archiveUrl ? archiveLink(e) : '<span style="color:var(--mute)">—</span>'}</td><td>${chip(e.audit.status)}</td></tr>`).join('');
+    $('#lb').innerHTML = E.filter((e) => lf === 'all' || e.audit.status === lf).map((e) => `<tr data-e="${e.id}"><td>${f(e.date)}</td><td>${h(V[e.vendor].name)}</td><td><b>${h(e.name)}</b> <span style="color:var(--mute)">${h(e.kind)}${e.milestone ? ' · 重要节点' : ''}</span></td><td>${h(tier(e))}</td><td>${h(e.audit.method)}</td><td class="ck">${ck(e.audit.support)}</td><td>${e.archiveUrl ? archiveLink(e) : '<span style="color:var(--mute)">—</span>'}</td><td>${chip(e.audit.status)}</td></tr>`).join('');
   }
   $('#lf').onclick = (e) => { if (e.target.dataset.s) { lf = e.target.dataset.s; ledger(); } };
   $('#lb').onclick = open; ledger();
@@ -183,6 +194,7 @@ function init({ D, W, SITE }) {
     dlg.dataset.forecast = forecastId;
     dlg.innerHTML = `<div class="dc"><button class="x" aria-label="关闭" data-close>×</button>${html}</div>`;
     if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
   };
   dlg.onclick = (e) => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); };
 
@@ -212,7 +224,7 @@ function init({ D, W, SITE }) {
 
   function refreshCurrentDay() {
     const next = todayKey(); if (next === TODAY) return;
-    TODAY = next; radar(); draw();
+    TODAY = next; radar(); draw(false);
     if (dlg.open && dlg.dataset.forecast) openF(dlg.dataset.forecast);
   }
   setInterval(refreshCurrentDay, 60000);

@@ -16,7 +16,7 @@ if (decision.action === 'publish') {
   const response = await fetchSourceText(decision.evidence.url, { validateUrl: url => sourceFor(registry, decision.evidence.registryId, url) });
   evidence = { url: response.url, text: articleText(response.text) };
 }
-const result = applyDecision({ queue: read('review/queue.json'), atlas: read('public/data/atlas.json'), registry, decision, evidence, actor: process.env.GITHUB_ACTOR });
+const result = applyDecision({ queue: read('review/queue.json'), atlas: read('public/data/atlas.json'), registry, decision, evidence, actor: process.env.GITHUB_ACTOR, epochStart: read('public/data/site.json').epochStart });
 // Validate the proposed atlas before changing either durable file.
 const draft = new URL('review/atlas-draft.json', root);
 try {

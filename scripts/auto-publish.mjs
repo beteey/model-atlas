@@ -6,7 +6,7 @@ const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(fs.readFileSync(new URL(path, root), 'utf8'));
 const dryRun = process.argv.includes('--dry-run');
 const atlas = read('public/data/atlas.json');
-const result = await autoReviewCandidates({ queue: read('review/queue.json'), atlas, registry: read('public/data/sources.json'), maxCandidates: Number(process.env.AUTO_REVIEW_LIMIT || 24) });
+const result = await autoReviewCandidates({ queue: read('review/queue.json'), atlas, registry: read('public/data/sources.json'), epochStart: read('public/data/site.json').epochStart, maxCandidates: Number(process.env.AUTO_REVIEW_LIMIT || 24) });
 const draft = new URL('review/atlas-auto-draft.json', root);
 try {
   fs.writeFileSync(draft, JSON.stringify(result.atlas, null, 2) + '\n');

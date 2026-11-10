@@ -5,7 +5,7 @@ export const candidateRevision = c => hash({ id: c.id, url: c.canonicalUrl, titl
 export const policyHash = r => hash({ version: r.policyVersion || 1, sources: r.sources.map(s => ({ id: s.id, vendor: s.vendor, sourceType: s.sourceType, evidencePrefixes: s.evidencePrefixes, autoPublish: s.autoPublish || null })) });
 export const confirmationHash = d => hash({ candidateId: d.candidateId, candidateRevision: d.candidateRevision, policyHash: d.policyHash, record: d.record, evidence: d.evidence, reason: d.reason });
 export function recordFingerprint(record) {
-  const { pipelineReview, archiveUrl, archivedAt, ...facts } = record;
+  const { pipelineReview, archiveUrl, archivedAt, milestone, ...facts } = record;
   if (facts.sources) facts.sources = facts.sources.map(({ archiveUrl, archivedAt, ...source }) => source);
   return hash(facts);
 }
@@ -40,7 +40,7 @@ export function sourceFor(registry, id, url) {
   return s;
 }
 
-export function applyDecision({ queue, atlas, registry, decision, evidence, actor, now = new Date() }) {
+export function applyDecision({ queue, atlas, registry, decision, evidence, actor, now = new Date(), epochStart }) {
   if (!actor || !/^[a-z\d][a-z\d-]{0,50}$/i.test(actor)) fail('缺少可信审核人');
   const q = structuredClone(queue), a = structuredClone(atlas), d = decision;
   const c = q.candidates.find(x => x.id === d.candidateId);
@@ -88,6 +88,7 @@ export function applyDecision({ queue, atlas, registry, decision, evidence, acto
     if (!events.includes(r.kind)) fail('请选择明确的历史事件类型');
     if (!validDate(r.date)) fail('事件日期无效');
     if (r.date > date) fail('历史日期在未来，应放入未来线索');
+    if (epochStart && r.date < epochStart) fail(`事件早于收录起点 ${epochStart}，本站不收录`);
     if (!['首次宣布', '论文公开'].includes(r.kind) && /\b(plan|planned|expect|expected|will|upcoming|soon|aim|hope|not|never)\b|计划|预计|即将|将于|将在|拟于|尚未|没有|未开放|未发布/i.test(e.quotes.eventType)) fail('该摘录描述计划或尚未可用，不能当成已经发布');
     record = { id: r.id, vendor: r.vendor, name: normalize(r.name), date: r.date, kind: r.kind, summary: normalize(r.summary), url: e.url, sourceType: source.sourceType, tags: [],
       audit: { status: 'verified', checkedAt: date, verifiedAt: date, supports: normalize(e.note), support: { modelName: true, eventDate: true, eventType: true }, method }, pipelineReview: receipt };
@@ -117,6 +118,7 @@ export function applyDecision({ queue, atlas, registry, decision, evidence, acto
     if (r.type === 'event') {
       record.tags = previous.tags || [];
       record.extraSources = previous.extraSources || [];
+      if (typeof previous.milestone === 'boolean') record.milestone = previous.milestone;
       if (previous.url === e.url && previous.pipelineReview?.contentHash === e.contentHash) for (const k of ['archiveUrl', 'archivedAt']) if (previous[k]) record[k] = previous[k];
     }
     target[target.findIndex(x => x.id === r.id)] = record;

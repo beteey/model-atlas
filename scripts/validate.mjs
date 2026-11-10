@@ -24,6 +24,8 @@ const SOURCE_TYPES = new Set(['official', 'paper', 'press_release', 'media', 've
 const CONFIDENCE = new Set(['official', 'media', 'estimated', 'community']);
 const OUTCOMES = new Set(['hit', 'partial', 'miss', 'pending']);
 const SNIPPET_ONLY = /检索摘录|未直接打开原页/;
+const epochStart = site.epochStart;
+if (!isDate(epochStart)) err('site.json', 'epochStart 缺失或格式错误（收录起点，如 2022-11-01）');
 
 const vendorIds = new Set();
 for (const v of atlas.vendors) {
@@ -67,6 +69,9 @@ for (const e of atlas.events) {
   if (!vendorIds.has(e.vendor)) err(w, `未知厂商 ${e.vendor}`);
   if (!isDate(e.date)) err(w, `日期格式错误：${e.date}`);
   if (e.date > today) err(w, `历史事件日期在未来：${e.date}，应放入 forecasts`);
+  if (isDate(epochStart) && e.date < epochStart) err(w, `早于收录起点 ${epochStart}：本站只记录大规模应用之后的发布`);
+  if (!Array.isArray(e.tags)) err(w, 'tags 必须是数组（可为空）');
+  if ('milestone' in e && typeof e.milestone !== 'boolean') err(w, 'milestone 只能是 true / false');
   if (!e.name || !e.kind || !e.summary) err(w, '缺少 name / kind / summary');
   checkSource(w, e);
   (e.extraSources || []).forEach((x, i) => checkSource(`${w} extraSources[${i}]`, x));
@@ -151,5 +156,5 @@ if (/YOUR_GITHUB_USERNAME|example\.com/.test(JSON.stringify(site))) warn('site.j
 
 for (const m of warnings) console.warn('⚠ ' + m);
 for (const m of errors) console.error('✗ ' + m);
-console.log(`\n${atlas.events.length} 条事件，${atlas.forecasts.length} 条线索，${watch.accounts.length} 个账号；${errors.length} 个错误，${warnings.length} 个提醒。`);
+console.log(`\n${atlas.events.length} 条事件（${atlas.events.filter((e) => e.milestone).length} 个重要节点），${atlas.forecasts.length} 条线索，${watch.accounts.length} 个账号；${errors.length} 个错误，${warnings.length} 个提醒。`);
 process.exit(errors.length ? 1 : 0);
