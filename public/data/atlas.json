@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-10",
-  "historyCheckedAt": "2026-11-10",
-  "radarCheckedAt": "2026-11-10",
+  "checkedAt": "2026-11-11",
+  "historyCheckedAt": "2026-11-11",
+  "radarCheckedAt": "2026-11-11",
   "vendors": [
     {
       "id": "openai",
@@ -1568,6 +1568,32 @@
         },
         "method": "一手资料正文"
       }
+    },
+    {
+      "id": "gemini4-carbon-open",
+      "vendor": "google",
+      "name": "Gemini 4 Carbon",
+      "date": "2026-11-10",
+      "kind": "广泛开放 / API 上线",
+      "summary": "限量预览两周后向开发者、企业和消费者开放：付费开发者可通过 API 使用，Google AI Ultra 订阅用户陆续可用，价格与 Argon 相同。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "sourceType": "official",
+      "tags": [
+        "API",
+        "网络安全"
+      ],
+      "audit": {
+        "status": "verified",
+        "checkedAt": "2026-11-11",
+        "verifiedAt": "2026-11-11",
+        "supports": "Google 官方博客日期为 2026-11-10，原文“Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers.”，并说明经 AI Studio API 向所有付费开发者与企业开放、向 Google AI Ultra 订阅用户陆续推出。",
+        "support": {
+          "modelName": true,
+          "eventDate": true,
+          "eventType": true
+        },
+        "method": "一手资料正文"
+      }
     }
   ],
   "forecasts": [
@@ -1803,16 +1829,28 @@
     {
       "confidence": "official",
       "evidenceLabel": "官方计划 · 无日期",
-      "status": "限量预览中",
-      "checkedAt": "2026-11-10",
+      "status": "已发布",
+      "checkedAt": "2026-11-11",
       "id": "gemini4-carbon-ga",
       "vendor": "google",
       "name": "Gemini 4 Carbon",
       "kind": "扩大开放",
-      "dateLabel": "日期未定",
-      "dateDetail": "官方只说“尽快”；社区传闻 11 月内扩大开放",
-      "summary": "Google 在 10 月 28 日宣布 Carbon，目前只经 Fairwind 计划向部分网络防御方开放，对开发者和消费者的时间只写了“尽快”。社区一侧，TestingCatalog 标为“soon”，Mark Kretschmann 认为 11 月可能扩大开放。",
+      "dateLabel": "已于 11 月 10 日开放",
+      "dateDetail": "官方只说“尽快” → 11 月 10 日向开发者、企业和消费者开放",
+      "summary": "Google 在 11 月 10 日向开发者、企业和消费者开放了 Carbon，距限量预览两周。社区“soon”和“11 月内”的判断都兑现了。",
       "sources": [
+        {
+          "title": "Google · Gemini 4 Carbon 开放公告",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "sourceType": "official",
+          "note": "2026.11.10 · API 向付费开发者开放，Ultra 订阅用户陆续可用。",
+          "publishedAt": "2026-11-10",
+          "verification": "verified",
+          "verifiedAt": "2026-11-11",
+          "method": "官网正文",
+          "supports": "确认 11 月 10 日起向开发者、企业、科研人员和消费者开放。",
+          "quote": "Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers."
+        },
         {
           "title": "Google · Gemini 4 Carbon 发布公告",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
@@ -1856,23 +1894,27 @@
         {
           "date": "2026-11-10",
           "text": "建档。官方公告确认有扩大开放的计划但没有日期，分级按官方计划；社区的 11 月说法只写在说明里，不设预计窗口。"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "读取官方开放公告：11 月 10 日全面开放。线索关闭，新增对应历史事件；两条社区说法记为命中。"
         }
       ]
     },
     {
       "confidence": "official",
       "evidenceLabel": "官方计划",
-      "status": "计划中",
-      "checkedAt": "2026-11-10",
+      "status": "已发布",
+      "checkedAt": "2026-11-11",
       "id": "kimi-k31-weights",
       "vendor": "kimi",
       "name": "Kimi K3.1 Pro",
       "kind": "权重开放",
-      "dateLabel": "11 月 4 日前",
-      "dateDetail": "官方承诺 2026 年 11 月 4 日前发布完整权重",
+      "dateLabel": "权重已上架",
+      "dateDetail": "官方承诺 11 月 4 日前 → Hugging Face 已上架，具体日期未能核实",
       "windowStart": "2026-10-24",
       "windowEnd": "2026-11-04",
-      "summary": "K3.1 Pro 已在 10 月 24 日上线产品与 API，官方文章写明完整权重会在 11 月 4 日前发布。截至本次检查，Kimi 官网新闻列表里没有权重发布的公告，是否已如期发布尚未确认。",
+      "summary": "Moonshot 在 Hugging Face 的官方仓库已经放出 K3.1 Pro 的权重文件。仓库页面不显示上架日期，Kimi 官网也没有单独的权重公告，所以无法确认是否赶在 11 月 4 日之前，也暂不新增历史事件。",
       "sources": [
         {
           "title": "Kimi · K3.1 Pro 发布文章",
@@ -1885,12 +1927,26 @@
           "method": "官网正文",
           "supports": "确认模型已在 Kimi 应用与 API 上线，并承诺 11 月 4 日前发布完整权重。",
           "quote": "The full model weights will be released by Nov 4."
+        },
+        {
+          "title": "Hugging Face · moonshotai/Kimi-K3.1-Pro",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+          "sourceType": "vendor_community",
+          "note": "2026.11.11 读取：仓库存在并带 Safetensors 权重，页面不显示上架日期。",
+          "verification": "verified",
+          "verifiedAt": "2026-11-11",
+          "method": "仓库页面",
+          "supports": "确认厂商官方组织下的仓库已提供权重；不能确认上架日期。"
         }
       ],
       "changes": [
         {
           "date": "2026-11-10",
           "text": "建档。官方窗口已过，官网未见权重发布公告；Hugging Face 上有同名仓库，但本次没有打开核对，暂不据此确认。"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "打开 Hugging Face 官方仓库核对：权重已上架，日期无从核实。线索关闭，不新增历史事件。"
         }
       ]
     },

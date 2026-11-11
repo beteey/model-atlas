@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-10",
+  "checkedAt": "2026-11-11",
   "rules": {
     "hitWindowDays": 7,
     "minResolvedForRate": 5,
@@ -78,8 +78,11 @@
           "claimUrl": "https://x.com/testingcatalog/status/2118644436917793116",
           "claimedAt": "2026-11-06",
           "windowEnd": "2026-12-06",
-          "outcome": "pending",
-          "note": "原帖未给日期，按 30 天窗口比对。"
+          "outcome": "hit",
+          "note": "官方 11 月 10 日全面开放，落在说法的时间窗内。",
+          "resolvedAt": "2026-11-11",
+          "evidenceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "eventId": "gemini4-carbon-open"
         },
         {
           "claim": "Grok 4.8 “not soon???”",
@@ -243,7 +246,11 @@
           "claimUrl": "https://x.com/mark_k/status/2117323044213625181",
           "claimedAt": "2026-11-03",
           "windowEnd": "2026-11-30",
-          "outcome": "pending"
+          "outcome": "hit",
+          "resolvedAt": "2026-11-11",
+          "evidenceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "eventId": "gemini4-carbon-open",
+          "note": "官方 11 月 10 日全面开放，落在说法的时间窗内。"
         },
         {
           "claim": "Claude Opus 5.6 在 11 月下旬或 12 月发布",

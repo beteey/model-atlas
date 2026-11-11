@@ -71,10 +71,11 @@
       "kind": "rss",
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ready",
-      "note": "官方 RSS，探测通过。",
+      "note": "官方 RSS，探测通过。 模型公告常跳转到 blog.google，一并列入可核验范围。",
       "sourceType": "official",
       "evidencePrefixes": [
-        "https://deepmind.google/blog/"
+        "https://deepmind.google/blog/",
+        "https://blog.google/"
       ],
       "autoPublish": {
         "enabled": true
